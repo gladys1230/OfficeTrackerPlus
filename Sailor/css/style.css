@@ -2604,3 +2604,26 @@ a.btn.btn-wide {
 /* Theme Styler :: End */
 
 /* add this now for Office Tracker*/
+
+#cta-2{
+    padding: 140px 0;
+}
+.cta-2-txt {
+    font-size: 24px;
+    padding-bottom: 15px;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 34px !important;
+}
+.cta-2-form input[type="email"] {
+    border: 0px solid #CCC;
+    padding: 13px 40px;
+    font-size: 18px;
+    color: #2b5d83;
+    font-weight: 100;
+    min-width: 280px;
+    margin-left: -4px;
+    margin-bottom: 2px;
+    border: 1px solid #5fcf80;
+    background-color: rgb(247, 247, 247);
+    border-radius: 30px 0px 0px 30px;
