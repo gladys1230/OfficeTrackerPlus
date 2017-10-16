@@ -584,9 +584,10 @@ header ul.nav li ul li.dropdown-submenu li a {
 	margin: 0;
 	padding:0 ;
 }
+/*removed this bg for Office Tracker
 #featured.bg {
 	background: url(../img/dummies/feat-bg.jpg) no-repeat top center;
-}
+}*/
 
 /* ===================================
 6. Sliders
@@ -626,7 +627,7 @@ box-shadow: none;
 7. Section: call action
 ==================================== */
 section.callaction {
-	background:#fafafa;
+	/*remove gray block for Office Tracker background:#fafafa;*/
 	/*changed from 30px for Offace tracker*/
 	padding:30px 0 0 0;
 }
@@ -654,7 +655,8 @@ section.callaction {
 #content {
 	position:relative;
 	background:#fff;
-	padding:60px 0 40px 0;
+	/*change from padding: 60px 0 40px 0; for Office Tracker*/
+	padding:20px 0 20px 0;
 }
 /*changed from 30 to 10 for Office Tracker*/
 #content img {
