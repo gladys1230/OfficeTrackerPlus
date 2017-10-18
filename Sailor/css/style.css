@@ -660,7 +660,7 @@ section.callaction {
 }
 /*changed from 30 to 10 for Office Tracker*/
 #content img {
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 }
 
 
@@ -696,7 +696,7 @@ section.callaction {
 }
 
 #parallax1{	
-	background-image: url(../img/parallax/1.jpg);
+	background-image: url(../img/parallax/officetracker/threepics.jpg);
     background-position: center;
     background-repeat: no-repeat;
     display:block;
@@ -1457,7 +1457,8 @@ a.readmore {
 }
 
 .post-slider {
-	margin-bottom:20px;
+	/*changed from margin-bottom:20px; for office tracker*/
+	margin-bottom:5px;
 }
 
 /* post-slider */
