@@ -134,7 +134,7 @@ img.img-polaroid {
 /* top area */
 
 header .top .row {
-	margin-bottom: 0;
+	margin-bottom: 10;
 }
 
 
@@ -656,11 +656,11 @@ section.callaction {
 	position:relative;
 	background:#fff;
 	/*change from padding: 60px 0 40px 0; for Office Tracker*/
-	padding:20px 0 20px 0;
+	padding:60px 0 4px 0;
 }
 /*changed from 30 to 10 for Office Tracker*/
 #content img {
-	margin-bottom: 5px;
+	margin-bottom: 30px;
 }
 
 
