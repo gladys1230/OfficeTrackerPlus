@@ -2609,3 +2609,10 @@ a.btn.btn-wide {
 /* Theme Styler :: End */
 
 /* add this now for Office Tracker*/
+
+.milummain{
+	font-size: 13px;
+	line-height: 18px;
+	color: #656565;
+	font-family: "Open Sans", Arial, sans-serif;
+}
