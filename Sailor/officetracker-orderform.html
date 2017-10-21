@@ -1,0 +1,1912 @@
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Office Tracker Order Form</title>
+<link href="../milumweb.css" rel="stylesheet" type="text/css">
+<style type="text/css"> 
+body {
+  margin-top: 0px;
+}
+.style16 {
+  color: #FF6600;
+  font-weight: bold;
+}
+</style>
+<script language="JavaScript" type="text/JavaScript"> 
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+ 
+function MM_findObj(n, d) { //v3.0
+ 
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+ 
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+ 
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+ 
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document); return x;
+ 
+}
+ 
+function MM_validateForm() { //v3.0
+ 
+  var i,p,q,nm,test,num,min,max,errors='',args=MM_validateForm.arguments;
+ 
+  for (i=0; i<(args.length-2); i+=3) { test=args[i+2]; val=MM_findObj(args[i]);
+ 
+    if (val) { nm=val.name; if ((val=val.value)!="") {
+  
+    if (test.indexOf('isEmail')!=-1) { p=val.indexOf('@');
+ 
+        if (p<1 || p==(val.length-1)) errors+='- '+nm+' must contain an e-mail address.\n';
+ 
+      } else if (test!='R') { num = parseFloat(val);
+ 
+        if (val!=''+num) errors+='- '+nm+' must contain a number.\n';
+ 
+        if (test.indexOf('inRange') != -1) { p=test.indexOf(':');
+ 
+          min=test.substring(8,p); max=test.substring(p+1);
+ 
+          if (num<min || max<num) errors+='- '+nm+' must contain a number between '+min+' and '+max+'.\n';
+
+    
+    } } } else if (test.charAt(0) == 'R') errors += '- '+nm+' is required.\n'; }
+ 
+
+  }
+ 
+ if (document.getElementById('PO').checked==false)
+                {
+                        if (document.getElementById('CardType').value=='') errors+='- Must Select Card Type.\n' ;
+                        if (document.getElementById('card#').value=='') errors+='- Card # must contain a valid Credit Card Number.\n';
+                        if (document.getElementById('cardfirstname').value=='') errors+='- Cardholder must contain a First Name.\n';
+      if (document.getElementById('cardlastname').value=='') errors+='- Cardholder must contain a Last Name.\n';
+
+                }
+                else if(document.getElementById('PO').checked==true && document.getElementById('PO#').value=='') errors+='- PO# must contain a Purchase Order number.\n' ;
+
+ 
+  if (errors){ 
+
+  
+  alert('The following error(s) occurred:\n'+errors);
+ }
+  document.MM_returnValue = (errors == '');
+ 
+}
+
+var currentInfo=null
+function HideShowInfo(layer,whichAddon,operation){
+if (whichAddon=='blackberry')
+{
+  document.getElementById(layer+'Text').innerHTML='The Blackberry Sync allows users to tansfer schedule information to/from Office Tracker from their Blackberry device. The license cost is based on the total user license you are purchasing.'
+}
+if (whichAddon=='webviewer')
+{
+  document.getElementById(layer+'Text').innerHTML='Web Viewer allows you to "host" a public calendar on your web site displaying events you have posted to public calendars. Users can e-mail schedule requests to your scheduling department.'
+}
+if (whichAddon=='selfscheduling')
+{
+  document.getElementById(layer+'Text').innerHTML='Self-Service Web Scheduling allows you to put an area on your own web site where your customers or others can find available event times and schedule themselves. Users create accounts in your Office Tracker system via an automated e-mail verification.'
+}
+//document.getElementById(layer).innerHTML=document.getElementById(layer).innerHTML+' <div align="right" style="vertical-align:bottom; position:absolute; color:#FF0000 " onClick="HideShowInfo("AddOnInfo",null,"close")">x <span style="text-decoration:underline ">close</span></div>'
+
+if (operation){
+  document.getElementById(layer).style.visibility='hidden'
+  }
+else if (document.getElementById(layer).style.visibility=='hidden')
+  {
+    document.getElementById(layer).style.visibility="visible"
+  }
+else if (whichAddon==currentInfo)
+  {
+    document.getElementById(layer).style.visibility="hidden"
+  }
+currentInfo=whichAddon
+} 
+ 
+function HideShow(layer){
+if (whichForm=='support')
+{
+    if (layer=='order')
+    {
+      document.getElementById('numberuserstotal').style.visibility='hidden'
+      document.getElementById('supportonly').style.visibility='hidden'
+      document.getElementById('shippingpayment').style.visibility='visible'
+      window.scroll(0,0)
+      document.getElementById('first_name').focus()
+    }
+    else
+    {
+      document.getElementById('NumberOfUsers').value=parseInt(document.getElementById('NumberOfUsers').value)
+      document.getElementById('AddUsers').value=parseInt(document.getElementById('AddUsers').value)
+      document.getElementById('numberuserstotal').style.visibility='visible'
+      document.getElementById('supportonly').style.visibility='visible'
+      document.getElementById('shippingpayment').style.visibility='hidden'
+      window.scroll(0,0)
+    }
+}
+else
+{
+  if (layer=='order')
+  {
+    if (document.getElementById('NumberOfUsers').value > 0)
+    {
+      document.getElementById('numberuserstotal').style.visibility='hidden'
+      document.getElementById('shippingpayment').style.visibility='visible'
+      window.scroll(0,0)
+      document.getElementById('first_name').focus()
+                        if (whichForm!='support')
+                        {
+                           document.getElementById('Choose_Upgrade').style.visibility='visible'
+                        }
+    }
+    else
+    {
+    //  alert("Please Select Number of Users.")
+      document.getElementById('NumberOfUsers').focus()
+      return 
+    }
+  }
+  else
+  {
+    document.getElementById('NumberOfUsers').value=parseInt(document.getElementById('NumberOfUsers').value)
+    document.getElementById('AddUsers').value=parseInt(document.getElementById('AddUsers').value)
+    document.getElementById('numberuserstotal').style.visibility='visible'
+    document.getElementById('shippingpayment').style.visibility='hidden'
+    window.scroll(0,0)
+                document.getElementById('Choose_Upgrade').style.visibility='hidden' 
+  }
+}
+}
+//
+var total=""
+//
+var StandardPercent=1.20
+//
+var Server=395*StandardPercent
+var License=105*StandardPercent
+var License35=80*StandardPercent
+var ViewOnly=License*.36
+var HostedViewOnly=License*.40
+// License normally 30, Base 100
+ 
+ 
+var WebClientLicense=0*StandardPercent
+var BaseWebClient=0*StandardPercent
+// License normall 40, Base 120
+var ContactsLicense=0*StandardPercent
+var BaseContacts=0*StandardPercent
+//
+var OTPalmLicense=0*StandardPercent
+var BasePalm=0*StandardPercent
+//
+var BBSyncLicense=30*StandardPercent
+var BaseBBSync=100*StandardPercent
+//
+var SSWLicense=40*StandardPercent
+var BaseSSW=120*StandardPercent
+//
+var WVLicense=0*StandardPercent
+var BaseWV=495*StandardPercent
+//
+var AnnualPercent=49-((2-StandardPercent)*10)
+var YearLicense1=60
+var YearLicense2=55
+var YearLicense3=53
+var VersionLicense=79
+var HostedPercent=80
+var BaseHosted=62 
+var HostedSetup=99
+//below baseDiscount is the discount for bundle of contacts and web client
+var baseDiscount=0
+//below multiAddonDiscount isn't currently being used (as of August 11, 2008) it may mess up the math?
+var multiAddonDiscount=0  
+///Specials currently this form doesn't allow Support only orders so I discounted support for the 'with product' $100 discount
+var Support1Yr=795
+var Support6Months=695
+var Support90Days=495
+var SupportPerIncident=125
+var EduPercent=.90
+var UpgPercent=.80
+var AddPercent=1.25
+var sizeForSpecial=200
+//above only impacts the itemForSpecial
+var itemForSpecial='bbsync,ssw' 
+ //free add ons is the itemForSpecial such as bbsync,ssw, etc.
+var whichForm=location.search.substr(1)
+if (whichForm=='support')
+{
+var Support1Yr=Support1Yr+100
+}
+if (whichForm=='edu')
+{
+var Server=Server*EduPercent
+var License=License*EduPercent
+var License35=License35*EduPercent
+var ViewOnly=ViewOnly*EduPercent
+var AddUserLicense=License*AddPercent
+var WebClientLicense=WebClientLicense*EduPercent
+var BaseWebClient=BaseWebClient*EduPercent
+var ContactsLicense=ContactsLicense*EduPercent
+var BaseContacts=BaseContacts*EduPercent
+var OTPalmLicense=OTPalmLicense*EduPercent
+var BasePalm=BasePalm*EduPercent
+var WVLicense=WVLicense*EduPercent
+var BaseWV=BaseWV*EduPercent
+var BBSyncLicense=BBSyncLicense*EduPercent
+var BaseBBSync=BaseBBSync*EduPercent
+var SSWLicense=SSWLicense*EduPercent
+var BaseSSW=BaseSSW*EduPercent
+}
+if (whichForm=='upgrade')
+{
+var Server=Server*UpgPercent
+var AddUserLicense=License*AddPercent
+var License=License*UpgPercent
+var License35=License35*UpgPercent
+var ViewOnly=ViewOnly*UpgPercent
+var sizeForSpecial=200
+//not giving discounts to add ons for upgrade in this form right now.
+//var WebClientLicense=WebClientLicense*UpgPercent
+//var ContactsLicense=ContactsLicense*UpgPercent
+//var OTPalmLicense=OTPalmLicense*UpgPercent
+//var WVLicense=WVLicense*UpgPercent
+}
+ 
+function resetForm(){
+document.getElementById('WebViewerTotal').innerHTML='&nbsp;'
+document.getElementById('BundleDiscount').innerHTML='&nbsp;'
+document.getElementById('AddOnsPerUser').innerHTML='&nbsp;'
+document.getElementById('SubTotal').innerHTML="Sub-Total: $0.00"
+document.getElementById('PricePerUser').innerHTML="Price/user: $0.00"
+document.getElementById('SupportTotal').innerHTML="Support: $0.00"
+document.getElementById('Tax').innerHTML='&nbsp;'
+document.getElementById('TotalOrder').innerHTML="Total: $0.00"
+document.getElementById('TotalOrder2').innerHTML="Your Office Tracker Total: $0.00  <a href=\"javascript:HideShow('userinfo')\">Edit</a>"
+ 
+}
+ 
+var adds=new Array('WebClient','Contacts','WebViewer','OTPalm','BBSync','SSW')
+function UpdateForm(){
+
+document.getElementById('realname').value=document.getElementById('first_name').value+" "+document.getElementById('last_name').value
+document.getElementById('cardholder').value=document.getElementById('cardfirstname').value+" "+document.getElementById('cardlastname').value
+
+ 
+//document.getElementById('Standard').disabled=false
+//document.getElementById('StandardOption').disabled=false
+//document.getElementById('Hosted').disabled=false
+//document.getElementById('HostedOption').disabled=false
+//if (document.getElementById('Standard').checked==true)
+//{
+//  document.getElementById('Hosted').disabled=true
+//  document.getElementById('HostedOption').disabled=true
+//}
+//if (document.getElementById('Hosted').checked==true)
+//{
+//  document.getElementById('Standard').disabled=true
+//  document.getElementById('StandardOption').disabled=true
+ 
+//}
+  selectedOptions=0
+  var Annual=1
+  var Hosted=1
+  var AddHosted=0
+  var Multi=1
+  if (document.getElementById('license').value=="1year")
+  {
+    Annual=YearLicense1/100
+  }
+  else if (document.getElementById('license').value=="2year")
+  {
+    Annual=YearLicense2/100
+    Multi=2
+  }
+  else if (document.getElementById('license').value=="3year")
+  {
+    Annual=YearLicense3/100
+    Multi=3
+  }
+  else if (document.getElementById('license').value=="version")
+  {
+    Annual=VersionLicense/100
+    Multi=3
+  }
+  else if (document.getElementById('license').value=="monthly")
+  {
+    Hosted=(HostedPercent/100)/12
+    if (whichForm=="upgrade")
+    {
+      Hosted=Hosted/UpgPercent
+    }   
+    AddHosted=BaseHosted
+  }
+ 
+  for (i=0;i<adds.length;i++)
+  {
+    document.getElementById(adds[i]).disabled=false
+  }
+  if (parseInt(document.getElementById('NumberOfUsers').value) > 0 && parseInt(document.getElementById('NumberOfUsers').value) <= 100)
+  {
+    if (parseInt(document.getElementById('NumberOfUsers').value) < 36)
+    {
+    users=(Number(Annual)*Number(Hosted)*Number(Multi)*(Number(Server)+Number(parseInt(document.getElementById('NumberOfUsers').value)*License)))+Number(AddHosted)
+    }
+    else
+    {
+    users=((Number(Annual)*Number(Hosted)*Number(Multi)*Number((parseInt(document.getElementById('NumberOfUsers').value)-35)*License35)))+((Number(Annual)*Number(Hosted)*Number(Multi)*(Number(Server)+Number(parseInt(35)*License)))+Number(AddHosted))
+    } 
+      if (document.getElementById('numberuserstotal').style.visibility=='hidden')
+                document.getElementById('NumberOfUsers').value=document.getElementById('NumberOfUsers').value
+//    document.getElementById('NumberOfUsers').value=document.getElementById('NumberOfUsers').value+" Users @: $"+users
+  }
+  else if (parseInt(document.getElementById('NumberOfUsers').value) > 100)
+  {
+    resetForm()
+    alert("Please Contact Milum Corporation for a Custom Quote on Larger Sizes\n                    Toll-free:(800) 257-2120")
+    return 
+  }
+  else if (whichForm=='support')
+  {
+    users=0
+  }
+  else 
+  {
+    resetForm()
+    alert("Please Select Number of Users.")
+    document.getElementById('NumberOfUsers').focus()
+    return 
+  }
+  var addUsers=0
+  if (parseInt(document.getElementById('AddUsers').value) > 0)
+  {
+    addUsers=Number(Annual)*Number(Hosted)*Number(Multi)*(Number(parseInt(document.getElementById('AddUsers').value)*AddUserLicense))
+    if (document.getElementById('numberuserstotal').style.visibility=='hidden')
+    {
+  //    document.getElementById('AddUsers').value=document.getElementById('AddUsers').value+"Additional Users @: $"+addUsers
+    }
+    var AddUsers=NumToCurrency(addUsers)
+    document.getElementById('AddUsersTotal').innerHTML='Additional Licenses: $'+AddUsers
+  }
+  else
+
+  {
+    document.getElementById('AddUsersTotal').innerHTML='&nbsp;'
+  }
+  var viewUsers=0
+  if (parseInt(document.getElementById('NumberOfViewOnly').value) > 0 && parseInt(document.getElementById('NumberOfViewOnly').value) <= 200 )
+  {
+    if (document.getElementById('license').value=="monthly")
+    {
+    ViewOnly=HostedViewOnly
+    }
+      viewUsers=Number(Annual)*Number(Hosted)*Number(Multi)*(Number(parseInt(document.getElementById('NumberOfViewOnly').value)*ViewOnly))
+    if (document.getElementById('numberuserstotal').style.visibility=='hidden')
+    {
+      //document.getElementById('NumberOfViewOnly').value=document.getElementById('NumberOfViewOnly').value+"View Only Users @: $"+viewUsers
+    }
+    var ViewUsers=NumToCurrency(viewUsers)
+    document.getElementById('ViewOnlyTotal').innerHTML='View Only Users: $'+ViewUsers
+  }
+ else if (parseInt(document.getElementById('NumberOfViewOnly').value) > 200)
+        {
+                resetForm()
+                alert("Please Contact Milum Corporation for a Custom Quote on Larger Sizes\n                      Toll-free:(800) 257-2120")
+                return
+        }
+
+  else
+  {
+    document.getElementById('ViewOnlyTotal').innerHTML='&nbsp;'
+  }
+  if (document.getElementById('WebClient').checked==true)
+  {
+    webclient=Number(Annual)*Number(Hosted)*Number(Multi)*(BaseWebClient+WebClientLicense*parseInt(document.getElementById('NumberOfUsers').value))
+//    document.getElementById('WebClient').value='Add WebClient @: $'+webclient
+    selectedOptions=selectedOptions+1
+  }
+  else
+  {
+    webclient=0
+  }
+  if (document.getElementById('Contacts').checked==true)
+  {
+    contacts=Number(Annual)*Number(Hosted)*Number(Multi)*(BaseContacts+ContactsLicense*parseInt(document.getElementById('NumberOfUsers').value))
+//    document.getElementById('Contacts').value='Add Contacts @: $'+contacts
+    selectedOptions=selectedOptions+1
+  }
+  else
+  {
+    contacts=0
+  }
+  if (document.getElementById('OTPalm').checked==true)
+  {
+    otpalm=Number(Annual)*Number(Hosted)*Number(Multi)*(BasePalm+OTPalmLicense*parseInt(document.getElementById('NumberOfUsers').value))
+//    document.getElementById('OTPalm').value='Add OTPalm @: $'+otpalm
+    //selectedOptions=selectedOptions+1
+  }
+  else
+  {
+    otpalm=0
+  }
+  if (document.getElementById('BBSync').checked==true)
+  {
+    bbsync=Number(Annual)*Number(Hosted)*Number(Multi)*(BaseBBSync+BBSyncLicense*parseInt(document.getElementById('NumberOfUsers').value))
+//    document.getElementById('BBSync').value='Add BBSync @: $'+bbsync
+    //not using this in the bundle discount -- selectedOptions=selectedOptions+1
+  }
+  else
+  {
+    bbsync=0
+  }
+  if (document.getElementById('SSW').checked==true)
+  {
+    ssw=Number(Annual)*Number(Hosted)*Number(Multi)*(BaseSSW+SSWLicense*parseInt(document.getElementById('NumberOfUsers').value))
+//    document.getElementById('SSW').value='Yes Add SSW @: $'+ssw
+    //not using this in the bundle discount -- selectedOptions=selectedOptions+1
+  }
+  else
+  {
+    ssw=0
+  }
+  
+  if (document.getElementById('WebViewer').checked==true)
+  {
+    webviewer=Number(Annual)*Number(Hosted)*Number(Multi)*(BaseWV+WVLicense*parseInt(document.getElementById('NumberOfUsers').value))
+    var WebViewerTotal=NumToCurrency(webviewer)
+//    document.getElementById('WebViewer').value='Yes Add WebViewer @: $'+webviewer
+    //document.getElementById('WebViewerTotal').innerHTML='Web Viewer: $'+WebViewerTotal
+    //selectedOptions=selectedOptions+1
+  }
+  else
+  {
+    document.getElementById('WebViewerTotal').innerHTML='&nbsp;'
+    webviewer=0
+  }
+  addOns=Number(webclient)+Number(contacts)+Number(otpalm)+Number(webviewer)+Number(bbsync)+Number(ssw)
+  if (selectedOptions > 1)
+  {
+    //var discount=Number(selectedOptions)*(Number(multiAddonDiscount)*Number(selectedOptions-1))*Number(parseInt(document.getElementById('NumberOfUsers').value))
+    var discount=(Number(addOns)-Number(otpalm)-Number(webviewer))*((Number(baseDiscount)/100)+(Number(selectedOptions-2)*Number(multiAddonDiscount)/100))
+    var BundleDiscount=NumToCurrency(discount)
+    //document.getElementById('BundleDiscount').innerHTML='Bundle Savings: - $'+BundleDiscount
+    if (discount >0)
+    {
+      document.getElementById('BundleDiscount').innerHTML='Bundle Savings: - $'+BundleDiscount
+    }
+    else
+    {
+      document.getElementById('BundleDiscount').innerHTML='&nbsp;'
+    } 
+  }
+  else
+  {
+    var discount=0
+    document.getElementById('BundleDiscount').innerHTML='&nbsp;'
+  }
+  var newDiscount=false
+  if (parseInt(document.getElementById('NumberOfUsers').value) >= sizeForSpecial)
+  {
+    var newDiscount=false
+    var itemsForSpecial=itemForSpecial.split(',')
+    if (itemsForSpecial.length > 1)
+    {
+      var itemsSelected=''
+      var includedItem=''
+      for (i=0;i<itemsForSpecial.length; i++)
+      {
+        for (z=0;z<adds.length; z++)
+        {
+          if (itemsForSpecial[i] == adds[z].toLowerCase())
+          {
+            if (document.getElementById(adds[z]).checked==true)
+            {
+              itemsSelected=itemsSelected+adds[z]+','
+            }
+          }
+        }
+      }
+      var whichItems=itemsSelected.split(',')
+      if (itemsSelected == '')
+        {
+        newDiscount=false
+        itemOptions=''
+        for (i=0;i<itemsForSpecial.length; i++)
+        {
+          for (z=0;z<adds.length; z++)
+          {
+            if (itemsForSpecial[i] == adds[z].toLowerCase())
+            {
+            if (adds[z].toLowerCase()=="bbsync")
+            {
+              itemOptions=itemOptions+'Blackberry Sync'+' or '
+            
+            }
+            else if (adds[z].toLowerCase()=="ssw")
+            {
+              itemOptions=itemOptions+'Self Service Web Scheduling'+' or '
+            }
+            else
+            {
+              itemOptions=itemOptions+adds[z]+' or '
+            }
+            }
+          }
+        }
+        newDiscount=true
+        includedItem=itemOptions.slice(0, itemOptions.length-4)
+        }
+      else if (whichItems.length -1 > 1)
+      {
+        var includedItem=''
+        var newDiscount=false
+        var itemToDiscount=''
+        var amountToDiscount=''
+        for (i=0;i<whichItems.length -1;i++)
+        {
+          if (whichItems[i].toLowerCase() == 'webviewer')
+          {
+            if(webviewer>amountToDiscount)
+            {
+              amountToDiscount=webviewer
+              itemToDiscount=whichItems[i]
+            }
+          }
+          if (whichItems[i].toLowerCase() == 'bbsync')
+          {
+            if(bbsync>amountToDiscount)
+            {
+              amountToDiscount=bbsync
+              //itemToDiscount=whichItems[i]
+              itemToDiscount="Blackberry Sync"
+            }
+          }
+          if (whichItems[i].toLowerCase() == 'ssw')
+          {
+            if(ssw>amountToDiscount)
+            {
+              amountToDiscount=ssw
+              //itemToDiscount=whichItems[i]
+              itemToDiscount="Self Service Web Scheduling"
+            }
+          }
+          if (whichItems[i].toLowerCase() == 'otpalm')
+          {
+            if(otpalm>amountToDiscount)
+            {
+              amountToDiscount=otpalm
+              itemToDiscount=whichItems[i]
+            }
+          }
+          if (whichItems[i].toLowerCase() == 'contacts')
+          {
+            if(contacts>amountToDiscount)
+            {
+              amountToDiscount=contacts
+              itemToDiscount=whichItems[i]
+            }
+          }
+          if (whichItems[i].toLowerCase() == 'webclient')
+          {
+            if(webclient>amountToDiscount)
+            {
+              amountToDiscount=webclient
+              itemToDiscount=whichItems[i]
+            }
+          }
+          
+        }
+          newDiscount=true
+          addOns=addOns-amountToDiscount
+          discount=discount+amountToDiscount
+          includedItem=itemToDiscount
+      }
+      else
+      {
+//        document.getElementById(whichItems[0]).value='Add '+adds[i]+' @: $0.00 - Special'
+        if (whichItems[0].toLowerCase() == 'webviewer')
+        {
+          discount=discount+webviewer
+          addOns=addOns-webviewer
+          includedItem=whichItems[0]
+        }
+        if (whichItems[0].toLowerCase() == 'otpalm')
+        {
+          discount=discount+otpalm
+          addOns=addOns-otpalm
+          includedItem=whichItems[0]
+        }
+        if (whichItems[0].toLowerCase() == 'bbsync')
+        {
+          discount=discount+bbsync
+          addOns=addOns-bbsync
+          includedItem="Blackberry Sync"
+        }
+        if (whichItems[0].toLowerCase() == 'ssw')
+        {
+          discount=discount+ssw
+          addOns=addOns-ssw
+          includedItem="Self Service Web Scheduling"
+        }
+        
+        if (whichItems[0].toLowerCase() == 'contacts')
+        {
+          discount=discount+contacts
+          addOns=addOns-contacts
+          includedItem=whichItems[0]
+        }
+        if (whichItems[0].toLowerCase() == 'webclient')
+        {
+          discount=discount+webclient
+          addOns=addOns-webclient
+          includedItem=whichItems[0]
+        }
+        newDiscount=true
+
+
+        
+      }
+    }
+    else
+    {
+      var newDiscount=false
+      var includedItem=''
+      for (i=0;i <adds.length; i++)
+      {
+        if (itemForSpecial == adds[i].toLowerCase())
+        {
+          document.getElementById(adds[i]).checked=true
+          document.getElementById(adds[i]).disabled=true
+//          document.getElementById(adds[i]).value='Add '+adds[i]+' @: $0.00 - Special'
+          if (itemForSpecial == 'webviewer')
+          {
+            discount=discount+webviewer
+            addOns=addOns-webviewer
+            includedItem=adds[i]
+          }
+          if (itemForSpecial == 'otpalm')
+          {
+            discount=discount+otpalm
+            addOns=addOns-otpalm
+            includedItem=adds[i]
+          }
+          if (itemForSpecial == 'bbsync')
+          {
+            discount=discount+bbsync
+            addOns=addOns-bbsync
+            includedItem="Blackberry Sync"
+          }
+          if (itemForSpecial == 'ssw')
+          {
+            discount=discount+ssw
+            addOns=addOns-ssw
+            includedItem="Self Service Web Scheduling"
+          }
+          
+          if (itemForSpecial == 'contacts')
+          {
+            discount=discount+contacts
+            addOns=addOns-contacts
+            includedItem=adds[i]
+          }
+          if (itemForSpecial == 'webclient')
+          {
+            discount=discount+webclient
+            addOns=addOns-webclient
+            includedItem=adds[i]
+          }
+          newDiscount=true
+          
+        }
+      }
+      if (itemForSpecial == 'all')
+      {
+        for (i=0;i <adds.length; i++)
+        {
+          document.getElementById(adds[i]).checked=true
+          document.getElementById(adds[i]).disabled=true
+//          document.getElementById(adds[i]).value='Add '+adds[i]+' @: $0.00 - Special'
+        }
+        discount=discount+webviewer+webclient+contacts+otpalm+bbsync+ssw
+        addOns=addOns-webviewer-webclient-contacts-otpalm-bbsync-ssw
+        newDiscount=true
+        includedItem="WebViewer, Blackberry Sync, and Self Service Web Scheduling Module"
+          
+      }
+    }
+  }
+  if (newDiscount==true)
+  {
+    document.getElementById('SpecialDiscount').innerHTML=sizeForSpecial+'+ Users Includes Free: '+includedItem+' Add-on'
+    if (sizeForSpecial < 2 )
+    {
+    document.getElementById('SpecialDiscount').innerHTML='Free: '+includedItem+' Add-on with all Purchases'
+    }
+    
+  }
+ 
+  else
+  {
+    document.getElementById('SpecialDiscount').innerHTML='&nbsp;'
+  }
+  if (document.getElementById('license').value=="monthly")
+  {
+    document.getElementById('SpecialDiscount').innerHTML=document.getElementById('SpecialDiscount').innerHTML+'<br>Hosted Accounts have a One Time Setup Fee of $'+NumToCurrency(HostedSetup)+'<br> Not included in Total. <br>'
+//    document.getElementById('BundleDiscount').innerHTML='$'+NumToCurrency(HostedSetup)
+  }
+
+// -- Turned the warning off for hosted accounts  
+//  if (document.getElementById('license').value=="version")
+//  {
+//    document.getElementById('ViewOnlyWarn').innerHTML=''
+//  }
+
+//  else if (document.getElementById('license').value=="monthly")
+//  {
+//    document.getElementById('ViewOnlyWarn').innerHTML='Not Available for Hosted'
+//    document.getElementById('NumberOfViewOnly').disabled=true
+//    viewUsers=''
+//  }
+//  else
+//  {
+//    document.getElementById('ViewOnlyWarn').innerHTML='&nbsp;'
+//    document.getElementById('NumberOfViewOnly').disabled=false
+//  }     
+  var AddOns=NumToCurrency(addOns)
+  //var AddOnsPerUser=NumToCurrency((addOns-Number(webviewer)-Number(otpalm))/parseInt(document.getElementById('NumberOfUsers').value))
+  if (addOns==0)
+  {
+    document.getElementById('AddOnsPerUser').innerHTML='&nbsp;'
+  }
+  else
+  {
+    document.getElementById('AddOnsPerUser').innerHTML="Add-ons w/ purchase: $"+AddOns
+  }
+  if (parseInt(document.getElementById('NumberOfUsers').value) >= sizeForSpecial && itemsForSpecial=='all')
+  {
+    document.getElementById('AddOnsPerUser').innerHTML=sizeForSpecial+'+ Packages Include All Add-ons'
+ 
+  }
+  
+  
+  subTotal=Number(users)+Number(webclient)+Number(contacts)+Number(webviewer)+Number(otpalm)+Number(ssw)+Number(bbsync)+Number(addUsers)+Number(viewUsers)-Number(discount)
+  
+  var SubTotal=NumToCurrency(subTotal)
+  if (whichForm!='support')
+  {
+    var PricePerUser=NumToCurrency(Number(users)/parseInt(document.getElementById('NumberOfUsers').value))
+    document.getElementById('PricePerUser').innerHTML="Price/user: $"+PricePerUser
+  }
+  document.getElementById('SubTotal').innerHTML="Sub-Total: $"+SubTotal
+  //if (document.getElementById('Standard').checked==false)
+  //{
+  if (document.getElementById('license').value=="1year")
+  {
+    document.getElementById('SubTotal').innerHTML=document.getElementById('SubTotal').innerHTML+'/year'
+  }
+  if (document.getElementById('license').value=="2year")
+  {
+    document.getElementById('SubTotal').innerHTML=document.getElementById('SubTotal').innerHTML+'/2 years'
+  }
+  if (document.getElementById('license').value=="3year")
+  {
+    document.getElementById('SubTotal').innerHTML=document.getElementById('SubTotal').innerHTML+'/3 years'
+  }
+  if (document.getElementById('license').value=="version")
+  {
+    document.getElementById('SubTotal').innerHTML=document.getElementById('SubTotal').innerHTML
+  }
+  if (document.getElementById('license').value=="monthly")
+  {
+    document.getElementById('SubTotal').innerHTML=document.getElementById('SubTotal').innerHTML+'/month'
+  }
+  //}
+ 
+  var support=''
+  for (i=0; i < document.forms[0].Support.length;i++)
+  {
+    if (document.forms[0].Support[i].checked)
+    {
+      support=parseInt(document.forms[0].Support[i].value)
+    }
+  }
+  if (support==90)
+  {
+    support=Support90Days
+//    document.forms[0].Support[1].value="90 Days Support @: $"+support
+//    document.forms[0].Support[4].value="90 Days Support @: $"+support
+  }
+  else if (support==6)
+  {
+    support=Support6Months
+//    document.forms[0].Support[2].value="6 Months Support @: $"+support
+//    document.forms[0].Support[5].value="6 Months Support @: $"+support
+  }
+  else if (support==1)
+  {
+    support=Support1Yr
+//    document.forms[0].Support[3].value="1 Year Support @: $"+support
+//    document.forms[0].Support[6].value="1 Year Support @: $"+support
+  }
+  else if (support==0)
+  {
+    support=SupportPerIncident
+//    document.forms[0].Support[7].value="0 Per Incident Support @: $"+support
+  }
+  else 
+  {
+    support=0
+  }
+  var SupportAmount=NumToCurrency(support)
+  document.getElementById('SupportTotal').innerHTML="Support: $"+SupportAmount
+  var tax=0
+  document.getElementById('Tax').innerHTML='&nbsp;'
+  if (document.getElementById('SalesTax').checked)
+  {
+    tax=subTotal*(0.0825)
+    var TaxAmount=NumToCurrency(tax)
+    document.getElementById('Tax').innerHTML='Sales Tax: $'+TaxAmount
+//    document.getElementById('SalesTax').value='Add Sales Tax @: $'+TaxAmount
+  }
+  var promo=PromoCode(document.getElementById('Promo').value)
+  total=Number(subTotal)+Number(support)+Number(tax)//-Number(promo)
+  if (whichForm=='support')
+  {
+  total=Number(support)+Number(tax)
+  }
+  if (promoType=='percent')
+  {
+  total = total - total*Number(promo)
+  }
+  else if (promoType=='flat')
+  {
+  total=total-Number(promo)
+  }
+  Total=NumToCurrency(total)
+  var TotalText=Total
+  if ( whichForm!='support')
+  {
+    if (document.getElementById('license').value=="1year")
+    {
+      TotalText=TotalText+'/year'
+    }
+    if (document.getElementById('license').value=="2year")
+    {
+      TotalText=TotalText+'/2 years'
+    }
+    if (document.getElementById('license').value=="3year")
+    {
+      TotalText=TotalText+'/3 years'
+    }
+    if (document.getElementById('license').value=="version")
+    {
+      TotalText=TotalText
+    }
+    if (document.getElementById('license').value=="monthly")
+    {
+      TotalText=TotalText+'/month'
+    }
+  }
+ 
+  document.getElementById('TotalOrder').innerHTML="Total: $"+TotalText
+  document.getElementById('TotalOrder2').innerHTML="Office Tracker Total: $"+TotalText+"  <a href=\"javascript:HideShow('userinfo')\">Edit</a>"
+  var order="On-line Order for: $"
+  if (whichForm=='edu')
+  {
+    order="On-line EDU Order for: $"
+  }
+  if (whichForm=='upgrade')
+  {
+    order="On-line Upgrade Order for: $"
+  }
+  if (whichForm=='addon')
+  {
+    order="On-line Add-on Order for: $"
+  }
+  if (whichForm=='support')
+  {
+    order="On-line Support Order for: $"
+  }
+  document.getElementById('subject').value=order+TotalText
+       document.getElementById('totalorderform').value=order+TotalText
+}
+ 
+//PROMO CODE
+var promoType=null
+function PromoCode(code){
+code=code.toLowerCase()
+var discount=0
+document.getElementById('PromoDiscount').innerHTML='&nbsp;'
+//change document.getElementById('Standard').checked==(true/false) to make a promo only work for Annual or Standard (false=Annual only,true=Standard only)
+//remove document.getElementById('Standard').checked==(true/false) to have promo work for both
+if (code=='nocode'&& document.getElementById('Standard').checked==true && parseInt(document.getElementById('NumberOfUsers').value) >=1)
+{
+discount=.2//20%
+ 
+//below is extra setting to optionally give no discount to packages under 3 users
+if (parseInt(document.getElementById('NumberOfUsers').value) <= 3)
+{
+discount=.10//10% 
+}
+ 
+var Discount=discount*100;
+promoType='percent'
+//NumToCurrency(discount)
+document.getElementById('PromoDiscount').innerHTML='Special Savings Discount:  '+Discount+'%'
+}
+ 
+if (code=='notvalidupgradenow' && whichForm=='upgrade')
+{
+discount=.10
+var Discount=discount*100;
+promoType='percent'
+ 
+document.getElementById('PromoDiscount').innerHTML='Special Savings Discount:  '+Discount+'%'
+}
+if (code=='extra10' && document.getElementById('license').value!="monthly" && whichForm!='upgrade')
+{
+discount=.30
+if (parseInt(document.getElementById('NumberOfUsers').value) < 20)
+{
+discount=.25
+}
+if (parseInt(document.getElementById('NumberOfUsers').value) < 10)
+{
+discount=.20
+}
+var Discount=discount*100;
+promoType='percent'
+ 
+document.getElementById('PromoDiscount').innerHTML='Special Savings Discount:  '+Discount+'%'
+}
+
+
+if (code=='extra5' && document.getElementById('license').value!="monthly" && whichForm!='upgrade')
+{
+discount=.25
+if (parseInt(document.getElementById('NumberOfUsers').value) < 20)
+{
+discount=.20
+}
+if (parseInt(document.getElementById('NumberOfUsers').value) < 11)
+{
+discount=.15
+}
+var Discount=discount*100;
+promoType='percent'
+
+document.getElementById('PromoDiscount').innerHTML='Special Savings Discount:  '+Discount+'%'
+}
+
+
+
+
+if (code=='savemore' && document.getElementById('license').value!="monthly" && whichForm!='upgrade')
+{
+discount=.20
+if (parseInt(document.getElementById('NumberOfUsers').value) < 20)
+{
+discount=.15
+}
+if (parseInt(document.getElementById('NumberOfUsers').value) < 11)
+{
+discount=.10
+}
+var Discount=discount*100;
+promoType='percent'
+ 
+document.getElementById('PromoDiscount').innerHTML='Special Savings Discount:  '+Discount+'%'
+}
+ 
+ 
+ 
+if (code=='ainthappenin' && document.getElementById('Standard').checked==false && document.getElementById('license').value!="monthly" && whichForm!='upgrade' && parseInt(document.getElementById('NumberOfUsers').value) >=5)
+{
+discount=0
+if (parseInt(document.getElementById('NumberOfUsers').value) >=5)
+{
+var extras=parseInt((document.getElementById('NumberOfUsers').value)/5)*2
+discount=0
+}
+ 
+var Discount=NumToCurrency(discount)
+promoType='flat'
+if (parseInt(document.getElementById('NumberOfUsers').value) >=5)
+{
+document.getElementById('PromoDiscount').innerHTML='This Month Get <strong>'+extras+'</strong> Extra View Only Users with <strong>'+parseInt(document.getElementById('NumberOfUsers').value)+'</strong> Full Users!'
+}
+
+document.getElementById('SpecialDiscount').innerHTML=document.getElementById('SpecialDiscount').innerHTML+document.getElementById('PromoDiscount').innerHTML
+//document.getElementById('PromoDiscount').innerHTML='Special Savings Discount:  $'+Discount
+ 
+}
+ 
+else if (code=='nocode' && document.getElementById('Standard').checked==false && whichForm=='upgrade' && parseInt(document.getElementById('NumberOfUsers').value) >=1)
+{
+discount=0
+if (parseInt(document.getElementById('NumberOfUsers').value) >=11)
+{
+discount=0
+}
+if (parseInt(document.getElementById('NumberOfUsers').value) >30)
+{
+discount=0
+}
+var Discount=NumToCurrency(discount)
+promoType='flat'
+document.getElementById('PromoDiscount').innerHTML='Special Savings Discount:  $'+Discount
+ 
+}
+else if (code=='80429' && whichForm=='support' && document.forms[0].Support[6].checked==true)
+{
+discount=100
+var Discount=NumToCurrency(discount)
+promoType='flat'
+document.getElementById('PromoDiscount').innerHTML='Special Support Discount:  $'+Discount
+}
+return discount
+}
+ 
+//ends here
+
+function submitOrder(theOrder) {
+
+
+if (MM_validateForm('firstname','','R','lastname','','R','Company','','R','Phone','','R','email','','RisEmail','Street Address','','R','city','','R','zip','','R'))
+{
+return document.MM_returnValue
+}
+
+else
+{
+//emails
+theOrder.action="https://www.officetracker.com/cgi-bin/test.cgi"
+theOrder.target="nonsubmit"
+theOrder.submit()
+
+//paypals
+
+var itemDescription=document.getElementById('NumberOfUsers').value+ " Full Users"
+
+if (document.getElementById('NumberOfViewOnly').value > 0)
+{
+itemDescription=itemDescription+" with "+document.getElementById('NumberOfViewOnly').value+" View-Only Users"
+}
+
+
+//document.getElementsByName("item_name").value=itemDescription
+//document.getElementsByName("amount").value=Number(total)
+document.forms[0].elements[6].value=Number(total)
+document.forms[0].elements[7].value=itemDescription
+document.forms[0].elements[10].value=document.getElementsByName("Street Address").value
+document.forms[0].elements[9].value=document.getElementsByName("redirect").value
+
+
+
+//document.getElementsByName("return").value=document.getElementsByName("redirect").value
+//document.getElementsByName("address1").value=document.getElementsByName("Street Address").value
+
+//alert(document.getElementsByName("item_name").value)
+//alert(document.getElementsByName("amount").value)
+//alert(document.forms[0].elements[10].name)
+//document.forms[0].action="https://www.paypal.com/cgi-bin/webscr"
+//document.forms[0].target="_top"
+
+//document.forms[0].submit()
+}
+}
+ 
+ 
+function NumToCurrency(number){
+dollar=parseInt(Math.round(Number(number)*Math.pow(10,2))/Math.pow(10,2).toFixed(2))
+cents=Math.round(Number(number)*Math.pow(10,2))/Math.pow(10,2).toFixed(2)-Number(dollar)
+dollar=dollar.toString()
+cents=cents.toFixed(2).toString()
+full=parseInt(dollar.length/3)
+extra=dollar.length%3
+if (extra > 0)
+{
+  totalnum=dollar.substring(0,extra)
+}
+else
+{
+  totalnum=''
+}
+if (full > 1 && extra ==0)
+{
+totalnum=dollar.substring(0,3)
+for (i=1; i<full; i ++)
+  {
+  totalnum=totalnum+','+dollar.substring((extra+(i)*3),extra+(i+1)*3)
+  }
+}
+else if (full > 1 || extra >0)
+{
+  for (i=0; i<full; i ++)
+  {
+  totalnum=totalnum+','+dollar.substring((extra+(i)*3),extra+(i+1)*3)
+  }
+}
+else
+  {
+  totalnum=dollar
+}
+return totalnum+cents.substr(1)
+}
+ 
+//-->
+</script>
+</head>
+ 
+<body>
+<div name="lostframe" id="lostframe" style="visibility:hidden; position:absolute; width:0px; height:0px"><iframe name="nonsubmit" id="nonsubmit" width=0px height=0px></iframe> </div>
+
+
+<FORM ACTION="https://www.officetracker.com/cgi-bin/test.cgi" METHOD=POST enctype="x-www-form-encoded" onSubmit="MM_validateForm('realname','','R','Company','','R','Phone','','R','email','','RisEmail','Street Address','','R','City','','R','Zip','','R');return document.MM_returnValue">
+<INPUT TYPE=hidden NAME=recipient VALUE="sales@officetracker.com">
+<INPUT TYPE=hidden id="subject" NAME=subject VALUE="On-Line Order Form">
+<input type=hidden name="redirect" value="https://www.officetracker.com/html/thankyoufororder.html">
+<input type=hidden name="totalorderform" id="totalorderform" value="Total On-line Order">
+<!--
+//<input type="hidden" name="business" value="MTB3U9ZCD8AR4">
+//<input type="hidden" name="cmd" value="_xclick">
+//<input type="hidden" name="currency_code" value="USD">
+-->
+<input type="hidden" name="amount" value="">
+<input type="hidden" name="item_name" value="">
+<input type="hidden" name="return" value="" />
+<input type="hidden" name="address1" value="" />
+
+<table width="778" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+  <tr>
+    <td width="337" height="79" valign="top" class="heading"><p><a href="http://www.officetracker.com"><img src="otnewlogo.gif" alt="Office Tracker Scheduling Software" border="0" class="table3"></a></p></td>
+    <td valign="bottom"><div align="right"><a href="mailto:info@officetracker.com"><img src="infophone.jpg" width="273" height="28" border="0" align="top" /></a></div></td>
+  </tr>
+</table>
+<div align="center">
+<img src="topbar.jpg" width="776" height="27" border="0" usemap="#MapMap2">
+  <table width="778" height="1420"  border="0" cellpadding="2" cellspacing="0" class="milumleftnav">
+    <tr valign="top">
+      <td width="25%" bgcolor="#FFFFFF"><p align="left"><span class="milummainsmall"></span></p>
+        <p align="left"><span class="milummainsmall"><br><br> 
+            <span class="heading"><img src="secure.png" width="50" height="38" align="right"></span>We use SSL Secure Sockets Layer to ensure the security and privacy of your online order.</span></p>
+        <P align="left" class="milummainsmall">Prices are U.S. Dollars and subject to change without </br> notice. </P>
+        <p align="left" class="milummainsmall"></p></td>
+      <td width="584px" class="style11"><div style="position:relative; width:584px; height:586px;"><div id="numberuserstotal" style=" position:relative;width:584px; height:586px; z-index:1; visibility: visible;">
+        <table width="579" border="0" align="center" cellpadding="3" cellspacing="3" class="milumleftnav" style="font-weight:normal; text-align:left ">
+          <tr>
+            <td height="60" colspan="2" valign="top" style="text-align:left "><span class="heading">
+            <div id="Header" class="heading"><br>     
+            </div>
+            </span>
+              <div class="specialoffer" id="subHeader">&nbsp;</div> 
+              <div id="holly" style="position:absolute; width:50px; height:53px; left:534px; top:2px "></div>
+        </td>
+          </tr>
+          <tr>
+            <td colspan="2" bgcolor="#E5E5E5" class="style11">1. Enter the number of users and options you want: </td>
+          </tr>
+          <tr>
+            <td width="372"> <div align="left" style="padding:5px 0;">Enter # of Full Users:
+             <div id="NumberOfUsersdiv" style="position:absolute; left:191px; top:95px;">     <input name="NumberOfUsers" id="NumberOfUsers" type="text" class="style11"  size="6" onChange="UpdateForm()" style="text-align:right">
+                  <a href="javascript:UpdateForm()">Update</a></div></div></td>
+            <td width="186"><div id="PricePerUser" style="visibility:hidden " align="right">Price/user: $0.00</div>
+
+</td>
+          </tr>
+      <tr>
+        <td valign="bottom" colspan="2"><div align="left">Enter  # of View-Only Users: 
+             <div id="NumberofViewOnlydiv" style="position:absolute; left:191px; top:125px;">      
+ <input name="NumberOfViewOnly" id="NumberOfViewOnly" type="text" size="6" class="style11"  onChange="UpdateForm()" style="text-align:right">
+                  <a href="javascript:UpdateForm()">Update </a>&nbsp;<span id="ViewOnlyWarn" style="color:#FF0000; ">&nbsp;</span></div>
+        </div>  
+          <div id="ViewOnlyTotal" style="visibility:hidden; color:#FF0000" align="right">&nbsp;</div></td>
+        </tr>
+      <tr>
+      <td valign="bottom"><span class="milumleftnav">Select License Type such as "Cloud Hosted":
+     <div id="licensediv" style="position:absolute; top:170px; left:300px;">     <select name="license" id="license" class="style11" onChange="UpdateForm()" style="text-align:right ">
+      <option id="monthly" value="monthly">Cloud Hosted</option>
+      <option id="1year" value="1year" selected="true">1 Year License</option>
+      <option id="2year" value="2year">2 Year License</option>
+      <option id="3year" value="3year">3 Year License</option>
+<!--      <option id="version" value="version">5 Year License</option> -->
+      </select> </div>
+      </span>
+                  
+                  </br>
+                  <div class="milumleftnav" style="font-size:12px; margin-top: 4px; position:absolute; width:600px ">
+                  Annual Licenses include web based client and desktop client options
+                  </div>
+      </td>
+      <td>&nbsp; 
+      </td>
+      </tr>
+<tr><td height="12px" >&nbsp;</td></tr>
+          <tr>
+            <td height="43" colspan="2" valign="bottom"><span class="milumleftnav"> <span style="font-size:12px">Other Options:</span></span>
+            </td>
+          </tr><tr><td valign="top"><div align="left" style="vertical-align:top ">
+                  <div style="visibility:hidden; position:absolute; height:0px; width:0px">
+                  <input type="checkbox" id="BBSync" name="BBSync" value="Add Blackberry Sync" onClick="UpdateForm()"> Blackberry Sync <img src="moreinfo.gif" width="14" height="14" onMouseOver="HideShowInfo('AddOnInfo', 'blackberry')" onMouseOut="HideShowInfo('AddOnInfo',null,'close')"> 
+        <input type="checkbox" id="Contacts" name="Contacts" value="Add Contacts" onClick="UpdateForm()">
+          Contact Manager<font color="#000000" face="Arial, Helvetica, sans-serif">&nbsp; </font></div>
+     
+<span style="font-size:12px"> <input type="checkbox" class="style11" id="WebViewer" name="WebViewer" value="Yes" onClick="UpdateForm()">
+       Public Calendar add on for your web site<img src="moreinfo.gif" width="14" height="14"/><div id="WebViewerdiv" style="position:absolute; top: 270px; left: 256px; width:18px; height:18px; z-index:1000;"  onMouseOver="HideShowInfo('AddOnInfo','webviewer')" onMouseOut="HideShowInfo('AddOnInfo',null,'close')"></div><br/>
+ <input type="checkbox" class="style11" id="SSW" name="SSW" value="Yes" onClick="UpdateForm()"> Self Service Scheduling add on for your web site<img src="moreinfo.gif" width="14" height="14" /><div id="SSWdiv" style="position:absolute; top: 290px; left: 296px; width:18px; height:18px; z-index:1000;"  onMouseOver="HideShowInfo('AddOnInfo','selfscheduling')" onMouseOut="HideShowInfo('AddOnInfo',null,'close')"></div>  </span>
+          <span style="visibility:hidden"><input type="checkbox" id="OTPalm" name="OTPalm" value="Add OTPalm" onClick="UpdateForm()">
+          OTPalm</span>
+    </div>
+<div style="visibility:hidden; height:0;width:0;position:absolute">
+<table>
+ 
+ <tr>
+            <td >
+                        <input type="checkbox" checked="true" id="WebClient" name="WebClient" value="Add Web Client" onClick="UpdateForm()">
+          Web Client <font color="#000000" face="Arial, Helvetica, sans-serif"> </font>
+                  </td><td><div id="WebViewerTotal" align="right">&nbsp;</div></td>
+          </tr>
+ 
+ <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+ 
+ 
+</table>
+</div>
+</td>
+      <td><div id="AddOnInfo" style="position:absolute; left:225px; top:250px; background-color:#E1E1E1; border:1px #1F0C65 solid; color:#1F0C65; width:348px; height:80px; padding-left:5px; padding-right:5px; padding-top:3px; visibility: hidden;"><span id="AddOnInfoText">&nbsp;</span>
+    <div align="right" style="vertical-align:bottom; position:absolute; top:105px; left:310px;   color:#FF0000 " </div>
+    </div>
+    <div id="AddOnsPerUser" style="visibility:hidden " align="right">&nbsp;</div></td>
+          </tr>
+ 
+      <tr id="AddOnRow" style="visibility:hidden;">
+            <td width="372">Enter # of Add-on Users:
+                <input name="AddUsers" class="style11" id="AddUsers" type="text" size="6" onChange="UpdateForm()" style="text-align:right">
+                
+            <td width="186"><div id="AddUsersTotal" style="visibility:hidden;" align="right">&nbsp;</div></td>
+          </tr>
+ <tr>
+            <td height="26">&nbsp;</td>
+            <td><div id="PromoDiscount" align="right" style="color:#FF6600">&nbsp;</div></td>
+          </tr>
+     <tr>
+            <td><div align="left"><div id="SpecialDiscount" style="color:#FF0000" align="left">&nbsp;</div><div align="right">
+ <span style="font-size:12px">enter promo code: </span>                <input name="Promo" class="style11" type="text" id="Promo" size="6" onChange="UpdateForm()" align="right"></div>
+                <div style="visibility:hidden; position:absolute; height:0; width:0 ">
+        <table style="visibility:hidden ">
+        <tr><td id="StandardOption" style="font-weight:bold ">  <input name="Standard" id="Standard" class="style11" type="checkbox" value="Standard" onClick="UpdateForm()">
+                     Version License*
+                    </td><td id="HostedOption" style="font-weight:bold ">
+          <input name="Hosted" id="Hosted" type="checkbox" class="style11" value="Hosted" onClick="UpdateForm()">
+                     Cloud Hosted
+                    </td></tr>
+        </table>
+        <div align="right" id="SubTotal" class="milumleftnavbold">Sub-Total: $0.00</div>
+        </div>
+              </div></td>
+
+            <!-- <td>&nbsp;</td> -->
+
+
+            <td class="milumleftnavbold"><div id="BundleDiscount" align="right" style="color:#FF0000 ">&nbsp;</div><br/>
+      <div align="right" id="TotalOrder" class="style11">Total: $0.00</div>
+      </td>
+          </tr>
+          <tr>
+            <td colspan="2" bgcolor="#E5E5E5"><span class="style11">2. Choose a Phone Support Plan: <br>
+            </span>
+              <strong>Save $100 when you purchase a Yearly  Support Plan with your scheduling package </strong></td>
+          </tr>
+          <tr>
+            <td height="35" colspan="2"><p align="center">Online Support Included
+with new package purchases </p>
+              <p align="center">
+    <input name="Support" id="Support" class="style11"  type="radio" value="No Phone Support" onClick="UpdateForm()" checked="true">
+    Online Support Only (Free)
+    <input name="Support" id="Support" type="radio"  class="style11"  value="90 Day Support" onClick="UpdateForm()">
+    3 months-$495
+    <input name="Support" id="Support" type="radio" class="style11"  value="6 Month Support" onClick="UpdateForm()">
+    6 months-$695
+    <input name="Support" id="Support" type="radio"  class="style11" value="1 YR Support" onClick="UpdateForm()">
+    1 Year-$895</p></td>
+          </tr>
+      <tr>
+            <td height="24"><div align="right"> </div></td>
+            <td><div id="SupportTotal" align="right">Support: $0.00</div></td>
+          </tr>
+          <tr>
+            <td colspan="2" bgcolor="#E5E5E5" class="style11">3. Receiving your Software.</td>
+          </tr>
+          
+          <tr>
+            <td height="24" colspan="2" class="milummainsmall">We will contact you via e-mail with  instructions. Be sure to enter your e-mail address correctly in the next step once you press the "Continue" button.
+</td>
+          </tr>
+          <tr>
+            <td>
+                <input type="checkbox" name="SalesTax"  class="style11" id="SalesTax" onClick="UpdateForm()" value="Taxxed">
+        Check this box if you are in Texas and are not tax exempt
+ <br>
+        ( Adds 8.25% Sales Tax&nbsp;)</td>
+            <td><div align="right" id="Tax">&nbsp; </div></td>
+          </tr>
+          
+          
+          <tr>
+            <td height="37">&nbsp;</td>
+            <td><div align="right"><strong>Click to continue:
+                    </strong>
+                <input type="button" name="Continue" class="style11"  value="Continue &gt;&gt;" onClick="HideShow('order');UpdateForm()">
+            </div></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+        </table>
+      </div>
+<div style="visibility:hidden; position:absolute; height:0px; width:0px">  <INPUT TYPE=text class="style11"  NAME=realname id="realname" VALUE="" SIZE=50> </div>
+
+          <div id="shippingpayment" style="position:absolute; width:584px; height:586px; top:0; left:0; background-color: #FFFFFF; border: 1px none #000000; z-index:1; visibility:hidden;">
+ <TABLE BORDER=0 CELLPADDING=2 HEIGHT=578 width="579" class="milumleftnav" style="text-align:left; font-weight:normal ">
+    <TR bgcolor="#FFFFFF">
+      <td height="31" colspan="3" bgcolor="#FFFFFF" class="milumleftnav"><div align="left" id="TotalOrder2" class="milumleftnav">Your Office Tracker Total: $0.00 <a href="javascript:HideShow('userinfo')">Edit</a></div>      </td>
+    </TR>
+    <TR bgcolor="#E5E5E5">
+      <TD HEIGHT=26 colspan="3" class="style11">Enter Your Shipping and Payment Information:</TD>
+    </TR>
+    <TR bgcolor="#FFFFFF">
+      <TD WIDTH="118" HEIGHT=11 bgcolor="#FFFFFF"><P>First Name:</P></TD>
+      <TD width="163" bgcolor="#FFFFFF">&nbsp;&nbsp;<INPUT TYPE=text  class="style11"  NAME=first_name id="first_name" VALUE="" SIZE=15>
+</TD>
+<TD WIDTH="278"  bgcolor="#FFFFFF"><P>Last Name:
+       <INPUT TYPE=text NAME=last_name class="style11"  id="last_name" VALUE="" SIZE=17>
+      </P>
+
+</TD>
+    </TR>
+    <TR bgcolor="#FFFFFF">
+      <TD WIDTH="118" HEIGHT=11 bgcolor="#FFFFFF"><P>Company or Org.:</P></TD>
+      <TD HEIGHT=11 COLSPAN=2 bgcolor="#FFFFFF"><P>&nbsp;
+              <INPUT TYPE=text NAME=Company class="style11"  VALUE="" SIZE=50>
+      </P></TD>
+    </TR>
+    <TR bgcolor="#FFFFFF">
+      <TD WIDTH="118" HEIGHT=13 bgcolor="#FFFFFF"><P>Phone Number:</P></TD>
+      <TD WIDTH=163 BGCOLOR="#FFFFFF"><P>&nbsp;&nbsp;<INPUT TYPE=text NAME=Phone class="style11"  VALUE="" SIZE=15>
+      </P></TD>
+      <TD WIDTH=278 HEIGHT=13 BGCOLOR="#FFFFFF" style="visibility:hidden"><P>Fax:<INPUT TYPE=text NAME=Fax class="style11"  VALUE="" SIZE=19>
+      </P></TD>
+    </TR>
+    <TR bgcolor="#FFFFFF">
+      <TD WIDTH="118" HEIGHT=13 bgcolor="#FFFFFF"><P>e-mail:</P></TD>
+      <TD HEIGHT=13 COLSPAN=2 bgcolor="#FFFFFF"><P>&nbsp;
+              <INPUT TYPE=text NAME="email" class="style11"  VALUE="" SIZE=50>
+      </P></TD>
+    </TR>
+    <TR bgcolor="#FFFFFF">
+      <TD WIDTH="118" HEIGHT=7 bgcolor="#FFFFFF"><P>Street Address:</P></TD>
+      <TD HEIGHT=7 COLSPAN=2 bgcolor="#FFFFFF"><P>&nbsp;
+              <INPUT TYPE=text NAME="Street Address" class="style11"  VALUE="" SIZE=50>
+      </P></TD>
+    </TR>
+    <TR bgcolor="#FFFFFF">
+      <TD WIDTH="118" HEIGHT=21 bgcolor="#FFFFFF"><P>City:</P></TD>
+      <TD HEIGHT=21 COLSPAN=2 bgcolor="#FFFFFF"><P>&nbsp;
+              <INPUT TYPE=text NAME=city class="style11"  VALUE="" SIZE=50>
+      </P></TD>
+    </TR>
+    <TR bgcolor="#FFFFFF">
+      <TD WIDTH="118" HEIGHT=31 bgcolor="#FFFFFF"><P>State or Province:</P></TD>
+      <TD WIDTH=163 HEIGHT=31 bgcolor="#FFFFFF"><P>&nbsp;
+              <SELECT NAME=state class="style11">
+                <OPTION>Select a State 
+                <OPTION VALUE=AL>AL-Alabama 
+                <OPTION VALUE=AK>AK-Alaska 
+                <OPTION VALUE=AZ>AZ-Arizona 
+                <OPTION VALUE=AR>AR-Arkansas 
+                <OPTION VALUE=CA>CA-California 
+                <OPTION VALUE=CO>CO-Colorado 
+                <OPTION VALUE=CT>CT-Connecticut 
+                <OPTION VALUE=DC>DC-Washington D.C. 
+                <OPTION VALUE=DE>DE-Delaware 
+                <OPTION VALUE=FL>FL-Florida 
+                <OPTION VALUE=GA>GA-Georgia 
+                <OPTION VALUE=HI>HI-Hawaii 
+                <OPTION VALUE=ID>ID-Idaho 
+                <OPTION VALUE=IL>IL-Illinois 
+                <OPTION VALUE=IN>IN-Indiana 
+                <OPTION VALUE=IA>IA-Iowa 
+                <OPTION VALUE=KS>KS-Kansas 
+                <OPTION VALUE=KY>KY-Kentucky 
+                <OPTION VALUE=LA>LA-Louisiana 
+                <OPTION VALUE=ME>ME-Maine 
+                <OPTION VALUE=MD>MD-Maryland 
+                <OPTION VALUE=MA>MA-Massachusetts 
+                <OPTION VALUE=MI>MI-Michigan 
+                <OPTION VALUE=MN>MN-Minnesota 
+                <OPTION VALUE=MS>MS-Mississippi 
+                <OPTION VALUE=MO>MO-Missouri 
+                <OPTION VALUE=MT>MT-Montana 
+                <OPTION VALUE=NE>NE-Nebraska 
+                <OPTION VALUE=NV>NV-Nevada 
+                <OPTION VALUE=NH>NH-New Hampshire 
+                <OPTION VALUE=NJ>NJ-New Jersey 
+                <OPTION VALUE=NM>NM-New Mexico 
+                <OPTION VALUE=NY>NY-New York 
+                <OPTION VALUE=NC>NC-North Carolina 
+                <OPTION VALUE=ND>ND-North Dakota 
+                <OPTION VALUE=OH>OH-Ohio 
+                <OPTION VALUE=OK>OK-Oklahoma 
+                <OPTION VALUE=OR>OR-Oregon 
+                <OPTION VALUE=PA>PA-Pennsylvania 
+                <OPTION VALUE=PR>PR-Puerto Rico 
+                <OPTION VALUE=RI>RI-Rhode Island 
+                <OPTION VALUE=SC>SC-South Carolina 
+                <OPTION VALUE=SD>SD-South Dakota 
+                <OPTION VALUE=TN>TN-Tennessee 
+                <OPTION VALUE=TX>TX-Texas 
+                <OPTION VALUE=UT>UT-Utah 
+                <OPTION VALUE=VT>VT-Vermont 
+                <OPTION VALUE=VA>VA-Virginia 
+                <OPTION VALUE=WA>WA-Washington 
+                <OPTION VALUE=WV>WV-West Virginia 
+                <OPTION VALUE=WI>WI-Wisconsin 
+                <OPTION VALUE=WY>WY-Wyoming 
+          </SELECT>
+      </P></TD>
+      <TD BGCOLOR="#FFFFFF"><P>Zip Code: &nbsp;
+              <INPUT TYPE=text NAME=zip class="style11"  VALUE="" SIZE=15>
+      </P></TD>
+    </TR>
+    <TR bgcolor="#FFFFFF">
+      <TD WIDTH="118" HEIGHT=1 bgcolor="#FFFFFF"><P>Country:</P></TD>
+      <TD HEIGHT=1 COLSPAN=2 bgcolor="#FFFFFF"><P>&nbsp;
+              <SELECT NAME=country class="style11">
+                <OPTION VALUE="/" SELECTED>Choose your country 
+                <OPTION VALUE="/us/">U.S.A. 
+                <OPTION VALUE="/al/">Albania 
+                <OPTION VALUE="/dz/">Algeria 
+                <OPTION VALUE="/as/">American Samoa 
+                <OPTION VALUE="/ad/">Andorra 
+                <OPTION VALUE="/ao/">Angola 
+                <OPTION VALUE="/ai/">Anguilla 
+                <OPTION VALUE="/ag/">Antigua 
+                <OPTION VALUE="/ar/">Argentina 
+                <OPTION VALUE="/am/">Armenia 
+                <OPTION VALUE="/aw/">Aruba 
+                <OPTION VALUE="/au/">Australia 
+                <OPTION VALUE="/at/">Austria 
+                <OPTION VALUE="/az/">Azerbaijan 
+                <OPTION VALUE="/bs/">Bahamas 
+                <OPTION VALUE="/bh/">Bahrain 
+                <OPTION VALUE="/bd/">Bangladesh 
+                <OPTION VALUE="/bb/">Barbados 
+                <OPTION VALUE="/ag/">Barbuda 
+                <OPTION VALUE="/by/">Belarus 
+                <OPTION VALUE="/be/">Belgium 
+                <OPTION VALUE="/bz/">Belize 
+                <OPTION VALUE="/bj/">Benin 
+                <OPTION VALUE="/bm/">Bermuda 
+                <OPTION VALUE="/bt/">Bhutan 
+                <OPTION VALUE="/bo/">Bolivia 
+                <OPTION VALUE="/an/">Bonaire 
+                <OPTION VALUE="/bw/">Botswana 
+                <OPTION VALUE="/br/">Brazil 
+                <OPTION VALUE="/vg/">British Virgin Islands 
+                <OPTION VALUE="/bn/">Brunei 
+                <OPTION VALUE="/bg/">Bulgaria 
+                <OPTION VALUE="/bf/">Burkina Faso 
+                <OPTION VALUE="/bi/">Burundi 
+                <OPTION VALUE="/kh/">Cambodia 
+                <OPTION VALUE="/cm/">Cameroon 
+                <OPTION VALUE="/ca/ca_english/">Canada - English 
+                <OPTION VALUE="/ca/ca_french/">Canada - Francais 
+                <OPTION VALUE="/cv/">Cape Verde 
+                <OPTION VALUE="/ky/">Cayman Islands 
+                <OPTION VALUE="/cf/">Central African Republic 
+                <OPTION VALUE="/td/">Chad 
+                <OPTION VALUE="/cs/">Channel Islands 
+                <OPTION VALUE="/cl/">Chile 
+                <OPTION VALUE="/cn/">China 
+                <OPTION VALUE="/co/">Colombia 
+                <OPTION VALUE="/cg/">Congo-Brazzaville 
+                <OPTION VALUE="/zr/">Congo-Kinshasa 
+                <OPTION VALUE="/ck/">Cook Islands 
+                <OPTION VALUE="/cr/">Costa Rica 
+                <OPTION VALUE="/hr/">Croatia 
+                <OPTION VALUE="/an/">Curacao 
+                <OPTION VALUE="/cy/">Cyprus 
+                <OPTION VALUE="/cz/">Czech Republic 
+                <OPTION VALUE="/dk/">Denmark 
+                <OPTION VALUE="/dj/">Djibouti 
+                <OPTION VALUE="/dm/">Dominica 
+                <OPTION VALUE="/do/">Dominican Republic 
+                <OPTION VALUE="/ec/">Ecuador 
+                <OPTION VALUE="/eg/">Egypt 
+                <OPTION VALUE="/sv/">El Salvador 
+                <OPTION VALUE="/gq/">Equatorial Guinea 
+                <OPTION VALUE="/er/">Eritrea 
+                <OPTION VALUE="/ee/">Estonia 
+                <OPTION VALUE="/et/">Ethiopia 
+                <OPTION VALUE="/fo/">Faroe Islands 
+                <OPTION VALUE="/fj/">Fiji 
+                <OPTION VALUE="/fi/">Finland 
+                <OPTION VALUE="/fr/">France 
+                <OPTION VALUE="/gf/">French Guiana 
+                <OPTION VALUE="/pf/">French Polynesia 
+                <OPTION VALUE="/ga/">Gabon 
+                <OPTION VALUE="/gm/">Gambia 
+                <OPTION VALUE="/ge/">Georgia 
+                <OPTION VALUE="/de/">Germany 
+                <OPTION VALUE="/gh/">Ghana 
+                <OPTION VALUE="/gi/">Gibraltar 
+                <OPTION VALUE="/gr/">Greece 
+                <OPTION VALUE="/gl/">Greenland 
+                <OPTION VALUE="/gd/">Grenada 
+                <OPTION VALUE="/gp/">Guadeloupe 
+                <OPTION VALUE="/gu/">Guam 
+                <OPTION VALUE="/gt/">Guatemala 
+                <OPTION VALUE="/gw/">Guinea Bissau 
+                <OPTION VALUE="/gn/">Guinea 
+                <OPTION VALUE="/gy/">Guyana 
+                <OPTION VALUE="/ht/">Haiti 
+                <OPTION VALUE="/hn/">Honduras 
+                <OPTION VALUE="/hk/">Hong Kong 
+                <OPTION VALUE="/hu/">Hungary 
+                <OPTION VALUE="/is/">Iceland 
+                <OPTION VALUE="/in/">India 
+                <OPTION VALUE="/id/">Indonesia 
+                <OPTION VALUE="/ir/">Iran 
+                <OPTION VALUE="/iq/">Iraq 
+                <OPTION VALUE="/ie/">Ireland 
+                <OPTION VALUE="/il/">Israel 
+                <OPTION VALUE="/it/">Italy 
+                <OPTION VALUE="/ci/">Ivory Coast 
+                <OPTION VALUE="/jm/">Jamaica 
+                <OPTION VALUE="/jp/">Japan 
+                <OPTION VALUE="/jo/">Jordan 
+                <OPTION VALUE="/kz/">Kazakhstan 
+                <OPTION VALUE="/ke/">Kenya 
+                <OPTION VALUE="/kw/">Kuwait 
+                <OPTION VALUE="/kg/">Kyrgyzstan 
+                <OPTION VALUE="/la/">Laos 
+                <OPTION VALUE="/lv/">Latvia 
+                <OPTION VALUE="/lb/">Lebanon 
+                <OPTION VALUE="/ls/">Lesotho 
+                <OPTION VALUE="/lr/">Liberia 
+                <OPTION VALUE="/ly/">Libya 
+                <OPTION VALUE="/li/">Liechtenstein 
+                <OPTION VALUE="/lt/">Lithuania 
+                <OPTION VALUE="/lu/">Luxembourg 
+                <OPTION VALUE="/mo/">Macau 
+                <OPTION VALUE="/mk/">Macedonia 
+                <OPTION VALUE="/mg/">Madagascar 
+                <OPTION VALUE="/mw/">Malawi 
+                <OPTION VALUE="/my/">Malaysia 
+                <OPTION VALUE="/ml/">Mali 
+                <OPTION VALUE="/mt/">Malta 
+                <OPTION VALUE="/mh/">Marshall Islands 
+                <OPTION VALUE="/mq/">Martinique 
+                <OPTION VALUE="/mr/">Mauritania 
+                <OPTION VALUE="/mu/">Mauritius 
+                <OPTION VALUE="/mx/">Mexico 
+                <OPTION VALUE="/fm/">Micronesia 
+                <OPTION VALUE="/md/">Moldova 
+                <OPTION VALUE="/mc/">Monaco 
+                <OPTION VALUE="/mn/">Mongolia 
+                <OPTION VALUE="/ms/">Montserrat 
+                <OPTION VALUE="/ma/">Morocco 
+                <OPTION VALUE="/mz/">Mozambique 
+                <OPTION VALUE="/mm/">Myanmar/Burma 
+                <OPTION VALUE="/na/">Namibia 
+                <OPTION VALUE="/np/">Nepal 
+                <OPTION VALUE="/an/">Netherlands Antilles 
+                <OPTION VALUE="/nl/">Netherlands 
+                <OPTION VALUE="/nc/">New Caledonia 
+                <OPTION VALUE="/nz/">New Zealand 
+                <OPTION VALUE="/ni/">Nicaragua 
+                <OPTION VALUE="/ne/">Niger 
+                <OPTION VALUE="/ng/">Nigeria 
+                <OPTION VALUE="/no/">Norway 
+                <OPTION VALUE="/om/">Oman 
+                <OPTION VALUE="/pk/">Pakistan 
+                <OPTION VALUE="/pw/">Palau 
+                <OPTION VALUE="/pa/">Panama 
+                <OPTION VALUE="/pg/">Papua New Guinea 
+                <OPTION VALUE="/py/">Paraguay 
+                <OPTION VALUE="/pe/">Peru 
+                <OPTION VALUE="/ph/">Philippines 
+                <OPTION VALUE="/pl/">Poland 
+                <OPTION VALUE="/pt/">Portugal 
+                <OPTION VALUE="/pr/">Puerto Rico 
+                <OPTION VALUE="/qa/">Qatar 
+                <OPTION VALUE="/re/">Reunion 
+                <OPTION VALUE="/ro/">Romania 
+                <OPTION VALUE="/ru/">Russia 
+                <OPTION VALUE="/rw/">Rwanda 
+                <OPTION VALUE="/an/">Saba 
+                <OPTION VALUE="/mp/">Saipan 
+                <OPTION VALUE="/sm/">San Marino 
+                <OPTION VALUE="/sa/">Saudi Arabia 
+                <OPTION VALUE="/sn/">Senegal 
+                <OPTION VALUE="/sc/">Seychelles 
+                <OPTION VALUE="/sl/">Sierra Leone 
+                <OPTION VALUE="/sg/">Singapore 
+                <OPTION VALUE="/sk/">Slovak Republic 
+                <OPTION VALUE="/si/">Slovenia 
+                <OPTION VALUE="/so/">Somalia 
+                <OPTION VALUE="/za/">South Africa 
+                <OPTION VALUE="/kr/">South Korea 
+                <OPTION VALUE="/es/">Spain 
+                <OPTION VALUE="/lk/">Sri Lanka 
+                <OPTION VALUE="/gp_english/">St. Barthelemy 
+                <OPTION VALUE="/vi/">St. Croix 
+                <OPTION VALUE="/an/">St. Eustatius 
+                <OPTION VALUE="/kn/">St. Kitts and Nevis 
+                <OPTION VALUE="/lc/">St. Lucia 
+                <OPTION VALUE="/an/">St. Maarten/St. Martin 
+                <OPTION VALUE="/vi/">St. Thomas 
+                <OPTION VALUE="/vc/">St. Vincent 
+                <OPTION VALUE="/sd/">Sudan 
+                <OPTION VALUE="/sr/">Suriname 
+                <OPTION VALUE="/sz/">Swaziland 
+                <OPTION VALUE="/se/">Sweden 
+                <OPTION VALUE="/ch/">Switzerland 
+                <OPTION VALUE="/sy/">Syria 
+                <OPTION VALUE="/tw/">Taiwan 
+                <OPTION VALUE="/tz/">Tanzania 
+                <OPTION VALUE="/th/">Thailand 
+                <OPTION VALUE="/tg/">Togo 
+                <OPTION VALUE="/vg/">Tortola 
+                <OPTION VALUE="/tt/">Trinidad and Tobago 
+                <OPTION VALUE="/tn/">Tunisia 
+                <OPTION VALUE="/tr/">Turkey 
+ 
+                <OPTION VALUE="/tm/">Turkmenistan 
+                <OPTION VALUE="/tc/">Turks and Caicos Islands 
+                <OPTION VALUE="/vi/">U.S. Virgin Islands 
+                <OPTION VALUE="/ug/">Uganda 
+                <OPTION VALUE="/ua/">Ukraine 
+                <OPTION VALUE="/ae/">United Arab Emirates 
+                <OPTION VALUE="/gb/">United Kingdom 
+                <OPTION VALUE="/uy/">Uruguay 
+                <OPTION VALUE="/us/">U.S.A. 
+                <OPTION VALUE="/uz/">Uzbekistan 
+                <OPTION VALUE="/vu/">Vanuatu 
+                <OPTION VALUE="/va/">Vatican City 
+                <OPTION VALUE="/ve/">Venezuela 
+                <OPTION VALUE="/vn/">Vietnam 
+                <OPTION VALUE="/wf/">Wallis &amp; Futuna 
+                <OPTION VALUE="/ye/">Yemen 
+                <OPTION VALUE="/zm/">Zambia 
+                <OPTION VALUE="/zw/">Zimbabwe 
+          </SELECT>
+      </P></TD>
+    </TR>
+    
+    <TR bgcolor="#FFFFFF">
+      <TD HEIGHT=2 colspan="3" style="visibility:hidden"><div align="left">
+          <input type=checkbox name="PO" id="PO" class="style11"  value=yes>
+          Purchase Order (fax/mail copy) PO #: 
+          <input type=text name="PO#" id="PO#"  class="style11" value="" size=33>
+      </div></TD>
+    </TR>
+    <TR bgcolor="#FFFFFF" id="Choose_Upgrade" name="Choose_Upgrade" style="visibility:hidden">
+      <TD HEIGHT=10 colspan="3"><p>
+          Version you are currently running: 
+          <select name="Current_Version" id="Current_Version" class="style11"  >
+            <option value="None">Current Version</option>
+            <option value="New_Purchase">New Purchase</option>
+            <option value="Version_12">Version 12</option>
+            <option value="Version_11">Version 11</option>
+            <option value="Version_10">Version 10</option>
+            <option value="Version_9">Version 9</option>
+            <option value="Version_8">Version 8</option>
+            <option value="Version_7">Version 7</option>
+            <option value="Unknown">Don't Know</option>
+            <option value="Prior_To_7">Older Version</option>
+
+          </select><br/>
+          Do you want to upgrade want to upgrade to latest version?
+          <select name="Wants_to_upgrade" id="Wants_to_upgrade" class="style11">
+            <option value"No_Answer">Choose</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+      </TD>  
+    </TR>
+    <TR bgcolor="#FFFFFF">
+      <TD HEIGHT=18 colspan="3"><p>
+          Enter Credit Card Information:<br>
+          <select name='CardType' id="CardType" class="style11">
+            <option value="">Choose Card </option>
+            <option value="MasterCard">MasterCard </option>
+            <option value="Visa">VISA </option>
+            <option value="Amex">American Express </option>
+            <option value="Discover">Discover</option>
+          </select>
+          Card #:
+          <input type=text name="card#" id='card#' class="style11" alue=""  size=22>
+&nbsp;exp. date
+          <select  name="exp Month" value="" class="style11"  size=1>
+      <option>01</option>
+      <option>02</option>
+      <option>03</option>
+      <option>04</option>
+      <option>05</option>
+      <option>06</option>
+      <option>07</option>
+      <option>08</option>
+      <option>09</option>
+      <option>10</option>
+      <option>11</option>
+      <option>12</option>
+      </select>
+      <select  name="exp Year" value="" class="style11" size=1>
+     <option>2016</option>
+      <option>2017</option>
+      <option>2018</option>
+      <option>2019</option>
+      <option>2020</option>
+          <option>2021</option>
+          <option>2022</option>
+          <option>2023</option>
+          <option>2024</option>
+          <option>2025</option>
+      </select>
+        </p>
+          <p class="milummainsmall">Agreement<br>
+          By entering my cardholder name and clicking the Submit Order button I verify all information shown above is correct and agree to the amount of charge, including recurring monthly charges if I am purchasing a Monhtly Hosting service. I also agree to all terms including the Purchase Policies Terms and Conditions below. </p>
+          <p class="milummainsmall">Purchase Policies Terms and Conditions<br>
+          All Milum Corporation &quot;Office Tracker&quot; software licenses and services purchases are final and non-refundable. If you have not tried the free trial version, you should do so before making this purchase. All purchases are in U.S. Dollars and any customs fees and sales or excise taxes, including VAT tax are the cardholder's responsibility. </p></TD>
+    </TR>
+    <TR bgcolor="#FFFFFF" >
+      <TD WIDTH="118" HEIGHT=40 bgcolor="#FFFFFF">First Name: </TD>
+      <TD width="163" bgcolor="#FFFFFF">&nbsp;&nbsp;<INPUT TYPE=text NAME=cardfirstname class="style11"  id="cardfirstname" VALUE="" SIZE=15>
+      </TD>
+      <TD WIDTH="278"  bgcolor="#FFFFFF"><P>Last Name:
+      <INPUT TYPE=text NAME=cardlastname id="cardlastname" class="style11"  VALUE="" SIZE=17>
+      </P>
+
+      <div style="position:absolute; height:0px; width:0px; visibility:hidden"><input type=text class="style11" name='cardholder' id='cardholder' value="" size=15></div>
+      </TD>
+    </TR>
+    <TR bgcolor="#E5E5E5">
+      <TD HEIGHT=23 colspan="3" class="style11"><p>5. Click the Submit Order button just once to complete your order.<br>
+      </p></TD>
+    </TR>
+    <TR valign="top" bgcolor="#FFFFFF">
+      <TD HEIGHT=56 colspan="3"><p align="center"><b> <br>
+          </b>A confirmation page will display. We will contact you via e-mail or phone shortly.</span><br>
+          <b><br>
+<input type=submit class="style11"  name=name value="Submit Order">
+          </b></font><br>
+          <br>
+      </p></TD>
+    </TR>
+  </TABLE>
+</div><div id="supportonly" style="position:absolute; top:66px; left:0; width:584px; height:578px; background-color: #FFFFFF; border: 1px none #000000; z-index:1; visibility: hidden;">
+      <table width="579" border="0" align="center" cellpadding="3" cellspacing="3" class="milumleftnav" style="font-weight:normal; text-align:left ">
+          <tr>
+            <td colspan="2" bgcolor="#E5E5E5" class="style11">Choose your Support Plan:</td>
+          </tr>
+    <tr>
+            <td height="35" colspan="2">
+              <p align="left">
+        
+      
+<br/>    <input name="Support" class="style11"  id="Support" type="radio" value="90 Day Support" onClick="UpdateForm()">
+    <span style="font-weight:bold ">Basic Support Plan - $495/ 90 days</span>
+May be limited to four support telephone calls per month. Online questions answered usually within 0-4 hours during work days. One contact name per support plan. If contact changes there may be a transfer fee of $50.
+              <p>
+    <input name="Support" id="Support" class="style11"  type="radio" value="6 Month Support" onClick="UpdateForm()">
+    <span style="font-weight:bold ">    Standard Support Plan- $695/6 months</span>
+May be limited to four support telephone calls per month. Online questions answered usually within 0-4 hours during work days. One contact name per support plan. If contact changes there may be a transfer fee of $50.
+ 
+   </p>
+              <p>
+    <input name="Support" id="Support" class="style11"  type="radio" value="1 YR Support" onClick="UpdateForm()" >
+    <span style="font-weight:bold ">    Premium Support Plan- $895/1 year</span>
+($100 less with new product license) May be limited to four support telephone calls per month. Online questions answered usually within 0-4 hours during work days. One contact name per support plan. If contact changes there may be a transfer fee of $50.
+ 
+  </p>
+            <p>
+  <input name="Support" id="Support" class="style11"  type="radio" value="0 Per Incident" onClick="UpdateForm()">
+  <span style="font-weight:bold ">Per Incident Support Plan- $125/1 hour</span>
+The following per incident service is offered with a limit of 1 hour per incident.
+ 
+<br/><br/><ul><li>This plan is only available for phone support and the cost is $125.00 per incident up to a maximum of 1 hour, charged to your American Express, Visa or Mastercard. </li>
+<li>Each support incident is equal to a single issue or problem that cannot reasonably be broken down into subordinate parts </li></ul>
+</p>
+  <br/>
+  <br/>
+  <br/>
+  *All Support Package phone calls may be limited to 20 mins and 4 per month at Milum's discretion.<br/><br/><br/>
+  Online Support Available at:  <a href="http://www.officetracker.com/forums/">http://www.officetracker.com/forums/</a><br/>
+  Or via email at: <a href="mailto:support@officetracker.com">support@officetracker.com</a><br/>
+  Support Packages, pricing and terms subject to change without notice. 
+  </p></td>
+      </tr>
+    </div></div></td>
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+</div>
+<map name="MapMap2">
+  <area shape="rect" coords="586,1,649,28" href="http://www.officetracker.com/html/Support.html" target="_top">
+  <area shape="rect" coords="518,1,583,27" href="http://www.officetracker.com/html/Order.html" target="_top">
+  <area shape="rect" coords="449,1,518,29" href="http://www.officetracker.com/html/DemoRequest.htm" target="_top">
+  <area shape="rect" coords="371,2,443,25" href="http://www.officetracker.com/html/Products.html" target="_top">
+  <area shape="rect" coords="4,3,28,23" href="http://www.officetracker.com" target="_top">
+  <area shape="rect" coords="32,3,55,24" href="http://www.officetracker.com/html/Contact.html" target="_top">
+  <area shape="rect" coords="650,2,773,26" href="http://www.officetracker.com/html/customercenter.html" target="_top">
+</map>
+<div align="right">
+ 
+</div>
+</form>
+</body>
+<script type="text/javascript"> 
+var Header=' '
+var subHeader='Schedule More, Save More - SAVE up to 20% <br> <div style="font-size:12px; font-weight:normal; margin-top:4px;"> Use promo code: <span class="style16"> savemore </span> to see your savings </div>'
+var whichForm=location.search.substr(1)
+if (whichForm=='edu')
+{
+Header='Office Tracker Non-Profit Org. Order Form'
+//-- to make same as regular SubHeader:   subHeader=subHeader
+subHeader=subHeader
+
+//-- moves input boxes to correct placement - adds 15px
+document.getElementById('NumberOfUsersdiv').style.top="110px"
+document.getElementById('NumberofViewOnlydiv').style.top="140px"
+document.getElementById('licensediv').style.top="185px"
+document.getElementById('WebViewerdiv').style.top="285px"
+document.getElementById('SSWdiv').style.top="305px"
+
+
+}
+if (whichForm=='upgrade')
+{
+Header='Office Tracker Upgrade Order Form'
+//-- to make same as regular SubHeader:   subHeader=subHeader
+subHeader='Upgrade Prices for Version 9 Or Later'
+document.getElementById('AddOnRow').style.visibility='hidden'
+}
+if (whichForm=='support')
+{
+Header='Office Tracker Support Order Form'
+//-- to make same as regular SubHeader:   subHeader=subHeader
+subHeader=''
+document.getElementById('supportonly').style.visibility='visible'
+document.getElementById('supportonly').style.zIndex=1
+}
+else
+{
+document.getElementById('supportonly').style.zIndex=0
+}
+document.getElementById('Header').innerHTML=Header
+document.getElementById('subHeader').innerHTML=subHeader
+</script>
+ 
+</html>
+ 
+
+
+
+
+
+
+
