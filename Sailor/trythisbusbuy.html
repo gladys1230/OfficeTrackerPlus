@@ -15,7 +15,7 @@
     <!-- boxed bg -->
     <link id="bodybg" href="bodybg/bg1.css" rel="stylesheet" type="text/css" />
 <title>Office Tracker Order Form</title>
-<link href="css/milumweb.css" rel="stylesheet" type="text/css">
+<!--<link href="css/milumweb.css" rel="stylesheet" type="text/css">
 <style type="text/css"> 
 body {
   margin-top: 0px;
@@ -24,7 +24,7 @@ body {
   color: #FF6600;
   font-weight: bold;
 }
-</style>
+</style>-->
 <script language="JavaScript" type="text/JavaScript"> 
 <!--
 function MM_reloadPage(init) {  //reloads the window if Nav4 resized
@@ -1258,9 +1258,6 @@ return totalnum+cents.substr(1)
             <div id="Header" class="heading"><br>     
             </div>
             </span>
-            <br/>
-            <br/>
-
               <div class="specialoffer" id="subHeader">&nbsp;</div> 
               <div id="holly" style="position:absolute; width:50px; height:53px; left:534px; top:2ßpx "></div>
         </td>
@@ -1270,24 +1267,23 @@ return totalnum+cents.substr(1)
           </tr>
           <tr>
             <td width="372"> <div align="left" style="padding:5px 0;" style="font-size:12px;">Enter # of Full Users:
-             <div id="NumberOfUsersdiv" style="position:absolute; left:250px; top:125px;">     <input name="NumberOfUsers" id="NumberOfUsers" type="text" class="style11"  size="6" onChange="UpdateForm()" style="text-align:right">
-                  <a href="javascript:UpdateForm()"><u>Update</u></a></div></div></td>
+             <div id="NumberOfUsersdiv" style="position:absolute; left:250px; top:100px;">     <input name="NumberOfUsers" id="NumberOfUsers" type="text" class="style11"  size="6" onChange="UpdateForm()" style="text-align:right">
+                  <a href="javascript:UpdateForm()" style="color: #656565;"><u>Update</u></a></div></div></td>
             <td width="186"><div id="PricePerUser" style="visibility:hidden " align="right">Price/user: $0.00</div>
 
 </td>
           </tr>
       <tr>
         <td valign="bottom" colspan="2"><div align="left">Enter  # of View-Only Users: 
-             <div id="NumberofViewOnlydiv" style="position:absolute; left:250px; top:150px;">      
+             <div id="NumberofViewOnlydiv" style="position:absolute; left:250px; top:130px;">      
  <input name="NumberOfViewOnly" id="NumberOfViewOnly" type="text" size="6" class="style11"  onChange="UpdateForm()" style="text-align:right">
-                  <a href="javascript:UpdateForm()"><u>Update</u> </a>&nbsp;<span id="ViewOnlyWarn" style="color:#FF0000; ">&nbsp;</span></div>
+                  <a href="javascript:UpdateForm()" style="color: #656565;"><u>Update</u> </a>&nbsp;<span id="ViewOnlyWarn" style="color:#FF0000; ">&nbsp;</span></div>
         </div>  
-        <br/>
           <div id="ViewOnlyTotal" style="visibility:hidden; color:#FF0000" align="right">&nbsp;</div></td>
         </tr>
       <tr>
       <td valign="bottom"><span class="milumleftnav">Select License Type such as "Cloud Hosted":
-     <div id="licensediv" style="position:absolute; top:190px; left:320px;">     <select name="license" id="license" class="style11" onChange="UpdateForm()" style="text-align:right ">
+     <div id="licensediv" style="position:absolute; top:170px; left:350px;">     <select name="license" id="license" class="style11" onChange="UpdateForm()" style="text-align:right ">
       <option id="monthly" value="monthly">Cloud Hosted</option>
       <option id="1year" value="1year" selected="true">1 Year License</option>
       <option id="2year" value="2year">2 Year License</option>
@@ -1431,16 +1427,9 @@ with new package purchases </p>
           </tr>
         </table>
       </div>
-      <br/>
-      <br/>
-      <br/>
 <div style="visibility:hidden; position:absolute; height:0px; width:0px">  <INPUT TYPE=text class="style11"  NAME=realname id="realname" VALUE="" SIZE=50> </div>
 
           <div id="shippingpayment" style="position:absolute; width:584px; height:586px; top:0; left:0; background-color: #FFFFFF; border: 1px none #000000; z-index:1; visibility:hidden;">
-
-            <br/>
-            <br/>
-            <br/>
  <TABLE BORDER=0 CELLPADDING=2 HEIGHT=578 width="579" class="milumleftnav" style="text-align:left; font-weight:normal ">
     <TR bgcolor="#FFFFFF">
       <td height="31" colspan="3" bgcolor="#FFFFFF" class="milumleftnav"><div align="left" id="TotalOrder2" class="milumleftnav">Your Office Tracker Total: $0.00 <a href="javascript:HideShow('userinfo')">Edit</a></div>      </td>
@@ -1449,10 +1438,10 @@ with new package purchases </p>
       <TD HEIGHT=26 colspan="3" class="style11">Enter Your Shipping and Payment Information:</TD>
     </TR>
     <TR bgcolor="#FFFFFF">
-      <TD WIDTH="118" HEIGHT=11 bgcolor="#FFFFFF"><P">First Name:</P></TD>
+      <TD WIDTH="118" HEIGHT=11 bgcolor="#FFFFFF"><P style="font-size:15px;">First Name:</P></TD>
       <TD width="163" bgcolor="#FFFFFF">&nbsp;&nbsp;<INPUT TYPE=text  class="style11"  NAME=first_name id="first_name" VALUE="" SIZE=15>
 </TD>
-<TD WIDTH="278"  HEIGHT=11 bgcolor="#FFFFFF" ><P>Last Name:
+<TD WIDTH="278"  bgcolor="#FFFFFF"><P>Last Name:
        <INPUT TYPE=text NAME=last_name class="style11"  id="last_name" VALUE="" SIZE=17>
       </P>
 
