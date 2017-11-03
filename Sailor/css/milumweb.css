@@ -6,6 +6,8 @@
 /* === fontawesome === */
 @import url('font-awesome.css');
 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro');
+
 
 /* ===================================
 1. General
@@ -28,31 +30,31 @@ a:active {
 }
 
 h1,h2, h3, h4, h5, h6 {
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 700;
 	line-height: 1.1em;
 	color: #666;
 	margin-bottom: 20px;
-	font-size: 16px;
+	/*font-size: 16px;*/
 }
 
 
 .milummain {
 	font-size: 13px;
 	line-height: 18px;
-	color: #1F0C65;
+	color: #666;
 	font-family: "Open Sans", Arial, sans-serif;
 	
 }.suborange {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt; font-weight: bold; color: #FF9900}
 .page {  background-color: #FFFFFF}
-.milumleftnav {  font-size: 14px; line-height: 16px; color: #1F0C65; font-weight: normal; font-family: Open Sans, Arial, Helvetica, sans-serif}
+.milumleftnav {  font-size: 14px; line-height: 16px; color: #666; font-weight: normal; font-family: Open Sans, Arial, Helvetica, sans-serif}
 .milumleftnavbold {  font-size: 14px; line-height: 16px; color: #1F0C65; font-weight: bold; font-family: Open Sans, Arial, Helvetica, sans-serif}
 body {font-size: 12px; line-height: 13px; color: #1F0C65; font-family: Arial, Helvetica, sans-serif}
 table {font-size: 11px; line-height: 13px; color: #FOC65; font-family: Verdana, Arial, Helvetica, sans-serif}
 .style11 {
 	font-size: 14px;
 	font-weight: bold;
-	color: #1F0C65;
+	color: #666;
 	font-family: "Trebuchet MS", Arial, Helvetica;
 	line-height: 18px;
 }
@@ -61,10 +63,10 @@ table {font-size: 11px; line-height: 13px; color: #FOC65; font-family: Verdana, 
 	font-size: 18px;
 	font-weight: bold;
 	line-height: 1.3em;
-	color: #1F0C65;
+	color: #666;
 }
 a:link {
-	color: #1F0C65;
+	color: #666;
 }
 a:visited {
 	color: #666666;
@@ -73,7 +75,7 @@ a:visited {
 	left: 20px;
 }
 .milumleftnavbold {
-font-size: 12px; line-height: 16px; color: #1F0C65; font-family: Arial, Helvetica, sans-serif
+font-size: 12px; line-height: 16px; color: #666; font-family: Arial, Helvetica, sans-serif
 }
 .specialoffer {
 	font-family: Arial, Helvetica, sans-serif;

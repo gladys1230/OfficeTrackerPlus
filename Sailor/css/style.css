@@ -4,6 +4,9 @@
     Author: BootstrapMade
     Author URL: https://bootstrapmade.com
 */
+/* import the specific font for Office Tracker */
+/* note: this mothod doesn't work*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 /* ==== Google font ==== */
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic,900|Open+Sans:300,400,600,700');
@@ -17,6 +20,8 @@
 /* ==== overwrite bootstrap standard ==== */
 @import url('theme.css');
 @import url('animate.css');
+
+
 
 /* ===================================
 officetrcker
@@ -1023,10 +1028,10 @@ box-shadow: none;
 
 /* --- blockquote --- */
 blockquote {
-	font-size:16px;
+	font-size:15px;
 	font-weight:400;
-	font-family: 'Roboto', sans-serif;
-	font-style:italic;
+	font-family: 'Open Sans', sans-serif;
+	/*font-style:italic;*/
 	padding-left:0;
 	color:#a2a2a2;
 	line-height:1.6em;
