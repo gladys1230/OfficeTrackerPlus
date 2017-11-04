@@ -1108,8 +1108,8 @@ h2.error {
 h4.heading {
 	font-weight:700;
 }
-
-.heading { margin-bottom: 30px; }
+/*change from margin-bottom: 30px; for Office Tracker */
+.heading { margin-bottom: 10px; }
 
 .heading {
 	position: relative;

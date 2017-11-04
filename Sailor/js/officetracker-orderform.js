@@ -1128,7 +1128,7 @@ return totalnum+cents.substr(1)
 }
 
 var Header=' '
-var subHeader='Schedule More, Save More - SAVE up to 20% <br> <div style="font-size:12px; font-weight:normal; margin-top:4px;"> Use promo code: <span class="style16"> savemore </span> to see your savings </div>'
+var subHeader='Schedule More, Save More - SAVE up to 20% <br> <div style="font-size:12px; font-weight:normal; margin-top:4x;"> Use promo code: <span class="style16"> savemore </span> to see your savings </div>'
 var whichForm=location.search.substr(1)
 if (whichForm=='edu')
 {
