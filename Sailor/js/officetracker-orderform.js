@@ -1132,16 +1132,19 @@ var subHeader='Schedule More, Save More - SAVE up to 20% <br> <div style="font-s
 var whichForm=location.search.substr(1)
 if (whichForm=='edu')
 {
+//add an extra row for the form with Bootstrap nav bar
+document.getElementById('AddOnRow').style.visibility='hidden'
 Header='Office Tracker Non-Profit Org. Order Form'
 //-- to make same as regular SubHeader:   subHeader=subHeader
 subHeader=subHeader
 
 //-- moves input boxes to correct placement - adds 15px
-document.getElementById('NumberOfUsersdiv').style.top="110px"
-document.getElementById('NumberofViewOnlydiv').style.top="140px"
-document.getElementById('licensediv').style.top="185px"
-document.getElementById('WebViewerdiv').style.top="285px"
-document.getElementById('SSWdiv').style.top="305px"
+//Found where to move the input boxes for edu, YEAH!!!
+document.getElementById('NumberOfUsersdiv').style.top="93px"
+document.getElementById('NumberofViewOnlydiv').style.top="120px"
+document.getElementById('licensediv').style.top="145px"
+document.getElementById('WebViewerdiv').style.top="215px"
+document.getElementById('SSWdiv').style.top="245px"
 
 
 }
