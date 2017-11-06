@@ -28,7 +28,7 @@
     Author: BootstrapMade
     Author URL: https://bootstrapmade.com
 ======================================================= -->
-<!--<style type="text/css"> 
+<style type="text/css"> 
 body {
   margin-top: 0px;
 }
@@ -36,7 +36,7 @@ body {
   color: #FF6600;
   font-weight: bold;
 }
-</style>-->
+</style>
 
 </head>
  
@@ -166,7 +166,7 @@ body {
         </tr>
       <tr>
       <td valign="bottom"><span class="milumleftnav">Select License Type such as "Cloud Hosted":
-     <div id="licensediv" style="position:absolute; top:170px; left:300px;">     <select name="license" id="license" class="style11" onChange="UpdateForm()" style="text-align:right ">
+     <div id="licensediv" style="position:absolute; top:160px; left:300px;">     <select name="license" id="license" class="style11" onChange="UpdateForm()" style="text-align:right ">
       <option id="monthly" value="monthly">Cloud Hosted</option>
       <option id="1year" value="1year" selected="true">1 Year License</option>
       <option id="2year" value="2year">2 Year License</option>
@@ -189,13 +189,13 @@ body {
             </td>
           </tr><tr><td valign="top"><div align="left" style="vertical-align:top ">
                   <div style="visibility:hidden; position:absolute; height:0px; width:0px">
-                  <input type="checkbox" id="BBSync" name="BBSync" value="Add Blackberry Sync" onClick="UpdateForm()"> Blackberry Sync <img src="moreinfo.gif" width="14" height="14" onMouseOver="HideShowInfo('AddOnInfo', 'blackberry')" onMouseOut="HideShowInfo('AddOnInfo',null,'close')"> 
+                  <input type="checkbox" id="BBSync" name="BBSync" value="Add Blackberry Sync" onClick="UpdateForm()"> Blackberry Sync <i class="fa fa-question-circle" style="color: #FE5433;"aria-hidden="true" onMouseOver="HideShowInfo('AddOnInfo', 'blackberry')" onMouseOut="HideShowInfo('AddOnInfo',null,'close')"></i>
         <input type="checkbox" id="Contacts" name="Contacts" value="Add Contacts" onClick="UpdateForm()">
           Contact Manager<font color="#000000" face="Arial, Helvetica, sans-serif">&nbsp; </font></div>
      
 <span style="font-size:12px"> <input type="checkbox" class="style11" id="WebViewer" name="WebViewer" value="Yes" onClick="UpdateForm()">
-       Public Calendar add on for your web site<img src="moreinfo.gif" width="14" height="14"/><div id="WebViewerdiv" style="position:absolute; top: 270px; left: 256px; width:18px; height:18px; z-index:1000;"  onMouseOver="HideShowInfo('AddOnInfo','webviewer')" onMouseOut="HideShowInfo('AddOnInfo',null,'close')"></div><br/>
- <input type="checkbox" class="style11" id="SSW" name="SSW" value="Yes" onClick="UpdateForm()"> Self Service Scheduling add on for your web site<img src="moreinfo.gif" width="14" height="14" /><div id="SSWdiv" style="position:absolute; top: 290px; left: 296px; width:18px; height:18px; z-index:1000;"  onMouseOver="HideShowInfo('AddOnInfo','selfscheduling')" onMouseOut="HideShowInfo('AddOnInfo',null,'close')"></div>  </span>
+       Public Calendar add on for your web site <i class="fa fa-question-circle" style="color: #FE5433;"aria-hidden="true"></i><div id="WebViewerdiv" style="position:absolute; top: 270px; left: 256px; width:18px; height:18px; z-index:1000;"  onMouseOver="HideShowInfo('AddOnInfo','webviewer')" onMouseOut="HideShowInfo('AddOnInfo',null,'close')"></div><br/>
+ <input type="checkbox" class="style11" id="SSW" name="SSW" value="Yes" onClick="UpdateForm()"> Self Service Scheduling add on for your web site <i class="fa fa-question-circle" style="color: #FE5433;"aria-hidden="true"></i><div id="SSWdiv" style="position:absolute; top: 290px; left: 296px; width:18px; height:18px; z-index:1000;"  onMouseOver="HideShowInfo('AddOnInfo','selfscheduling')" onMouseOut="HideShowInfo('AddOnInfo',null,'close')"></div>  </span>
           <span style="visibility:hidden"><input type="checkbox" id="OTPalm" name="OTPalm" value="Add OTPalm" onClick="UpdateForm()">
           OTPalm</span>
     </div>
@@ -751,7 +751,10 @@ with new package purchases </p>
       </p></TD>
     </TR>
   </TABLE>
-</div><div id="supportonly" style="position:absolute; top:66px; left:0; width:584px; height:578px; background-color: #FFFFFF; border: 1px none #000000; z-index:1; visibility: hidden;">
+</div>
+
+
+<div id="supportonly" style="position:absolute; top:60px; left:0; width:584px; height:578px; background-color: #FFFFFF; border: 1px none #000000; z-index:1; visibility: hidden;">
       <table width="579" border="0" align="center" cellpadding="3" cellspacing="3" class="milumleftnav" style="font-weight:normal; text-align:left ">
           <tr>
             <td colspan="2" bgcolor="#E5E5E5" class="style11">Choose your Support Plan:</td>
@@ -761,18 +764,18 @@ with new package purchases </p>
               <p align="left">
         
       
-<br/>    <input name="Support" class="style11"  id="Support" type="radio" value="90 Day Support" onClick="UpdateForm()">
+<br/><input name="Support" class="style11"  id="Support" type="radio" value="90 Day Support" onClick="UpdateForm()">
     <span style="font-weight:bold ">Basic Support Plan - $495/ 90 days</span>
 May be limited to four support telephone calls per month. Online questions answered usually within 0-4 hours during work days. One contact name per support plan. If contact changes there may be a transfer fee of $50.
               <p>
     <input name="Support" id="Support" class="style11"  type="radio" value="6 Month Support" onClick="UpdateForm()">
-    <span style="font-weight:bold ">    Standard Support Plan- $695/6 months</span>
+    <span style="font-weight:bold ">Standard Support Plan- $695/6 months</span>
 May be limited to four support telephone calls per month. Online questions answered usually within 0-4 hours during work days. One contact name per support plan. If contact changes there may be a transfer fee of $50.
  
    </p>
               <p>
     <input name="Support" id="Support" class="style11"  type="radio" value="1 YR Support" onClick="UpdateForm()" >
-    <span style="font-weight:bold ">    Premium Support Plan- $895/1 year</span>
+    <span style="font-weight:bold ">Premium Support Plan- $895/1 year</span>
 ($100 less with new product license) May be limited to four support telephone calls per month. Online questions answered usually within 0-4 hours during work days. One contact name per support plan. If contact changes there may be a transfer fee of $50.
  
   </p>
@@ -781,13 +784,9 @@ May be limited to four support telephone calls per month. Online questions answe
   <span style="font-weight:bold ">Per Incident Support Plan- $125/1 hour</span>
 The following per incident service is offered with a limit of 1 hour per incident.
  
-<br/><br/><ul><li>This plan is only available for phone support and the cost is $125.00 per incident up to a maximum of 1 hour, charged to your American Express, Visa or Mastercard. </li>
+<ul><li>This plan is only available for phone support and the cost is $125.00 per incident up to a maximum of 1 hour, charged to your American Express, Visa or Mastercard. </li>
 <li>Each support incident is equal to a single issue or problem that cannot reasonably be broken down into subordinate parts </li></ul>
-</p>
-  <br/>
-  <br/>
-  <br/>
-  *All Support Package phone calls may be limited to 20 mins and 4 per month at Milum's discretion.<br/><br/><br/>
+</p>*All Support Package phone calls may be limited to 20 mins and 4 per month at Milum's discretion.<br/><br/><br/>
   Online Support Available at:  <a href="http://www.officetracker.com/forums/">http://www.officetracker.com/forums/</a><br/>
   Or via email at: <a href="mailto:support@officetracker.com">support@officetracker.com</a><br/>
   Support Packages, pricing and terms subject to change without notice. 
@@ -795,8 +794,29 @@ The following per incident service is offered with a limit of 1 hour per inciden
       </tr>
     </div></div></td>
     </tr>
+    <tr>
+            <td>
+                <input type="checkbox" name="SalesTax"  class="style11" id="SalesTax" onClick="UpdateForm()" value="Taxxed">
+        Check this box if you are in Texas and are not tax exempt
+ <br>
+        ( Adds 8.25% Sales Tax&nbsp;)</td>
+            <td><div align="right" id="Tax">&nbsp; </div></td>
+          </tr>
+          
+          
+          <!--<tr>
+            <td height="37">&nbsp;</td>
+            <td><div align="right"><strong>Click to continue:
+                    </strong>
+                <input type="button" name="Continue" class="style11"  value="Continue &gt;&gt;" onClick="HideShow('order');UpdateForm()">
+            </div></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>-->
   </table>
-  <p>&nbsp;</p>
+  <p></p>
 </div>
 
 <!--<map name="MapMap2">
