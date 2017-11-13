@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <title>Office Tracker Order Form</title>
@@ -9,6 +10,7 @@
     <link href="plugins/flexslider/flexslider.css" rel="stylesheet" media="screen" />
     <link href="css/cubeportfolio.min.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
+    <!-- Office Tracker stylesheet-->
     <link href="css/milumweb.css" rel="stylesheet" type="text/css">
     <!-- Theme skin -->
     <link id="t-colors" href="skins/default.css" rel="stylesheet" />
@@ -44,7 +46,7 @@
 </table>-->
 <div align="center">
 <!--<img src="topbar.jpg" width="776" height="27" border="0" usemap="#MapMap2">-->
-  <table width="778" height="1420"  border="0" cellpadding="2" cellspacing="0" class="milumleftnav">
+  <table border="0" cellpadding="2" cellspacing="0" class="milumleftnav">
     <tr valign="top">
           <header>
             <div class="navbar navbar-default navbar-fixed-top">
@@ -105,13 +107,14 @@
         <br />
         <br />
         <br />
-        <br />
-      <td width="25%" bgcolor="#FFFFFF"><p align="left"><span class="milummainsmall"></span></p>
+      <!--<td width="25%" bgcolor="#FFFFFF"><p align="left"><span class="milummainsmall"></span></p>
         <p align="left"><span class="milummainsmall"><br><br> 
             <span class="heading"><img src="img/officetracker/secure.png" width="50" height="38" align="right"></span>We use SSL Secure Sockets Layer to ensure the security and privacy of your online order.</span></p>
         <P align="left" class="milummainsmall">Prices are U.S. Dollars and subject to change without </br> notice. </P>
-        <p align="left" class="milummainsmall"></p></td>
-      <td width="584px" class="style11"><div style="position:relative; width:584px; height:586px;"><div id="numberuserstotal" style=" position:relative;width:584px; height:586px; z-index:1; visibility: visible;">
+        <p align="left" class="milummainsmall"></p></td>-->
+
+
+      <td class="style11"><div style="position:relative;"><div id="numberuserstotal" style="visibility: visible;">
         <table width="579" border="0" align="center" cellpadding="3" cellspacing="3" class="milumleftnav" style="font-weight:normal; text-align:left ">
           <tr>
             <td height="60" colspan="2" valign="top" style="text-align:left "><span class="heading">
@@ -126,8 +129,8 @@
             <td colspan="2" bgcolor="#E5E5E5" class="style11">1. Enter the number of users and options you want: </td>
           </tr>
           <tr>
-            <td width="372"> <div align="left" style="padding:5px 0;">Enter # of Full Users:
-             <div id="NumberOfUsersdiv" style="position:absolute; left:191px; top: 80px;">
+            <td width="372"> <div align="left" style="padding:20px 0;">Enter # of Full Users:
+             <div id="NumberOfUsersdiv" style="position:absolute; left:191px; top: 105px;">
               <input name="NumberOfUsers" id="NumberOfUsers" type="text" class="style11"  size="6" onChange="UpdateForm()" style="text-align:right">
 
                   <a href="javascript:UpdateForm()">Update</a></div></div></td>
@@ -137,7 +140,7 @@
           </tr>
       <tr>
         <td valign="bottom" colspan="2"><div align="left">Enter  # of View-Only Users: 
-             <div id="NumberofViewOnlydiv" style="position:absolute; left:191px; top:105px;">      
+             <div id="NumberofViewOnlydiv" style="position:absolute; left:191px; top:145px;">      
  <input name="NumberOfViewOnly" id="NumberOfViewOnly" type="text" size="6" class="style11"  onChange="UpdateForm()" style="text-align:right">
                   <a href="javascript:UpdateForm()">Update </a>&nbsp;<span id="ViewOnlyWarn" style="color:#FF0000; ">&nbsp;</span></div>
         </div>  
@@ -145,7 +148,8 @@
         </tr>
       <tr>
       <td valign="bottom"><span class="milumleftnav">Select License Type such as "Cloud Hosted":
-     <div id="licensediv" style="position:absolute; top:130px; left:300px;">     <select name="license" id="license" class="style11" onChange="UpdateForm()" style="text-align:right ">
+     <div id="licensediv" style="position:absolute; top:180px; left:300px;">     
+      <select name="license" id="license" class="style11" onChange="UpdateForm()" style="text-align:right ">
       <option id="monthly" value="monthly">Cloud Hosted</option>
       <option id="1year" value="1year" selected="true">1 Year License</option>
       <option id="2year" value="2year">2 Year License</option>
@@ -155,7 +159,7 @@
       </span>
                   
                   </br>
-                  <div class="milumleftnav" style="font-size:12px; margin-top: 4px; position:absolute; width:600px ">
+                  <div class="milumleftnav" style="font-size:12px; margin-top: 10px; position:absolute; width:600px ">
                   Annual Licenses include web based client and desktop client options
                   </div>
       </td>
@@ -289,6 +293,10 @@ with new package purchases </p>
           </tr>
         </table>
       </div>
+
+
+
+<!--payment form -->
 <div style="visibility:hidden; position:absolute; height:0px; width:0px">  <INPUT TYPE=text class="style11"  NAME=realname id="realname" VALUE="" SIZE=50> </div>
 
           <div id="shippingpayment" style="position:absolute; width:584px; height:586px; top:0; left:0; background-color: #FFFFFF; border: 1px none #000000; z-index:1; visibility:hidden;">
@@ -297,7 +305,7 @@ with new package purchases </p>
       <td height="31" colspan="3" bgcolor="#FFFFFF" class="milumleftnav"><div align="left" id="TotalOrder2" class="milumleftnav">Your Office Tracker Total: $0.00 <a href="javascript:HideShow('userinfo')">Edit</a></div>      </td>
     </TR>
     <TR bgcolor="#E5E5E5">
-      <TD HEIGHT=26 colspan="3" class="style11">Enter Your Shipping and Payment Information:</TD>
+      <TD HEIGHT=40 colspan="3" class="style11">Enter Your Shipping and Payment Information:</TD>
     </TR>
     <TR bgcolor="#FFFFFF">
       <TD WIDTH="118" HEIGHT=11 bgcolor="#FFFFFF"><P>First Name:</P></TD>
@@ -309,7 +317,6 @@ with new package purchases </p>
 
 </TD>
     </TR>
-
 
     <TR bgcolor="#FFFFFF">
       <TD WIDTH="118" HEIGHT=11 bgcolor="#FFFFFF"><P>Company or Org.:</P></TD>
@@ -804,23 +811,7 @@ The following per incident service is offered with a limit of 1 hour per inciden
   Or via email at: <a href="mailto:support@officetracker.com">support@officetracker.com</a><br/>
   Support Packages, pricing and terms subject to change without notice. 
   </p></td>
-  <tr>
-            <td>
-                <input type="checkbox" name="SalesTax"  class="style11" id="SalesTax" onClick="UpdateForm()" value="Taxxed">
-        Check this box if you are in Texas and are not tax exempt
- <br>
-        ( Adds 8.25% Sales Tax )</td>
-            <td><div align="right" id="Tax"> </div></td>
-          </tr>
-          
-          
-          <tr>
-            <td height="37"></td>
-            <td><div align="right"><strong>Click to continue:
-                    </strong>
-                <input type="button" name="Continue" class="style11"  value="Continue " onClick="HideShow('order');UpdateForm()">
-            </div></td>
-          </tr>
+  
       </tr>
     </div></div></td>
     </tr>
@@ -831,8 +822,6 @@ The following per incident service is offered with a limit of 1 hour per inciden
  
 </div>
 </form>
-
-
 
 <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
     <!-- Placed at the end of the document so the pages load faster -->

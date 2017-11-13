@@ -1128,7 +1128,7 @@ return totalnum+cents.substr(1)
 }
 
 var Header=' '
-var subHeader='Schedule More, Save More - SAVE up to 20% <br> <div style="font-size:12px; font-weight:normal; margin-top:4x;"> Use promo code: <span class="style16"> savemore </span> to see your savings </div>'
+var subHeader='Schedule More, Save More - SAVE up to 20% <br><div style="font-size:14px; font-weight:normal; margin-top:4x;"> Use promo code: <span class="style16"> savemore </span> to see your savings </div>'
 var whichForm=location.search.substr(1)
 if (whichForm=='edu')
 {
@@ -1140,10 +1140,10 @@ subHeader=subHeader
 
 //-- moves input boxes to correct placement - adds 15px
 //Found where to move the input boxes for edu, YEAH!!!
-document.getElementById('NumberOfUsersdiv').style.top="93px"
-document.getElementById('NumberofViewOnlydiv').style.top="120px"
-document.getElementById('licensediv').style.top="145px"
-document.getElementById('WebViewerdiv').style.top="215px"
+document.getElementById('NumberOfUsersdiv').style.top="135px"
+document.getElementById('NumberofViewOnlydiv').style.top="175px"
+document.getElementById('licensediv').style.top="208px"
+document.getElementById('WebViewerdiv').style.top="225px"
 document.getElementById('SSWdiv').style.top="245px"
 
 

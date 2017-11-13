@@ -615,8 +615,8 @@ box-shadow: none;
 
 .main-slider .flex-caption {background:none; -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000); zoom: 1;}
 /*changed rgba(0, 0, 0, 0.06) for Office Tracker */
-/*changed width from 295px for Office Tracker */
-.main-slider .flex-caption { bottom: 35px; background-color: rgba(0, 0, 0, 0); color: #fff; margin: 0; padding: 25px 25px 25px 30px; position: absolute; right: 0; width: 495px;}
+/*changed width from 295px & rgba for Office Tracker */
+.main-slider .flex-caption { bottom: 35px; background-color: rgba(68, 87, 121, 0.87); color: #fff; margin: 0; padding: 25px 25px 25px 30px; position: absolute; right: 0; width: 495px;}
 .main-slider .flex-caption h3 {color: #fff; letter-spacing: 1px; margin-bottom: 8px; text-transform: uppercase;}
 .main-slider .flex-caption p {margin: 0 0 15px;}
 

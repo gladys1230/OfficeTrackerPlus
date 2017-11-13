@@ -105,29 +105,35 @@
         <br />
         <br />
         <br />
-        <br />
-      <td width="25%" bgcolor="#FFFFFF"><p align="left"><span class="milummainsmall"></span></p>
+      <!--<td width="25%" bgcolor="#FFFFFF"><p align="left"><span class="milummainsmall"></span></p>
         <p align="left"><span class="milummainsmall"><br><br> 
             <span class="heading"><img src="img/officetracker/secure.png" width="50" height="38" align="right"></span>We use SSL Secure Sockets Layer to ensure the security and privacy of your online order.</span></p>
         <P align="left" class="milummainsmall">Prices are U.S. Dollars and subject to change without </br> notice. </P>
-        <p align="left" class="milummainsmall"></p></td>
-      <td width="584px" class="style11"><div style="position:relative; width:584px; height:586px;"><div id="numberuserstotal" style=" position:relative;width:584px; height:586px; z-index:1; visibility: visible;">
-        <table width="579" border="0" align="center" cellpadding="3" cellspacing="3" class="milumleftnav" style="font-weight:normal; text-align:left ">
-          <tr>
-            <td height="60" colspan="2" valign="top" style="text-align:left "><span class="heading">
-            <div id="Header" class="heading"><br>     
-            </div>
-            </span>
-              <div class="specialoffer" id="subHeader">&nbsp;</div> 
-              <div id="holly" style="position:absolute; width:50px; height:53px; left:534px; top:2px "></div>
-        </td>
-          </tr>
+        <p align="left" class="milummainsmall"></p></td>-->
+
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              
+              <div id="Header" class="heading"><br>     
+              </div>
+              <div class="specialoffer" id="subHeader">
+              </div>
+              <!--What I know is this part can't be removed otherwise the tbale going to messed up!-->
+              <td width="584px" class="style11"><div style="position:relative; width:584px; height:586px;"><div id="numberuserstotal" style=" position:relative;width:584px; height:586px; z-index:1; visibility: visible;">
+
+              <table width="579" border="0" align="center" cellpadding="3" cellspacing="3" class="milumleftnav" style="font-weight:normal; text-align:left ">
+              <tr>
+              <td height="60" colspan="2" valign="top" style="text-align:left "><span class="heading">  
+              </td>
+              </tr>
+              <!-- Do not remove the above-->
           <tr>
             <td colspan="2" bgcolor="#E5E5E5" class="style11">1. Enter the number of users and options you want: </td>
           </tr>
           <tr>
-            <td width="372"> <div align="left" style="padding:5px 0;">Enter # of Full Users:
-             <div id="NumberOfUsersdiv" style="position:absolute; left:191px; top: 80px;">
+            <td width="372"> <div align="left" style="padding:15px 0;">Enter # of Full Users:
+             <div id="NumberOfUsersdiv" style="position:absolute; left:191px; top: 90px;">
               <input name="NumberOfUsers" id="NumberOfUsers" type="text" class="style11"  size="6" onChange="UpdateForm()" style="text-align:right">
 
                   <a href="javascript:UpdateForm()">Update</a></div></div></td>
@@ -137,7 +143,7 @@
           </tr>
       <tr>
         <td valign="bottom" colspan="2"><div align="left">Enter  # of View-Only Users: 
-             <div id="NumberofViewOnlydiv" style="position:absolute; left:191px; top:105px;">      
+             <div id="NumberofViewOnlydiv" style="position:absolute; left:191px; top:130px;">      
  <input name="NumberOfViewOnly" id="NumberOfViewOnly" type="text" size="6" class="style11"  onChange="UpdateForm()" style="text-align:right">
                   <a href="javascript:UpdateForm()">Update </a>&nbsp;<span id="ViewOnlyWarn" style="color:#FF0000; ">&nbsp;</span></div>
         </div>  
@@ -145,7 +151,8 @@
         </tr>
       <tr>
       <td valign="bottom"><span class="milumleftnav">Select License Type such as "Cloud Hosted":
-     <div id="licensediv" style="position:absolute; top:130px; left:300px;">     <select name="license" id="license" class="style11" onChange="UpdateForm()" style="text-align:right ">
+     <div id="licensediv" style="position:absolute; top:155px; left:330px;">
+      <select name="license" id="license" class="style11" onChange="UpdateForm()" style="text-align:right ">
       <option id="monthly" value="monthly">Cloud Hosted</option>
       <option id="1year" value="1year" selected="true">1 Year License</option>
       <option id="2year" value="2year">2 Year License</option>
@@ -197,6 +204,14 @@
 </table>
 </div>
 </td>
+ </div>
+          </div>
+        </div>
+
+
+
+
+
       <td><div id="AddOnInfo" style="position:absolute; left:225px; top:250px; background-color:#E1E1E1; border:1px #1F0C65 solid; color:#1F0C65; width:348px; height:80px; padding-left:5px; padding-right:5px; padding-top:3px; visibility: hidden;"><span id="AddOnInfoText">&nbsp;</span>
     <div align="right" style="vertical-align:bottom; position:absolute; top:105px; left:310px;   color:#FF0000 " </div>
     </div>
@@ -297,7 +312,7 @@ with new package purchases </p>
       <td height="31" colspan="3" bgcolor="#FFFFFF" class="milumleftnav"><div align="left" id="TotalOrder2" class="milumleftnav">Your Office Tracker Total: $0.00 <a href="javascript:HideShow('userinfo')">Edit</a></div>      </td>
     </TR>
     <TR bgcolor="#E5E5E5">
-      <TD HEIGHT=26 colspan="3" class="style11">Enter Your Shipping and Payment Information:</TD>
+      <TD HEIGHT=40 colspan="3" class="style11">Enter Your Shipping and Payment Information:</TD>
     </TR>
     <TR bgcolor="#FFFFFF">
       <TD WIDTH="118" HEIGHT=11 bgcolor="#FFFFFF"><P>First Name:</P></TD>
@@ -309,7 +324,6 @@ with new package purchases </p>
 
 </TD>
     </TR>
-
 
     <TR bgcolor="#FFFFFF">
       <TD WIDTH="118" HEIGHT=11 bgcolor="#FFFFFF"><P>Company or Org.:</P></TD>
@@ -805,22 +819,7 @@ The following per incident service is offered with a limit of 1 hour per inciden
   Support Packages, pricing and terms subject to change without notice. 
   </p></td>
   <tr>
-            <td>
-                <input type="checkbox" name="SalesTax"  class="style11" id="SalesTax" onClick="UpdateForm()" value="Taxxed">
-        Check this box if you are in Texas and are not tax exempt
- <br>
-        ( Adds 8.25% Sales Tax )</td>
-            <td><div align="right" id="Tax"> </div></td>
-          </tr>
-          
-          
-          <tr>
-            <td height="37"></td>
-            <td><div align="right"><strong>Click to continue:
-                    </strong>
-                <input type="button" name="Continue" class="style11"  value="Continue " onClick="HideShow('order');UpdateForm()">
-            </div></td>
-          </tr>
+            
       </tr>
     </div></div></td>
     </tr>
