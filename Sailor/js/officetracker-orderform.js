@@ -1140,11 +1140,11 @@ subHeader=subHeader
 
 //-- moves input boxes to correct placement - adds 15px
 //Found where to move the input boxes for edu, YEAH!!!
-document.getElementById('NumberOfUsersdiv').style.top="135px"
-document.getElementById('NumberofViewOnlydiv').style.top="175px"
-document.getElementById('licensediv').style.top="208px"
-document.getElementById('WebViewerdiv').style.top="225px"
-document.getElementById('SSWdiv').style.top="245px"
+document.getElementById('NumberOfUsersdiv').style.top="148px"
+document.getElementById('NumberofViewOnlydiv').style.top="188px"
+document.getElementById('licensediv').style.top="228px"
+document.getElementById('WebViewerdiv').style.top="335px"
+document.getElementById('SSWdiv').style.top="350px"
 
 
 }
