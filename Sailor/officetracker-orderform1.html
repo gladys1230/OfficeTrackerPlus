@@ -16,6 +16,7 @@
     <link id="t-colors" href="skins/default.css" rel="stylesheet" />
     <!-- boxed bg -->
     <link id="bodybg" href="bodybg/bg1.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet">
 
 </head>
  
@@ -107,7 +108,7 @@
         <br />
         <br />
         <br />
-      <!--<td width="25%" bgcolor="#FFFFFF"><p align="left"><span class="milummainsmall"></span></p>
+      <td width="25%" bgcolor="#FFFFFF"><!-- <p align="left"><span class="milummainsmall"></span></p>
         <p align="left"><span class="milummainsmall"><br><br> 
             <span class="heading"><img src="img/officetracker/secure.png" width="50" height="38" align="right"></span>We use SSL Secure Sockets Layer to ensure the security and privacy of your online order.</span></p>
         <P align="left" class="milummainsmall">Prices are U.S. Dollars and subject to change without </br> notice. </P>
@@ -115,7 +116,7 @@
 
 
       <td class="style11"><div style="position:relative;"><div id="numberuserstotal" style="visibility: visible;">
-        <table width="579" border="0" align="center" cellpadding="3" cellspacing="3" class="milumleftnav" style="font-weight:normal; text-align:left ">
+        <table width="800" border="0" align="center" cellpadding="3" cellspacing="3" class="milumleftnav" style="font-weight:normal; text-align:left ">
           <tr>
             <td height="60" colspan="2" valign="top" style="text-align:left "><span class="heading">
             <div id="Header" class="heading"><br>     
@@ -128,28 +129,38 @@
           <tr>
             <td colspan="2" bgcolor="#E5E5E5" class="style11">1. Enter the number of users and options you want: </td>
           </tr>
-          <tr>
-            <td width="372"> <div align="left" style="padding:20px 0;">Enter # of Full Users:
-             <div id="NumberOfUsersdiv" style="position:absolute; left:191px; top: 130px;">
-              <input name="NumberOfUsers" id="NumberOfUsers" type="text" class="style11"  size="6" onChange="UpdateForm()" style="text-align:right">
 
-                  <a href="javascript:UpdateForm()">Update</a></div></div></td>
+          <!-- # of Full Users -->
+          <tr>
+            <td width="372"> <div align="left" style="padding:12px 0;">Enter # of Full Users:
+             <div id="NumberOfUsersdiv" style="position:absolute; left:191px; top: 150px;">
+
+
+              <input name="NumberOfUsers" id="NumberOfUsers" type="text" class="form-control" onChange="UpdateForm()" style="text-align:right;"></td>
+
+
+                  <td><a href="javascript:UpdateForm()">Update</a></div></div></td>
             <td width="186"><div id="PricePerUser" style="visibility:hidden " align="right">Price/user: $0.00</div>
 
-</td>
+            </td>
           </tr>
+
+      <!-- # of View-Only Users -->    
       <tr>
-        <td valign="bottom" colspan="2"><div align="left">Enter  # of View-Only Users: 
-             <div id="NumberofViewOnlydiv" style="position:absolute; left:191px; top:170px;">      
- <input name="NumberOfViewOnly" id="NumberOfViewOnly" type="text" size="6" class="style11"  onChange="UpdateForm()" style="text-align:right">
-                  <a href="javascript:UpdateForm()">Update </a>&nbsp;<span id="ViewOnlyWarn" style="color:#FF0000; ">&nbsp;</span></div>
+        <td width="372"> <div align="left" style="padding:12px 0;">Enter # of View-Only Users: 
+             <div id="NumberofViewOnlydiv" style="position:absolute; left:191px; top:190px;">
+
+
+                <input name="NumberOfViewOnly" id="NumberOfViewOnly" type="text" class="form-control"  onChange="UpdateForm()" style="text-align:right"></td>
+
+                  <td><a href="javascript:UpdateForm()">Update</a><span id="ViewOnlyWarn" style="color:#FF0000; "></span></div></td>
         </div>  
           <div id="ViewOnlyTotal" style="visibility:hidden; color:#FF0000" align="right">&nbsp;</div></td>
         </tr>
       <tr>
       <td valign="bottom"><span class="milumleftnav">Select License Type such as "Cloud Hosted":
-     <div id="licensediv" style="position:absolute; top:205px; left:300px;">     
-      <select name="license" id="license" class="style11" onChange="UpdateForm()" style="text-align:right ">
+     <div id="licensediv" style="position:absolute; top:225px; left:300px;">     
+      <select name="license" id="license" class="form-control" onChange="UpdateForm()" style="text-align:right ">
       <option id="monthly" value="monthly">Cloud Hosted</option>
       <option id="1year" value="1year" selected="true">1 Year License</option>
       <option id="2year" value="2year">2 Year License</option>
@@ -213,13 +224,14 @@
                 
             <td width="186"><div id="AddUsersTotal" style="visibility:hidden;" align="right">&nbsp;</div></td>
           </tr>
- <tr>
+          <tr>
             <td height="26">&nbsp;</td>
             <td><div id="PromoDiscount" align="right" style="color:#FF6600">&nbsp;</div></td>
           </tr>
+
+          <!-- Enter Promo Code -->
      <tr>
-            <td><div align="left"><div id="SpecialDiscount" style="color:#FF0000" align="left">&nbsp;</div><div align="right">
- <span style="font-size:12px">enter promo code: </span>                <input name="Promo" class="style11" type="text" id="Promo" size="6" onChange="UpdateForm()" align="right"></div>
+      <td><div align="left"><div id="SpecialDiscount" style="color:#FF0000" align="left">&nbsp;</div><h4>Enter promo code below</h4><input name="Promo" class="form-control" style="width: 50%; margin-bottom: 10px;" type="text" id="Promo" size="6" onChange="UpdateForm()" align="right"></div>
                 <div style="visibility:hidden; position:absolute; height:0; width:0 ">
         <table style="visibility:hidden ">
         <tr><td id="StandardOption" style="font-weight:bold ">  <input name="Standard" id="Standard" class="style11" type="checkbox" value="Standard" onClick="UpdateForm()">
@@ -282,9 +294,8 @@ with new package purchases </p>
           
           <tr>
             <td height="37">&nbsp;</td>
-            <td><div align="right"><strong>Click to continue:
-                    </strong>
-                <input type="button" name="Continue" class="style11"  value="Continue &gt;&gt;" onClick="HideShow('order');UpdateForm()">
+            <td><div align="right"><h4>Click to continue:</h4>
+                <input type="button" name="Continue" class="button-theme"  value="Continue &gt;&gt;" onClick="HideShow('order');UpdateForm()">
             </div></td>
           </tr>
           <tr>
