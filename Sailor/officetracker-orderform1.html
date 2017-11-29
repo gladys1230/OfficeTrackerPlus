@@ -330,38 +330,34 @@ with new package purchases </p>
 
     <TR bgcolor="#FFFFFF">
       <TD WIDTH="118" HEIGHT=11 bgcolor="#FFFFFF"><P>Company or Org.:</P></TD>
-      <TD HEIGHT=11 COLSPAN=2 bgcolor="#FFFFFF"><P>&nbsp;
-              <INPUT TYPE=text NAME=Company class="form-control"  VALUE="" SIZE=50>
-      </P></TD>
+      <TD HEIGHT=11 COLSPAN=2 bgcolor="#FFFFFF">&nbsp;&nbsp;<INPUT TYPE=text NAME=Company class="form-control"  VALUE="" SIZE=50>
+      </TD>
     </TR>
     <TR bgcolor="#FFFFFF">
       <TD WIDTH="118" HEIGHT=13 bgcolor="#FFFFFF"><P>Phone Number:</P></TD>
-      <TD WIDTH=163 BGCOLOR="#FFFFFF"><P>&nbsp;&nbsp;<INPUT TYPE=text NAME=Phone class="form-control"  VALUE="" SIZE=15>
-      </P></TD>
+      <TD WIDTH=163 BGCOLOR="#FFFFFF">&nbsp;&nbsp;<INPUT TYPE=text NAME=Phone class="form-control"  VALUE="" SIZE=15>
+      </TD>
       <TD WIDTH=278 HEIGHT=13 BGCOLOR="#FFFFFF" style="visibility:hidden"><P>Fax:<INPUT TYPE=text NAME=Fax class="form-control"  VALUE="" SIZE=19>
       </P></TD>
     </TR>
     <TR bgcolor="#FFFFFF">
       <TD WIDTH="118" HEIGHT=13 bgcolor="#FFFFFF"><P>e-mail:</P></TD>
-      <TD HEIGHT=13 COLSPAN=2 bgcolor="#FFFFFF"><P>&nbsp;
-              <INPUT TYPE=text NAME="email" class="form-control"  VALUE="" SIZE=50>
-      </P></TD>
+      <TD HEIGHT=13 COLSPAN=2 bgcolor="#FFFFFF">&nbsp;&nbsp;<INPUT TYPE=text NAME="email" class="form-control"  VALUE="" SIZE=50>
+      </TD>
     </TR>
     <TR bgcolor="#FFFFFF">
       <TD WIDTH="118" HEIGHT=7 bgcolor="#FFFFFF"><P>Street Address:</P></TD>
-      <TD HEIGHT=7 COLSPAN=2 bgcolor="#FFFFFF"><P>&nbsp;
-              <INPUT TYPE=text NAME="Street Address" class="form-control"  VALUE="" SIZE=50>
-      </P></TD>
+      <TD HEIGHT=7 COLSPAN=2 bgcolor="#FFFFFF">&nbsp;&nbsp;<INPUT TYPE=text NAME="Street Address" class="form-control"  VALUE="" SIZE=50>
+      </TD>
     </TR>
     <TR bgcolor="#FFFFFF">
       <TD WIDTH="118" HEIGHT=21 bgcolor="#FFFFFF"><P>City:</P></TD>
-      <TD HEIGHT=21 COLSPAN=2 bgcolor="#FFFFFF"><P>&nbsp;
-              <INPUT TYPE=text NAME=city class="form-control"  VALUE="" SIZE=50>
-      </P></TD>
+      <TD HEIGHT=21 COLSPAN=2 bgcolor="#FFFFFF">&nbsp;&nbsp;<INPUT TYPE=text NAME=city class="form-control"  VALUE="" SIZE=50>
+      </TD>
     </TR>
     <TR bgcolor="#FFFFFF">
       <TD WIDTH="118" HEIGHT=31 bgcolor="#FFFFFF"><P>State or Province:</P></TD>
-      <TD WIDTH=163 HEIGHT=31 bgcolor="#FFFFFF"><P>&nbsp;
+      <TD WIDTH=163 HEIGHT=31 bgcolor="#FFFFFF">&nbsp;&nbsp;
         <SELECT NAME=state class="style11">
           <OPTION>Select a State 
           <option value="AL">Alabama</option>
@@ -416,16 +412,16 @@ with new package purchases </p>
           <option value="WI">Wisconsin</option>
           <option value="WY">Wyoming</option>
         </SELECT>
-      </P></TD></TR>
+      </TD></TR>
       <TR>
-      <TD BGCOLOR="#FFFFFF"><P>Zip Code:</TD>
-        <TD><INPUT TYPE=text NAME=zip class="form-control"  VALUE="" SIZE=15>
-      </P></TD>
+      <TD BGCOLOR="#FFFFFF"><P>Zip Code:</P></TD>
+        <TD>&nbsp;&nbsp;<INPUT TYPE=text NAME=zip class="form-control"  VALUE="" SIZE=15 style:="width:70%;">
+      </TD>
     </TR>
     <TR bgcolor="#FFFFFF">
-      <TD WIDTH="118" HEIGHT=1 bgcolor="#FFFFFF"><P>Country:</P></TD>
-      <TD HEIGHT=1 COLSPAN=2 bgcolor="#FFFFFF"><P>&nbsp;
-          <SELECT NAME=country class="style11" style="width: 70%;">
+      <TD WIDTH="118" HEIGHT=31 bgcolor="#FFFFFF"><P>Country:</P></TD>
+      <TD WIDTH=163 HEIGHT=31 bgcolor="#FFFFFF">&nbsp;&nbsp;
+          <SELECT NAME=country class="style11">
             <OPTION VALUE="/" SELECTED>Choose your country</OPTION>
             <option value="US">United States</option>
             <option value="AF">Afghanistan</option>
@@ -677,7 +673,7 @@ with new package purchases </p>
             <option value="ZM">Zambia</option>
             <option value="ZW">Zimbabwe</option>
           </SELECT>
-      </P></TD>
+        </TD>
     </TR>
     
     <TR bgcolor="#FFFFFF">
@@ -712,8 +708,7 @@ with new package purchases </p>
       </TD>  
     </TR>
     <TR bgcolor="#FFFFFF">
-      <TD HEIGHT=18 colspan="3"><p>
-          Enter Credit Card Information:</p>
+      <TD HEIGHT=18 colspan="3"><P>Enter Credit Card Information:</P>
           <select name='CardType' id="CardType" class="style11">
             <option value="">Choose Card </option>
             <option value="MasterCard">MasterCard </option>
@@ -758,18 +753,17 @@ with new package purchases </p>
     <!-- First Name, Last Name-->
     <TR bgcolor="#FFFFFF" >
       <TD WIDTH="118" HEIGHT=40 bgcolor="#FFFFFF">First Name: </TD>
-      <TD width="163" bgcolor="#FFFFFF"><INPUT TYPE=text NAME=cardfirstname class="form-control"  id="cardfirstname" VALUE="" SIZE=18>
-      </TD>
-      <TD WIDTH="118"  HEIGHT=40 bgcolor="#FFFFFF">Last Name:
-      <INPUT TYPE=text NAME=cardlastname id="cardlastname" class="form-control"  VALUE="" SIZE=18>
-      
-
-      <div style="position:absolute; height:0px; width:0px; visibility:hidden"><input type=text class="style11" name='cardholder' id='cardholder' value="" size=15></div>
+      <TD width="163" bgcolor="#FFFFFF"><INPUT TYPE=text NAME=cardfirstname class="form-control"  id="cardfirstname" VALUE="" SIZE=18></INPUT>
       </TD>
     </TR>
+    <TR>
+      <TD WIDTH="118"  HEIGHT=40 bgcolor="#FFFFFF">Last Name:</TD>
+      <TD><INPUT TYPE=text NAME=cardlastname id="cardlastname" class="form-control"  VALUE="" SIZE=18></INPUT>
+      
 
-
-
+      <div style="position:absolute; height:0px; width:0px; visibility:hidden"><input type=text class="style11" name='cardholder' id='cardholder' value="" size=15></div></div>
+      </TD>
+    </TR>
 
     <TR bgcolor="#E5E5E5">
       <TD HEIGHT=23 colspan="3" class="style11"><p>5. Click the Submit Order button just once to complete your order.<br>
