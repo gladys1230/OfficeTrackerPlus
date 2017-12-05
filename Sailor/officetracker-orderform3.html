@@ -137,7 +137,7 @@
               <input name="NumberOfUsers" id="NumberOfUsers" type="text" class="form-control" onChange="UpdateForm()" style="text-align:right;"></td>
 
 
-                  <td><a href="javascript:UpdateForm()">Update</a></div></div></td>
+                  <td><a href="javascript:UpdateForm()" style="margin-left: -40px;">Update</a></div></div></td>
             <td width="186"><div id="PricePerUser" style="visibility:hidden " align="right">Price/user: $0.00</div>
 
             </td>
@@ -151,7 +151,7 @@
 
                 <input name="NumberOfViewOnly" id="NumberOfViewOnly" type="text" class="form-control"  onChange="UpdateForm()" style="text-align:right"></td>
 
-                  <td><a href="javascript:UpdateForm()">Update</a><span id="ViewOnlyWarn" style="color:#FF0000; "></span></div></td>
+                  <td><a href="javascript:UpdateForm()" style="margin-left: -40px;">Update</a><span id="ViewOnlyWarn" style="color:#FF0000; "></span></div></td>
         </div>  
           <div id="ViewOnlyTotal" style="visibility:hidden; color:#FF0000" align="right">&nbsp;</div></td>
         </tr>
@@ -314,16 +314,17 @@ with new package purchases </p>
     <TR bgcolor="#E5E5E5">
       <TD HEIGHT=50 colspan="3" class="style11">Enter Your Shipping and Payment Information:</TD>
     </TR>
+
     <TR bgcolor="#FFFFFF">
       <TD WIDTH="118" HEIGHT=11 bgcolor="#FFFFFF"><P>First Name:</P></TD>
-      <TD width="163" bgcolor="#FFFFFF">&nbsp;&nbsp;<INPUT TYPE=text  class="form-control"  NAME=first_name id="first_name" VALUE="" SIZE=18>
+      <TD HEIGHT=11 COLSPAN=2 bgcolor="#FFFFFF">&nbsp;&nbsp;<INPUT TYPE=text  class="form-control"  NAME=first_name id="first_name" VALUE="" SIZE=18>
       </INPUT>
     </TD>
   </TR>
 
   <TR bgcolor="#FFFFFF">
     <TD WIDTH="118"   HEIGHT=11 bgcolor="#FFFFFF"><P>Last Name:</P></TD>
-    <TD width="163" bgcolor="#FFFFFF">&nbsp;&nbsp;<INPUT TYPE=text NAME=last_name class="form-control" id="last_name" VALUE="" SIZE=18>
+    <TD HEIGHT=11 COLSPAN=2 bgcolor="#FFFFFF">&nbsp;&nbsp;<INPUT TYPE=text NAME=last_name class="form-control" id="last_name" VALUE="" SIZE=18>
 
 </TD>
     </TR>
@@ -335,11 +336,15 @@ with new package purchases </p>
     </TR>
     <TR bgcolor="#FFFFFF">
       <TD WIDTH="118" HEIGHT=13 bgcolor="#FFFFFF"><P>Phone Number:</P></TD>
-      <TD WIDTH=163 BGCOLOR="#FFFFFF">&nbsp;&nbsp;<INPUT TYPE=text NAME=Phone class="form-control"  VALUE="" SIZE=15>
+      <TD HEIGHT=11 COLSPAN=2 bgcolor="#FFFFFF">&nbsp;&nbsp;<INPUT TYPE=text NAME=Phone class="form-control"  VALUE="" SIZE=15>
       </TD>
-      <TD WIDTH=278 HEIGHT=13 BGCOLOR="#FFFFFF" style="visibility:hidden"><P>Fax:<INPUT TYPE=text NAME=Fax class="form-control"  VALUE="" SIZE=19>
-      </P></TD>
+
+      <!-- This Guy caused some messed, if we are not showing fax #, hide it-->
+      <!--<TD WIDTH=278 HEIGHT=13 BGCOLOR="#FFFFFF" style="visibility:hidden"><P>Fax:</P></TD>
+      <TD HEIGHT=11 COLSPAN=2 bgcolor="#FFFFFF">&nbsp;&nbsp;<INPUT TYPE=text NAME=Fax class="form-control"  VALUE="" SIZE=19>
+      </TD-->
     </TR>
+
     <TR bgcolor="#FFFFFF">
       <TD WIDTH="118" HEIGHT=13 bgcolor="#FFFFFF"><P>e-mail:</P></TD>
       <TD HEIGHT=13 COLSPAN=2 bgcolor="#FFFFFF">&nbsp;&nbsp;<INPUT TYPE=text NAME="email" class="form-control"  VALUE="" SIZE=50>
@@ -692,7 +697,7 @@ with new package purchases </p>
       <TD WIDTH=163 HEIGHT=31 bgcolor="#FFFFFF">&nbsp;&nbsp;
         <SELECT NAME=state class="form-control"> -->
     <TR  WIDTH="118" HEIGHT=31 bgcolor="#FFFFFF" id="Choose_Upgrade" name="Choose_Upgrade" style="visibility:hidden">
-      <TD WIDTH="118" HEIGHT=31 bgcolor="#FFFFFF"><P>Version you are currently running:</P></TD>
+      <TD WIDTH="118" HEIGHT=31 bgcolor="#FFFFFF"><P>Your current version:</P></TD>
           <TD><select name="Current_Version" id="Current_Version" class="form-control" ><
             <option value="None">Current Version</option>
             <option value="New_Purchase">New Purchase</option>
@@ -707,7 +712,7 @@ with new package purchases </p>
 
           </select></TD></TR>
           <TR>
-          <TD WIDTH="118" HEIGHT=31 bgcolor="#FFFFFF"><P>Do you want to upgrade want to upgrade to latest version?</P></TD>
+          <TD WIDTH="118" HEIGHT=31 bgcolor="#FFFFFF"><P>Upgrade to the latest version?</P></TD>
           <TD><select name="Wants_to_upgrade" id="Wants_to_upgrade" class="form-control" >
             <option value"No_Answer">Choose</option>
             <option value="Yes">Yes</option>
@@ -717,7 +722,7 @@ with new package purchases </p>
     </TR>
     <TR bgcolor="#FFFFFF">
       <TD HEIGHT=18 colspan="3"><P>Enter Credit Card Information:</P>
-          <select name='CardType' id="CardType" class="style11">
+          <select name='CardType' id="CardType" class="style11" >
             <option value="">Choose Card </option>
             <option value="MasterCard">MasterCard </option>
             <option value="Visa">VISA </option>

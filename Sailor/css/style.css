@@ -666,9 +666,9 @@ section.callaction {
 	/*change from padding: 60px 0 40px 0; for Office Tracker*/
 	padding:60px 0 4px 0;
 }
-/*changed from 30 to 10 for Office Tracker*/
+/*changed from 30 to 0 for Office Tracker*/
 #content img {
-	margin-bottom: 30px;
+	margin-bottom: 0px;
 }
 
 
