@@ -170,3 +170,10 @@ select[multiple], select[size] {
 input[type=submit].btn-block, input[type=reset].btn-block, input[type=button].btn-block {
     width: 50%;
 }
+
+/*.col-lg-4{
+	position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 5px;
+}*/
