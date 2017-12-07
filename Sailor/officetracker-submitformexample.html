@@ -6,7 +6,7 @@
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Submit a ticket - Powered by Kayako Help Desk Software</title>
+    <title>Your ticket details - Powered by Kayako Help Desk Software</title>
     <meta name="KEYWORDS" content="Home" />
     <!-- <meta name="description" content="DISPLAY SOME KB STUFF OR NEWS HERE" /> -->
     <meta name="robots" content="index,follow" />
@@ -25,7 +25,7 @@
   <link rel="stylesheet" type="text/css" media="all" href="https://www.officetracker.com/support/index.php?/Core/Default/Compressor/css" />
   <script type="text/javascript" src="https://www.officetracker.com/support/index.php?/Core/Default/Compressor/js"></script>
   <script language="Javascript" type="text/javascript">
-  SWIFT.Setup('/tickets/submit/Index/', {"basename":"https:\/\/www.officetracker.com\/support\/index.php?","interfacepath":"https:\/\/www.officetracker.com\/support\/","swiftpath":"https:\/\/www.officetracker.com\/support\/","ip":false,"themepath":"https:\/\/www.officetracker.com\/support\/__swift\/themes\/client\/","themepathinterface":"https:\/\/www.officetracker.com\/support\/__swift\/themes\/client\/","themepathglobal":"https:\/\/www.officetracker.com\/support\/__swift\/themes\/__global\/","version":"4.76.0","product":"fusion"});
+  SWIFT.Setup('/tickets/submit/RenderForm/', {"basename":"https:\/\/www.officetracker.com\/support\/index.php?","interfacepath":"https:\/\/www.officetracker.com\/support\/","swiftpath":"https:\/\/www.officetracker.com\/support\/","ip":false,"themepath":"https:\/\/www.officetracker.com\/support\/__swift\/themes\/client\/","themepathinterface":"https:\/\/www.officetracker.com\/support\/__swift\/themes\/client\/","themepathglobal":"https:\/\/www.officetracker.com\/support\/__swift\/themes\/__global\/","version":"4.76.0","product":"fusion"});
   </script>
   </head>
 
@@ -70,7 +70,8 @@
             </ul>
           </div>
         </div>
-
+        
+        <!-- CONTENT -->
         <div id="maincore">
       <div class="innerwrapper">
               <div id="maincoreleft">
@@ -79,7 +80,7 @@
               <form method="post" action="https://www.officetracker.com/support/index.php?/Base/User/Login" name="LoginForm">
                 <div class="tabrow" id="leftloginsubscribeboxtabs"><a id="leftloginsubscribeboxlogintab" href="javascript:void(0);" onclick="ActivateLoginTab();" class="atab"><span class="tableftgap">&nbsp;</span><span class="tabbulk"><span class="tabtext">Login</span></span></a></div>
                 <div id="leftloginbox" class="switchingpanel active">
-                  <input type="hidden" name="_redirectAction" value="/Tickets/Submit/Index" />
+                  <input type="hidden" name="_redirectAction" value="/Tickets/Submit/RenderForm" />
                   <input type="hidden" name="_csrfhash" value="noqzyljumw6xbllkqz5w2ln6dpghtlos" />
                   <div class="inputframe zebraeven"><input class="loginstyledlabel" value="Your email address" onfocus="javascript: ResetLabel(this, 'Your email address', 'loginstyled');" name="scemail" type="text"></div>
                   <div class="inputframe zebraodd"><input class="loginstyled" value="" name="scpassword" type="password" autocomplete="off"></div>
@@ -121,35 +122,93 @@
 
           <!-- BEGIN DIALOG PROCESSING -->
           
-          <form method="post" action="https://www.officetracker.com/support/index.php?/Tickets/Submit/RenderForm" name="SubmitTicketForm">
+          <form method="post" action="https://www.officetracker.com/support/index.php?/Tickets/Submit/Confirmation" name="SubmitTicketForm" enctype="multipart/form-data" autocomplete="off">
       <div class="boxcontainer">
-      <div class="boxcontainerlabel">Submit a ticket</div>
+      <div class="boxcontainerlabel">Your ticket details</div>
 
       <div class="boxcontainercontent">
-      If you can't find a solution to your problem in our knowledgebase, you can submit a ticket by selecting the appropriate department below.<br /><br />
-      <table class="hlineheader"><tr><th rowspan="2" nowrap>Departments</th><td>&nbsp;</td></tr><tr><td class="hlinelower">&nbsp;</td></tr></table>
+      If you are reporting a problem, please remember to provide as much information that is relevant to the issue as possible.<br /><br />
+      <table class="hlineheader"><tr><th rowspan="2" nowrap>General Information</th><td>&nbsp;</td></tr><tr><td class="hlinelower">&nbsp;</td></tr></table>
       <table width="100%" border="0" cellspacing="1" cellpadding="4">
                 <tr>
-          <td width="16" align="left" valign="middle" class="zebraodd"><input type="radio" name="departmentid" onclick="javascript: ToggleTicketSubDepartments('3');" value="3" id="department_3" /></td>
-          <td><label for="department_3">Sales</label></td>
+          <td width="200" align="left" valign="middle" class="zebraodd">First and Last Name</td>
+          <td><input name="ticketfullname" type="text" size="25" class="swifttextlarge" value="" /></td>
         </tr>
-          
+        <tr>
+          <td align="left" valign="middle" class="zebraodd">Email</td>
+          <td><input name="ticketemail" type="text" size="25" class="swifttextlarge" value="" /></td>
+        </tr>
+        
                 <tr>
-          <td width="16" align="left" valign="middle" class="zebraodd"><input type="radio" name="departmentid" onclick="javascript: ToggleTicketSubDepartments('5');" value="5" id="department_5" /></td>
-          <td><label for="department_5">Demo Support</label></td>
+          <td width="200" align="left" valign="middle" class="zebraodd">Type</td>
+          <td><select name="tickettypeid" class="swiftselect">          <option value="1" selected="selected">Issue</option>
+                    <option value="3">Bug</option>
+                    <option value="5">Feedback</option>
+          </select></td>
         </tr>
-          
+        
                 <tr>
-          <td width="16" align="left" valign="middle" class="zebraodd"><input type="radio" name="departmentid" onclick="javascript: ToggleTicketSubDepartments('1');" value="1" id="department_1" checked /></td>
-          <td><label for="department_1">Support</label></td>
+          <td width="200" align="left" valign="middle" class="zebraodd">Priority</td>
+          <td><select name="ticketpriorityid" class="swiftselect">          <option value="1" selected="selected">Normal</option>
+                    <option value="2">Medium</option>
+                    <option value="3">High</option>
+                    <option value="4">Urgent</option>
+                    <option value="5">Emergency</option>
+                    <option value="6">Critical</option>
+          </select></td>
         </tr>
-          
         
       </table>
       <br />
+          <table class="hlineheader"><tr><th rowspan="2" nowrap>Version</th><td>&nbsp;</td></tr><tr><td class="hlinelower">&nbsp;</td></tr></table>
+      <table width="100%" border="0" cellspacing="1" cellpadding="4">
+                        <tr>
+          <td width="200" align="left" valign="middle" class="zebraodd">Office Tracker Version:</td>
+          <td>                    <input name="qargyebixh5v" type="text" autocomplete="off" size="20" class="swifttextlarge" value="">
+          
 
-      <div class="subcontent"><input class="rebuttonwide2" value="Next &raquo;" type="submit" name="button" /></div>
+          
+          <br /><span class="smalltext">Complete version number (example 9.1.5) The complete version number can be found on the admin page on the Office Tracker server status page.</span></td>
+        </tr>
+        
+        
+      </table>
+    <br/>
+    
 
+      <table class="hlineheader"><tr><th rowspan="2" nowrap>Your Message</th><td>&nbsp;</td></tr><tr><td class="hlinelower">&nbsp;</td></tr></table>
+      <table width="100%" border="0" cellspacing="1" cellpadding="4">
+        <tr>
+          <td width="200" align="left" valign="middle" class="zebraodd">Subject</td>
+          <td width=""><input name="ticketsubject" type="text" size="45" class="swifttextwide" id="ticketsubject" value="" /></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="1" cellpadding="4">
+        <tr>
+          <td colspan="2" align="left" valign="top"><textarea name="ticketmessage" id="ticketmessage" cols="25" rows="15" class="swifttextareawide"></textarea><div id="irscontainer" class="irscontainer"><div class="irsui"><div class="irstitle">Loading knowledgebase suggestions...</div></div></div></td>
+        </tr>
+      </table>
+      <br />
+
+            <table class="hlineheader"><tr><th rowspan="2" nowrap>Attach Files [<div class="addplus"><a href="#ticketattachmentcontainer" onclick="javascript: AddTicketFile();">Add File</a></div>]</th><td>&nbsp;</td></tr><tr><td class="hlinelower">&nbsp;</td></tr></table>
+      <div id="ticketattachmentcontainer">
+      </div>
+      
+      <br />
+
+            <table class="hlineheader"><tr><th rowspan="2">CAPTCHA Verification</th><td>&nbsp;</td></tr><tr><td class="hlinelower">&nbsp;</td></tr></table>
+      <div class="subcontent">Please enter the text you see in the image into the textbox below (we use this to prevent automated submissions).</div>
+      <div class="captchaholder"><img src="https://www.officetracker.com/support/index.php?/Base/Captcha/GetWordImage" align="middle" border="0" /><input type="text" name="captcha" class="swifttextlarge" value="" /></div>
+      <br />
+      
+
+      <div class="subcontent"><input class="rebuttonwide2" value="Submit" type="submit" name="button" /><input type="hidden" name="departmentid" value="1" /><input type="hidden" name="_csrfhash" value="noqzyljumw6xbllkqz5w2ln6dpghtlos" /></div>
+
+
+            <script type="text/javascript">
+      StartIRS();
+      </script>
+      
       </div>
       </div>
     </form><script type="text/javascript"> $(function(){ $('.dialogerror, .dialoginfo, .dialogalert').fadeIn('slow');$("form").bindLate("submit", function(e){$(this).find("input:submit").attr("disabled", "disabled");});});</script></div>
@@ -157,6 +216,7 @@
         <div id="bottomfooter" class="bottomfooterpadding"><a href="http://www.kayako.com/?utm_source=www.officetracker.com/support/index.php?&utm_medium=chat&utm_content=powered-by-kayako-help-desk-software&utm_campaign=product_links" target="_blank" class="bottomfooterlink">Help Desk Software</a> by Kayako</div>
       </div>
     </div>
+    <!-- End of CONTENT -->
   </div>
   </body>
 </html>

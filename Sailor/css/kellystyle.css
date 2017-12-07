@@ -52,11 +52,11 @@ a:active {
 
 h1,h2, h3, h4, h5, h6 {
 	/*changed from Roboto for Office Tracker */
-	/*font-family:'Source Sans Pro', sans-serif;*/
-	font-family:'Source Sans Pro', sans-serif;
-	font-weight:700;
-	line-height:1.1em;
-	color:#666;
+	/*font-family:'Sans Pro', sans-serif;*/
+	font-family: 'Sans Pro', sans-serif;
+	font-weight: lighter;
+	line-height: 1.1em;
+	color: #666;
 	/*change this from margin-bottom: 20px for Office Tracker;*/
 	margin-bottom: 5px;
 }
