@@ -52,14 +52,15 @@ a:active {
 
 h1,h2, h3, h4, h5, h6 {
 	/*changed from Roboto for Office Tracker */
-	/*font-family:'Source Sans Pro', sans-serif;*/
-	font-family:'Source Sans Pro', sans-serif;
-	font-weight:700;
-	line-height:1.1em;
-	color:#666;
+	/*font-family:'Sans Pro', sans-serif;*/
+	font-family: 'Sans Pro', sans-serif;
+	font-weight: lighter;
+	line-height: 1.1em;
+	color: #666;
 	/*change this from margin-bottom: 20px for Office Tracker;*/
 	margin-bottom: 5px;
 }
+
 
 .highlight {
 	color: #fff !important;
@@ -610,17 +611,47 @@ header ul.nav li ul li.dropdown-submenu li a {
 
 /* flexslider */
 /* changed from { margin: 40px 0 50px, for the images left & right for Office Tracker */
-	/* for example margin: 60px -50px 50px} for the left/right margin*/
+/* for example margin: 60px -50px 50px} for the left/right margin*/
 .main-slider.flexslider { margin: 60px 0 50px; background: transparent; border: none;
 -webkit-border-radius: 0; -moz-border-radius: 0; -o-border-radius: 0; border-radius: 0; -webkit-box-shadow: none; -moz-box-shadow: none; 
 -o-box-shadow: none;
 box-shadow: none;
 }
 
+/*changes for Office Tracker */
 .main-slider .flex-caption {background:none; -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000); zoom: 1;}
 /*changed rgba(0, 0, 0, 0.06) for Office Tracker */
 /*changed width from 295px & rgba for Office Tracker */
-.main-slider .flex-caption { bottom: 35px; background-color: rgba(19, 24, 53, 0.83); color: #fff; margin: 0; padding: 25px 25px 25px 30px; position: absolute; right: 0; width: 495px;}
+.main-slider .flex-caption {
+    bottom: 20px;
+    background-color: rgba(4, 19, 104, 0.68);
+    color: #fff;
+    margin: 0;
+    padding: 10px 35px 20px 30px;
+    position: absolute;
+    right: 0;
+    width: 365px;
+    height: 200px;
+
+}
+
+/*.main-slider .flex-caption {background:none; -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000); zoom: 1;}*/
+/*changed rgba(0, 0, 0, 0.06) for Office Tracker */
+/*changed width from 295px & rgba for Office Tracker */
+.main-slider .flex-caption { bottom: 25px; background-color: rgba(19, 24, 53, 0.83); color: #fff; margin: 0; padding: 25px 25px 25px 30px; position: absolute; right: 0; width: 495px;}
+
+@media(max-width: 640px) {
+	.main-slider .flex-caption{
+		max-width: 305px;
+	}
+	h1, h2, h3, h4, h5, h6{
+		font-size: 1.5em;
+	}
+	p{
+		font-size: 12px;
+	}
+
+	}
 .main-slider .flex-caption h3 {color: #fff; letter-spacing: 1px; margin-bottom: 8px; text-transform: uppercase;}
 .main-slider .flex-caption p {margin: 0 0 15px;}
 
@@ -672,6 +703,7 @@ section.callaction {
 /*changed from 30 to 0 for Office Tracker*/
 #content img {
 	margin-bottom: 0px;
+	max-width: 100%;
 }
 
 /* --- box --- */
@@ -2338,6 +2370,7 @@ article img.pull-right, article .align-right{
 	.main-slider .flex-caption {
 		bottom: 0;
 		text-align: center;
+
 	}
 	.main-slider .flex-caption p {
 		display: none;
