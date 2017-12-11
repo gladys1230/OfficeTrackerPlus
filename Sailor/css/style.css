@@ -638,11 +638,11 @@ box-shadow: none;
 /*.main-slider .flex-caption {background:none; -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000); zoom: 1;}*/
 /*changed rgba(0, 0, 0, 0.06) for Office Tracker */
 /*changed width from 295px & rgba for Office Tracker */
-.main-slider .flex-caption { bottom: 25px; background-color: rgba(19, 24, 53, 0.83); color: #fff; margin: 0; padding: 25px 25px 25px 30px; position: absolute; right: 0; width: 495px;}
+.main-slider .flex-caption { bottom: 25px; background-color: rgba(19, 24, 53, 0.83); color: #fff; margin: 0; padding: 10px 25px 25px 30px; position: absolute; right: 0; width: 495px;}
 
 @media(max-width: 640px) {
 	.main-slider .flex-caption{
-		max-width: 305px;
+		max-width: 365px;
 	}
 	h1, h2, h3, h4, h5, h6{
 		font-size: 1.5em;
