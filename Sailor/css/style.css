@@ -35,7 +35,7 @@ officetrcker
 ==================================== */
 
 body {
-	font-family:'Open Sans', Arial, sans-serif;
+	font-family:'Open Sans', sans-serif;
 	font-size:14px;
 	font-weight:300;
 	line-height:1.6em;
@@ -374,8 +374,8 @@ header .navbar-nav > li  {
     padding-top: 10px;
     padding-bottom: 5px;*/
 
-    padding-bottom: 30px;
-    padding-top: 30px;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 
@@ -699,7 +699,7 @@ section.callaction {
 	position:relative;
 	background:#fff;
 	/*change from padding: 60px 0 40px 0; for Office Tracker*/
-	padding:60px 0 4px 0;
+	padding:20px 0 4px 0;
 }
 /*changed from 30 to 0 for Office Tracker*/
 #content img {
