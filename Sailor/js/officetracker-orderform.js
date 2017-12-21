@@ -1143,8 +1143,8 @@ subHeader=subHeader
 document.getElementById('NumberOfUsersdiv').style.top="185px"
 document.getElementById('NumberofViewOnlydiv').style.top="225px"
 document.getElementById('licensediv').style.top="265px"
-document.getElementById('WebViewerdiv').style.top="335px"
-document.getElementById('SSWdiv').style.top="350px"
+document.getElementById('WebViewerdiv').style.top="385px"
+document.getElementById('SSWdiv').style.top="400px"
 
 
 }

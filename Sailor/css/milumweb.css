@@ -168,7 +168,7 @@ select[multiple], select[size] {
 }
 
 input[type=submit].btn-block, input[type=reset].btn-block, input[type=button].btn-block {
-    width: 50%;
+    width: 60%;
 }
 
 /*.col-lg-4{
