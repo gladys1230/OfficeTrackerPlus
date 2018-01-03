@@ -59,7 +59,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="row">
+<div class="row">
                     <div class="navbar-header">
                       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="icon-bar"></span>
@@ -71,24 +71,42 @@
                   <div class="navbar-collapse collapse ">
                     <ul class="nav navbar-nav">
                       <li><a href="index.html" class="active" style="color: #d9232d;">Home</a></li>
-                      <li><a href="officetracker-about.html">About</a></li>
+                      <li class="dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Learn More <i class="fa fa-angle-down"></i></a>
+                      <ul class="dropdown-menu">
+
+
+                        <form action="https://demo.officetracker.biz/otweb/OTPClientLogin" name="loginform" enctype="application/x-www-form-urlencoded" method="POST" target="_blank">
+                          <input type="hidden" name="logincount" value="0">
+                          <input type="hidden" name="lastname" value="Office">
+                          <input type="hidden" name="timezone" value="">
+                          <input type="hidden" name="uid" value="">
+                          <input type="hidden" name="phone" value="false">
+                          <input class="input" type="hidden" name="login" value="Office">
+                          <input class="input" type="hidden" name="password" value="office">
+                          <input type="submit" value=" Live Demo " style="border: none; color: #444; font-family:'Open Sans', sans-serif; font-weight:400;">
+                        </form>
+
+                        <li><a href="officetracker-freetrial.html">30 Days Free Trial</a></li>
+                      </ul>
+                      </li>
                       <li class="dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Products <i class="fa fa-angle-down"></i></a>
                       <ul class="dropdown-menu">
-                        <li><a href="officetracker-products3.html">Product Overview</a></li>
-                        <li><a href="officetracker-howitworks2.html">How it Works</a></li>
+                        <li><a href="officetracker-products.html">Product Overview</a></li>
+                        <li><a href="officetracker-howitworks.html">How it Works</a></li>
                         <li><a href="officetracker-successstories.html">Success Stories</a></li>
                         <li><a href="officetracker-faq.html">Frequent Questions & Answers</a></li>
                       </ul>
                       </li>
-                      <li><a href="officetracker-freetrial2.html">Free Trial</a></li>
+
                       <li class="dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Pricing <i class="fa fa-angle-down"></i></a>
                         <ul class="dropdown-menu">
-                          <li><a href="officetracker-orderform3.html">Business</a></li>
-                          <li><a href="officetracker-orderform3.html?edu">Non Profit</a></li>
-                          <li><a href="officetracker-orderform3.html?upgrade">Upgrade</a></li>
-                          <li><a href="officetracker-orderform3.html?support">Support</a></li>
+                          <li><a href="officetracker-orderform.html">Business</a></li>
+                          <li><a href="officetracker-orderform.html?edu">Non Profit</a></li>
+                          <li><a href="officetracker-orderform.html?upgrade">Upgrade</a></li>
+                          <li><a href="officetracker-orderform.html?support">Support</a></li>
                         </ul>
                       </li>
+                      <li><a href="officetracker-about.html">About</a></li>
                       <li><a href="https://www.officetracker.com/support.html">Support</a></li>
                     </ul>
                   </div>
@@ -97,7 +115,7 @@
         </div>
       </div>
     </header>
-        <!-- end header -->
+    <!-- end header -->
 
 	<section id="inner-headline">
 	<div class="container">
@@ -112,123 +130,64 @@
 		</div>
 	</div>
 	</section>
+
+  <br />
+  <br />
+  <br />
 	<section id="content">
-<div class="container">
-<div class="row">
-    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+    <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
 
-      <!--Begin CTCT Sign-Up Form-->
-<!-- EFD 1.0.0 [Wed Oct 11 17:38:30 EDT 2017] -->
-<link rel='stylesheet' type='text/css' href='https://static.ctctcdn.com/h/contacts-embedded-signup-assets/1.0.2/css/signup-form.css'>
-<div class="ctct-embed-signup" style="font: 16px Helvetica Neue, Arial, sans-serif; font: 1rem Helvetica Neue, Arial, sans-serif; line-height: 1.5; -webkit-font-smoothing: antialiased;">
-   <div style="color:#656565; background-color:#FFFFFF; border-radius:5px;">
-       <span id="success_message" style="display:none;">
-           <div style="text-align:center;">Thanks for signing up!</div>
-       </span>
-       <form data-id="embedded_signup:form" class="ctct-custom-form Form" name="embedded_signup" method="POST" action="https://visitor2.constantcontact.com/api/signup">
-           <h2>Registration</h2>
-           <p>Thanks for your interest in joining our mailing list. Please complete the information below and click Sign Up.</p>
-           <hr class="colorgraph">
-           <!-- The following code must be included to ensure your sign-up form works properly. -->
-           <input data-id="ca:input" name="ca" value="99da6344-c79e-48c5-b3d4-a5480ad462fe" type="hidden">
-           <input data-id="source:input" name="source" value="EFD" type="hidden">
-           <input data-id="required:input" name="required" value="list,email,first_name,last_name,company" type="hidden">
-           <input data-id="url:input" name="url" value="" type="hidden">
-           <p data-id="Email Address:p" ><label data-id="Email Address:label" data-name="email" class="ctct-form-required">Email Address</label> <input data-id="Email Address:input" name="email" value="" maxlength="80" type="text"></p>
-           <p data-id="First Name:p" ><label data-id="First Name:label" data-name="first_name" class="ctct-form-required">First Name</label> <input data-id="First Name:input" name="first_name" value="" maxlength="50" type="text"></p>
-           <p data-id="Last Name:p" ><label data-id="Last Name:label" data-name="last_name" class="ctct-form-required">Last Name</label> <input data-id="Last Name:input" name="last_name" value="" maxlength="50" type="text"></p>
-           <p data-id="Company:p" ><label data-id="Company:label" data-name="company" class="ctct-form-required">Company</label> <input data-id="Company:input" name="company" value="" maxlength="50" type="text"></p>
-                      <p data-id="Lists:p" ><label data-id="Lists:label" data-name="list" class="ctct-form-required">Email Lists</label><div><input data-id="Lists:input" name="list_0" value="1521291697" type="checkbox"><span data-id="Lists:span">Coupon Customers List</span></div><div><input data-id="Lists:input" name="list_1" value="3" type="checkbox"><span data-id="Lists:span">Office Tracker Newsletter</span></div><div><input data-id="Lists:input" name="list_2" value="4" type="checkbox"><span data-id="Lists:span">Office Tracker Support</span></div></p>
-           <button type="submit" style= "background-color:#656565" class="Button ctct-button Button--block Button-secondary" data-enabled="enabled">Sign Up</button>
-           <div><p class="ctct-form-footer">By submitting this form, you are granting: Office Tracker, PO Box 384, Kingsland, Texas, 78639, United States, http://www.officetracker.com permission to email you. You may unsubscribe via the link found at the bottom of every email.  (See our <a href="http://www.constantcontact.com/legal/privacy-statement" target="_blank">Email Privacy Policy</a> for details.) Emails are serviced by Constant Contact.</p></div>
-       </form>
-       <hr class="colorgraph">
-   </div>
-</div>
-<script type='text/javascript'>
-   var localizedErrMap = {};
-   localizedErrMap['required'] =         'This field is required.';
-   localizedErrMap['ca'] =             'An unexpected error occurred while attempting to send email.';
-   localizedErrMap['email'] =             'Please enter your email address in name@email.com format.';
-   localizedErrMap['birthday'] =         'Please enter birthday in MM/DD format.';
-   localizedErrMap['anniversary'] =     'Please enter anniversary in MM/DD/YYYY format.';
-   localizedErrMap['custom_date'] =     'Please enter this date in MM/DD/YYYY format.';
-   localizedErrMap['list'] =             'Please select at least one email list.';
-   localizedErrMap['generic'] =         'This field is invalid.';
-   localizedErrMap['shared'] =         'Sorry, we could not complete your sign-up. Please contact us to resolve this.';
-   localizedErrMap['state_mismatch'] = 'Mismatched State/Province and Country.';
-    localizedErrMap['state_province'] = 'Select a state/province';
-   localizedErrMap['selectcountry'] =     'Select a country';
-   var postURL = 'https://visitor2.constantcontact.com/api/signup';
-</script>
-<script type='text/javascript' src='https://static.ctctcdn.com/h/contacts-embedded-signup-assets/1.0.2/js/signup-form.js'></script>
-<!--End CTCT Sign-Up Form-->
-		<!--<form role="form" class="register-form">
-			<h2><center>Registration</center></h2>
-			<h2><small>Thanks for your interest in joining our mailing list. Please complete the information below and click Sign Up.</small></h2>
-			<hr class="colorgraph">
-			<div class="row">
-				<div class="col-xs-12 col-sm-12 col-md-12">
-					<div class="form-group">
-						<h3><small><a>*</a> Email Address</small></h3>
-						<input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="1">
-					</div>
-					<div class="form-group">
-						<h3><small><a>*</a> First Name</small></h3>
-            <input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="First Name" tabindex="2">
-					</div>
-					<div class="form-group">
-						<h3><small><a>*</a> Last Name</small></h3>
-						<input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="Last Name" tabindex="3">
-					</div>
-					<div class="form-group">
-						<h3><small><a>*</a> Company</small></h3>
-						<input type="text" name="company_name" id="company_name" class="form-control input-lg" placeholder="Company" tabindex="4">
-				</div>
-			</div>		
-		</div>
-			<div class="row">
-				<div class="col-xs-4 col-sm-3 col-md-3">
-					<span class="button-checkbox">
-						<button type="button" class="btn" data-color="info" tabindex="7">I Agree</button>
-                        <input type="checkbox" name="t_and_c" id="t_and_c" class="hidden" value="1">
-					</span>
-				</div>
-				<div class="col-xs-8 col-sm-9 col-md-9">
-					 By clicking <strong class="label label-primary">Register</strong>, you agree to the <a href="#" data-toggle="modal" data-target="#t_and_c_m">Terms and Conditions</a> set out by this site, including our Cookie Use.
-				</div>
-			</div>
-			
-			<hr class="colorgraph">
-			<div class="row">
-				<div class="col-xs-12 col-md-6"><input type="submit" value="Sign Up" class="btn btn-theme btn-block btn-lg" tabindex="7"></div>
-				<div class="col-xs-12 col-md-6">Already have an account? <a href="login.html">Sign In</a></div>
-			</div>
-		</form>-->
-	</div>
-</div>
-<!-- Modal -->
-<div class="modal fade" id="t_and_c_m" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="modal-dialog modal-lg">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-				<h4 class="modal-title" id="myModalLabel">Terms & Conditions</h4>
-			</div>
-			<div class="modal-body">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-primary" data-dismiss="modal">I Agree</button>
-			</div>
-		</div><!-- /.modal-content -->
-	</div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-</div>
-	</section>
-  
+        <!--Begin CTCT Sign-Up Form-->
+        <!-- EFD 1.0.0 [Wed Oct 11 17:38:30 EDT 2017] -->
+        <link rel='stylesheet' type='text/css' href='https://static.ctctcdn.com/h/contacts-embedded-signup-assets/1.0.2/css/signup-form.css'>
+        <div class="ctct-embed-signup" style="font: 16px Helvetica Neue, Arial, sans-serif; font: 1rem Helvetica Neue, Arial, sans-serif; line-height: 1.5; -webkit-font-smoothing: antialiased;">
+           <div style="color:#656565; background-color:#FFFFFF; border-radius:5px;">
+              <span id="success_message" style="display:none;">
+                  <div style="text-align:center;">Thanks for signing up!</div>
+               </span>
+               <form data-id="embedded_signup:form" class="ctct-custom-form Form" name="embedded_signup" method="POST" action="https://visitor2.constantcontact.com/api/signup">  
+                  <h2>Registration</h2>
+                  <p>Thanks for your interest in joining our mailing list. Please complete the information below and click Sign Up.</p>
+                  <hr class="colorgraph">
+                   <!-- The following code must be included to ensure your sign-up form works properly. -->
+                  <input data-id="ca:input" name="ca" value="99da6344-c79e-48c5-b3d4-a5480ad462fe" type="hidden">
+                  <input data-id="source:input" name="source" value="EFD" type="hidden">
+                  <input data-id="required:input" name="required" value="list,email,first_name,last_name,company" type="hidden">
+                  <input data-id="url:input" name="url" value="" type="hidden">
+                  <p data-id="Email Address:p" ><label data-id="Email Address:label" data-name="email" class="ctct-form-required">Email Address</label> <input data-id="Email Address:input" name="email" value="" maxlength="80" type="text"></p>
+                  <p data-id="First Name:p" ><label data-id="First Name:label" data-name="first_name" class="ctct-form-required">First Name</label> <input data-id="First Name:input" name="first_name" value="" maxlength="50" type="text"></p>
+                  <p data-id="Last Name:p" ><label data-id="Last Name:label" data-name="last_name" class="ctct-form-required">Last Name</label> <input data-id="Last Name:input" name="last_name" value="" maxlength="50" type="text"></p>
+                  <p data-id="Company:p" ><label data-id="Company:label" data-name="company" class="ctct-form-required">Company</label> <input data-id="Company:input" name="company" value="" maxlength="50" type="text"></p>
+                  <p data-id="Lists:p" ><label data-id="Lists:label" data-name="list" class="ctct-form-required">Email Lists</label><div><input data-id="Lists:input" name="list_0" value="1521291697" type="checkbox"><span data-id="Lists:span">Coupon Customers List</span></div><div><input data-id="Lists:input" name="list_1" value="3" type="checkbox"><span data-id="Lists:span">Office Tracker Newsletter</span></div><div><input data-id="Lists:input" name="list_2" value="4" type="checkbox"><span data-id="Lists:span">Office Tracker Support</span></div></p>
+                  <button type="submit" style= "background-color:#656565" class="Button ctct-button Button--block Button-secondary" data-enabled="enabled">Sign Up</button>
+                  <div><p class="ctct-form-footer">By submitting this form, you are granting: Office Tracker, PO Box 384, Kingsland, Texas, 78639, United States, http://www.officetracker.com permission to email you. You may unsubscribe via the link found at the bottom of every email.  (See our <a href="http://www.constantcontact.com/legal/privacy-statement" target="_blank">Email Privacy Policy</a> for details.) Emails are serviced by Constant Contact.</p></div>
+              </form>
+              <hr class="colorgraph">
+          </div>
+        </div>
+        <script type='text/javascript'>
+          var localizedErrMap = {};
+          localizedErrMap['required'] =         'This field is required.';
+          localizedErrMap['ca'] =             'An unexpected error occurred while attempting to send email.';
+          localizedErrMap['email'] =             'Please enter your email address in name@email.com format.';
+          localizedErrMap['birthday'] =         'Please enter birthday in MM/DD format.';
+          localizedErrMap['anniversary'] =     'Please enter anniversary in MM/DD/YYYY format.';
+          localizedErrMap['custom_date'] =     'Please enter this date in MM/DD/YYYY format.';
+          localizedErrMap['list'] =             'Please select at least one email list.';
+          localizedErrMap['generic'] =         'This field is invalid.';
+          localizedErrMap['shared'] =         'Sorry, we could not complete your sign-up. Please contact us to resolve this.';
+          localizedErrMap['state_mismatch'] = 'Mismatched State/Province and Country.';
+          localizedErrMap['state_province'] = 'Select a state/province';
+          localizedErrMap['selectcountry'] =     'Select a country';
+          var postURL = 'https://visitor2.constantcontact.com/api/signup';
+        </script>
+        <script type='text/javascript' src='https://static.ctctcdn.com/h/contacts-embedded-signup-assets/1.0.2/js/signup-form.js'></script>
+        <!--End CTCT Sign-Up Form-->
 
+	     </div>
+      </div>
 			<footer>
       <div class="container">
         <div class="row">

@@ -469,7 +469,7 @@ header ul.nav li ul li a {
 }
 
 
-.dropdown-menu li:hover,
+.dropdown-menu li :hover,
 .dropdown-menu li a:hover,
 .dropdown-menu li > a:focus,
 .dropdown-submenu:hover > a, 
