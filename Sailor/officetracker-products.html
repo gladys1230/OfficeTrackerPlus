@@ -29,7 +29,7 @@
 
 <body>
   <div id="wrapper">
-  <!-- start header -->
+    <!-- start header -->
     <header>
       <div class="navbar navbar-default navbar-fixed-top">
         <div class="top">
@@ -68,10 +68,11 @@
                   <div class="navbar-collapse collapse ">
                     <ul class="nav navbar-nav">
                       <li><a href="index.html" class="active" style="color: #d9232d;">Home</a></li>
+
                       <li class="dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Learn More <i class="fa fa-angle-down"></i></a>
                       <ul class="dropdown-menu">
 
-
+                        <!--Live Demo -->
                         <form action="https://demo.officetracker.biz/otweb/OTPClientLogin" name="loginform" enctype="application/x-www-form-urlencoded" method="POST" target="_blank">
                           <input type="hidden" name="logincount" value="0">
                           <input type="hidden" name="lastname" value="Office">
@@ -80,19 +81,25 @@
                           <input type="hidden" name="phone" value="false">
                           <input class="input" type="hidden" name="login" value="Office">
                           <input class="input" type="hidden" name="password" value="office">
-                          <input type="submit" value=" Live Demo " style="border: none; color: #444; font-family:'Open Sans', sans-serif; font-weight:400;">
+                          <!--leave the spaces between "Live Demo    " for the border line -->
+                          <input type="submit" value=" Live Demo                                   " style="background-color: #ffffff; font-family:'Open Sans', sans-serif; border-color: #ffffff; border-bottom: 1px solid #eee; font-weight:400; padding: 5px 8px 5px;">
                         </form>
-
+                        <!--End of Live Demo -->
                         <li><a href="officetracker-freetrial.html">30 Days Free Trial</a></li>
+                        <li><a href="officetracker-successstories.html">Success Stories</a></li>
+                        <li><a href="officetracker-faq.html">Frequent Questions & Answers</a></li>
+                        <li><a href="officetracker-whousesofficetracker.html">Who Uses Office Tracker</a></li>
+
+                        
+
                       </ul>
                       </li>
                       <li class="dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Products <i class="fa fa-angle-down"></i></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="officetracker-products.html">Product Overview</a></li>
-                        <li><a href="officetracker-howitworks.html">How it Works</a></li>
-                        <li><a href="officetracker-successstories.html">Success Stories</a></li>
-                        <li><a href="officetracker-faq.html">Frequent Questions & Answers</a></li>
-                      </ul>
+                        <ul class="dropdown-menu">
+                          <li><a href="officetracker-products.html">Product Overview</a></li>
+                          <li><a href="officetracker-howitworks.html">How it Works</a></li>
+                          <li><a href="officetracker-cloudbase.html">Cloud Based Server</a></li>
+                        </ul>
                       </li>
 
                       <li class="dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Pricing <i class="fa fa-angle-down"></i></a>
@@ -103,16 +110,30 @@
                           <li><a href="officetracker-orderform.html?support">Support</a></li>
                         </ul>
                       </li>
-                      <li><a href="officetracker-about.html">About</a></li>
-                      <li><a href="https://www.officetracker.com/support.html">Support</a></li>
-                    </ul>
-                  </div>
+
+                      <li class="dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Support <i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="https://www.officetracker.com/support/">Submit a Question</a></li>
+                          <li><a href="https://www.officetracker.com/support.html">View the Knowledgebase</a></li>
+                          <li><a href="officetracker-sysreq.html?upgrade">Get System Requirements</a></li>
+                        </ul>
+                      </li>
+
+                      <li class="dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">About <i class="fa fa-angle-down"></i></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="officetracker-about.html">About Us</a></li>
+                        <li><a href="officetracker-contactUs.html">Contact Us</a></li>
+                      </ul>
+                    </li>
+                      
+                  </ul>
+                </div>
             </div>
           </div>
         </div>
       </div>
     </header>
-    <!-- end header -->            
+    <!-- end header -->          
             <section id="inner-headline"> 
                 <div class="container"> 
                     <div class="row"> 
@@ -124,8 +145,7 @@
                     </div>                     
                 </div>                 
             </section>
-            <br />
-            <br />             
+            <br />            
             <section id="content"> 
                 <div class="container"> 
                     <div class="row"> 
@@ -133,7 +153,7 @@
                             <div class="col-lg-8"> 
                                 <div class="post-slider"> 
                                     <div class="post-heading"> 
-                                        <h1 style="color: #666666;" href="#">Product Overview</h1> 
+                                        <h2 style="color: #666666;" href="#">Product Overview</h2> 
                                     </div>                                     
                                     <!-- start flexslider -->                                     
                                     <div id="post-slider" class="postslider flexslider"> 
@@ -186,6 +206,233 @@
                     </div>                     
                 </div>                 
             </section>             
+
+            <!-- Portfolio Projects -->
+        <div class="container marginbot50">
+          <div class="row">
+            <div class="col-lg-12">
+              <h4 class="heading">Features</h4>
+              <!--Define the filters on Top-->
+              <div id="filters-container" class="cbp-l-filters-button">
+                <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">All
+                  <div class="cbp-filter-counter"></div>
+                </div>
+                <div data-filter=".Scheduling" class="cbp-filter-item">Scheduling
+                  <div class="cbp-filter-counter"></div>
+                </div>
+                <div data-filter=".Mobile-Access" class="cbp-filter-item">Mobile Access
+                  <div class="cbp-filter-counter"></div>
+                </div>
+                <div data-filter=".Cloud-based" class="cbp-filter-item">Cloud-based
+                  <div class="cbp-filter-counter"></div>
+                </div>
+                <div data-filter=".Other" class="cbp-filter-item">Other
+                  <div class="cbp-filter-counter"></div>
+                </div>
+              </div>
+              <div id="grid-container" class="cbp-l-grid-projects">
+                <ul>
+                  <!--First Feature -->
+                  <li class="cbp-item Mobile-Access">
+                    <div class="cbp-caption">
+                      <div class="cbp-caption-defaultWrap">
+                        <img src="img/officetracker/features/contacts.png" alt="" />
+                      </div>
+                      <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                          <div class="cbp-l-caption-body">
+                            <a href="img/officetracker/features/contacts.png" class="cbp-lightbox cbp-l-caption-buttonRight" data-title="Contact<br>Share Company Wide - Desktop.Mobile. & Web">view larger</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cbp-l-grid-projects-title">Share & Schedule Contacts</div>
+                    <div class="cbp-l-grid-projects-desc">Mobile Access</div>
+                  </li>
+
+                  <!--Second Feature -->
+                  <li class="cbp-item Mobile-Access">
+                    <div class="cbp-caption">
+                      <div class="cbp-caption-defaultWrap">
+                        <img src="img/officetracker/features/findmeetings.png" alt="" />
+                      </div>
+                      <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                          <div class="cbp-l-caption-body">
+                            <a href="img/officetracker/features/findmeetings.png" class="cbp-lightbox cbp-l-caption-buttonRight" data-title="Find Information Fast<br>Search by Date Range. Name. Labels & More">view larger</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cbp-l-grid-projects-title">Find Information Fast</div>
+                    <div class="cbp-l-grid-projects-desc">Mobile Access</div>
+                  </li>
+
+                  <!--Third Feature -->
+                  <li class="cbp-item web-design Mobile-Access">
+                    <div class="cbp-caption">
+                      <div class="cbp-caption-defaultWrap">
+                        <img src="img/officetracker/features/groupschedule.png" alt="" />
+                      </div>
+                      <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                          <div class="cbp-l-caption-body">
+                            <a href="img/officetracker/features/groupschedule.png" class="cbp-lightbox cbp-l-caption-buttonRight" data-title="Side by Side Group Schedules<br>Share Company Wide - Desktop.Mobile. & Web">view larger</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cbp-l-grid-projects-title">Side by Side Group Schedules</div>
+                    <div class="cbp-l-grid-projects-desc">Mobile Access</div>
+                  </li>
+
+                  <!-- Fourth Feature -->
+                  <li class="cbp-item identity Mobile-Access">
+                    <div class="cbp-caption">
+                      <div class="cbp-caption-defaultWrap">
+                        <img src="img/officetracker/features/reports.png" alt="" />
+                      </div>
+                      <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                          <div class="cbp-l-caption-body">
+                            <a href="img/officetracker/features/reports.png" class="cbp-lightbox cbp-l-caption-buttonRight" data-title="Create Quick Reports<br>On Screen or Printable Reports">view larger</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cbp-l-grid-projects-title">Create Quick Reports</div>
+                    <div class="cbp-l-grid-projects-desc">Mobile Access</div>
+                  </li>
+                  <!-- Fifth Feature -->
+                  <li class="cbp-item identity Scheduling">
+                    <div class="cbp-caption">
+                      <div class="cbp-caption-defaultWrap">
+                        <img src="img/officetracker/features/customlabels.png" alt="" />
+                      </div>
+                      <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                          <div class="cbp-l-caption-body">
+                            <a href="img/officetracker/features/customlabelslarge.png" class="cbp-lightbox cbp-l-caption-buttonRight" data-title="Create Color Coded Labels">view larger</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cbp-l-grid-projects-title">Create Color Coded Labels</div>
+                    <div class="cbp-l-grid-projects-desc">Scheduling</div>
+                  </li>
+
+                  <!-- Sixth Feature -->
+                  <li class="cbp-item Mobile-Access Cloud-based Scheduling">
+                    <div class="cbp-caption">
+                      <div class="cbp-caption-defaultWrap">
+                        <img src="img/officetracker/features/sendtextreminders.png" alt="" />
+                      </div>
+                      <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                          <div class="cbp-l-caption-body">
+                            <a href="img/officetracker/features/sendtextreminderslarge.png" class="cbp-lightbox cbp-l-caption-buttonRight" data-title="Text Reminders send to your mobile Devices">view larger</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cbp-l-grid-projects-title">Send Text Reminder</div>
+                    <div class="cbp-l-grid-projects-desc">Mobile Access/Cloud-based/Scheduling</div>
+                  </li>
+
+                  <!--Seventh Feather -->
+                  <li class="cbp-item Scheduling">
+                    <div class="cbp-caption">
+                      <div class="cbp-caption-defaultWrap">
+                        <img src="img/officetracker/features/sharingandsecurity.png" alt="" />
+                      </div>
+                      <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                          <div class="cbp-l-caption-body">
+                            <a href="img/officetracker/features/sharingandsecuritylg.png" class="cbp-lightbox cbp-l-caption-buttonRight" data-title="Sharing and Security Settings">view larger</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cbp-l-grid-projects-title">Sharing and Security Settings</div>
+                    <div class="cbp-l-grid-projects-desc">Scheduling</div>
+                  </li>
+
+                  <!-- Eight Feature -->
+                  <li class="cbp-item Scheduling">
+                    <div class="cbp-caption">
+                      <div class="cbp-caption-defaultWrap">
+                        <img src="img/officetracker/features/customcategories.png" alt="" />
+                      </div>
+                      <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                          <div class="cbp-l-caption-body">
+                            <a href="img/officetracker/features/customcategorieslg.png" class="cbp-lightbox cbp-l-caption-buttonRight" data-title="Send Text Reminder<br>by Tiberiu Neamu">view larger</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cbp-l-grid-projects-title">Custom Categories and Fields</div>
+                    <div class="cbp-l-grid-projects-desc">Scheduling</div>
+                  </li>
+
+                  <!-- Ninth Feature -->
+                  <li class="cbp-item Cloud-based Scheduling">
+                    <div class="cbp-caption">
+                      <div class="cbp-caption-defaultWrap">
+                        <img src="img/officetracker/features/automatedbackups.png" alt="" />
+                      </div>
+                      <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                          <div class="cbp-l-caption-body">
+                            <a href="img/officetracker/features/automatedbackupslg.png" class="cbp-lightbox cbp-l-caption-buttonRight" data-title="Automated Backups">view larger</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cbp-l-grid-projects-title">Automated Backups</div>
+                    <div class="cbp-l-grid-projects-desc">Cloud-based/Scheduling</div>
+                  </li>
+
+                  <!-- Tenth Feature -->
+                  <li class="cbp-item Cloud-based Mobile-Access">
+                    <div class="cbp-caption">
+                      <div class="cbp-caption-defaultWrap">
+                        <img src="img/officetracker/features/textmessageoptions.png" alt="" />
+                      </div>
+                      <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                          <div class="cbp-l-caption-body">
+                            <a href="img/officetracker/features/textmessageoptionslg.png" class="cbp-lightbox cbp-l-caption-buttonRight" data-title="Text Message Options">view larger</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cbp-l-grid-projects-title">Text Message Options</div>
+                    <div class="cbp-l-grid-projects-desc">Cloud-based/Mobile-Access</div>
+                  </li>
+
+                  <!-- Eleventh Feature -->
+                  <li class="cbp-item Cloud-based">
+                    <div class="cbp-caption">
+                      <div class="cbp-caption-defaultWrap">
+                        <img src="img/officetracker/features/easyadministration.png" alt="" />
+                      </div>
+                      <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                          <div class="cbp-l-caption-body">
+                            <a href="img/officetracker/features/easyadministrationlg.png" class="cbp-lightbox cbp-l-caption-buttonRight" data-title="Easy Administration">view larger</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cbp-l-grid-projects-title">Easy Administration</div>
+                    <div class="cbp-l-grid-projects-desc">Cloud-based</div>
+                  </li>
+                </ul>
+              </div>   
+            </div>
+          </div>
+        </div>
             <!-- Second Part -->             
             <section id="content" style="background-color: #f2f2f2;"> 
                 <div class="container"> 
@@ -344,7 +591,7 @@
                         </div>
             </section>             
             <!--End of Forth Part -->             
-            <footer>
+    <footer>
       <div class="container">
         <div class="row">
           <div class="col-sm-4 col-lg-4">
@@ -374,10 +621,10 @@
               <ul class="link-list">
                 <li><a href="officetracker-about.html">About</a></li>
                 <li><a href="officetracker-legalprivacy.html">Legal/Privacy</a></li>
-                <li><a href="Resellers&VARs.html">Resellers</a></li>
+                <li><a href="officetracker-resellers.html">Resellers</a></li>
                 <li><a href="officetracker-careers.html">Career Center</a></li>
                 <li><a href="officetracker-hours.html">Hours</a></li>
-                <li><a href="officetracker-contact.html">Contact</a></li>
+                <li><a href="officetracker-contactUs.html">Contact</a></li>
               </ul>
             </div>
 
@@ -401,19 +648,14 @@
             <div class="row">
               <div class="col-lg-6">
                 <div class="copyright">
-                  <p>&copy; 1992-2018 Milum Corporation. All rights reserved. Milum, Office Tracker and point.click.schedule, are trademarks belonging to Milum Corporation. All other trademarks mentioned belong to their respective owners.</p>
-                    <div class="credits">
-                      <!-- 
-                        All the links in the footer should remain intact. 
-                        You can delete the links only if you purchased the pro version.
-                        Licensing information: https://bootstrapmade.com/license/
-                        Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Sailor
-                      -->
-                      <!--a href="https://bootstrapmade.com/free-business-bootstrap-themes-website-templates/">Business Bootstrap Themes</a> by <a href="https://bootstrapmade.com/">BootstrapMade</a>-->
-                    </div>
+
+                  <p>
+                    <strong>NOTE: </strong>We make our best effort to keep information up to date, however, all information on this page is subjected to change without notice. If in double, you are encourged to get the most updated information by contacting Milum at 800-257-2120 or at 512-469-2966.
+                  </p>
+                  <br/>
+                  <p>&copy; Milum Corporation. All rights reserved. Milum, Office Tracker and point.click.schedule, are trademarks belonging to Milum Corporation. All other trademarks mentioned belong to their respective owners.</p>
                 </div>
-              </div>
-                   
+              </div> 
             </div>
           </div>
         </div>
