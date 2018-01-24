@@ -1,23 +1,25 @@
 <!DOCTYPE html> 
 <html lang="en"> 
-    <head> 
-        <meta charset="utf-8"> 
-        <title>Office tracker's Product page</title>         
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
-        <meta name="description" content="Bootstrap 3 template for corporate business" /> 
-        <!-- css -->         
-        <link href="css/bootstrap.min.css" rel="stylesheet" /> 
-        <link href="plugins/flexslider/flexslider.css" rel="stylesheet" media="screen" /> 
-        <link href="css/cubeportfolio.min.css" rel="stylesheet" /> 
-        <link href="css/style.css" rel="stylesheet" /> 
-        <!-- Theme skin -->         
-        <link id="t-colors" href="skins/default.css" rel="stylesheet" /> 
-        <!-- boxed bg -->         
-        <link id="bodybg" href="bodybg/bg1.css" rel="stylesheet" type="text/css" /> 
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet"> 
-<!-- =======================================================
+  <head> 
+    <meta charset="utf-8"> 
+    <title>Office tracker's Product page</title>         
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <meta name="description" content="Bootstrap 3 template for corporate business" /> 
+    <!-- css -->         
+    <link href="css/bootstrap.min.css" rel="stylesheet" /> 
+    <link href="plugins/flexslider/flexslider.css" rel="stylesheet" media="screen" /> 
+    <link href="css/cubeportfolio.min.css" rel="stylesheet" /> 
+    <link href="css/style.css" rel="stylesheet" /> 
+    <!-- Theme skin -->         
+    <link id="t-colors" href="skins/default.css" rel="stylesheet" /> 
+    <!-- boxed bg -->         
+    <link id="bodybg" href="bodybg/bg1.css" rel="stylesheet" type="text/css" /> 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet"> 
+
+  <!-- =======================================================
     Office Tracker's webpage
     Implemented By: Kit Chan
+    https://www.linkedin.com/in/kitchan3495/
     
     Using:
     Theme Name: Sailor
@@ -28,86 +30,83 @@
 </head>
 
 <body>
-  <div id="wrapper">
-    <!-- start header -->
-    <header>
-      <div class="navbar navbar-default navbar-fixed-top">
-        <div class="top">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-4">
+<div id="wrapper">
+  <!-- start header -->
+  <header>
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="top">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              </div>
+                <div class="col-md-8">
+                  <!-- Office Tracker's logo orange #FE5433 -->
+                  <ul class="topright-info">
+                    <li><a href="mailto:info@officetracker.com"><i class="fa fa-envelope-square fa-2x" style="color: #FE5433;"aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.facebook.com/officetracker/"><i class="fa fa-facebook-square fa-2x" style="color: #FE5433;" aria-hidden="true"></i></a></li>
+                    <li><a href="tel:1-800-257-2120"><i class="fa fa-phone-square fa-2x" style="color:#FE5433;" aria-hidden="true"></i></a></li>
+                  </ul>
                 </div>
-                  <div class="col-md-8">
-                    <!-- Office Tracker's logo orange #FE5433 -->
-                    <ul class="topright-info">
-                      <li><a href="mailto:info@officetracker.com"><i class="fa fa-envelope-square fa-2x" style="color: #FE5433;"aria-hidden="true"></i></a></li>
-                      <li><a href="https://www.facebook.com/officetracker/"><i class="fa fa-facebook-square fa-2x" style="color: #FE5433;" aria-hidden="true"></i></a></li>
-                      <li><a href="tel:1-800-257-2120"><i class="fa fa-phone-square fa-2x" style="color:#FE5433;" aria-hidden="true"></i></a></li>
+                <div class="col-md-6">
+                <!--changed display:none in order to hiding but not mess with the Recent Work for Office Tracker-->
+                  <div id="sb-search" style="display: none;" class="sb-search">
+                    <form>
+                      <input class="sb-search-input" placeholder="Enter your search term..." type="text" value="" name="search" id="search">
+                      <input class="sb-search-submit" type="submit" value="">
+                        <span class="sb-icon-search" title="Click to start searching"></span>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="index.html"><img src="img/officeTrackerLogo.png" height="50px"/></a>
+                </div>
+              <div class="navbar-collapse collapse ">
+                <ul class="nav navbar-nav">
+                  <li><a href="index.html" class="active" style="color: #d9232d;">Home</a></li>
+
+                  <li class="dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Learn More <i class="fa fa-angle-down"></i></a>
+                  <ul class="dropdown-menu">
+
+                    <!--Live Demo -->
+                    <form action="https://demo.officetracker.biz/otweb/OTPClientLogin" name="loginform" enctype="application/x-www-form-urlencoded" method="POST" target="_blank">
+                      <input type="hidden" name="logincount" value="0">
+                      <input type="hidden" name="lastname" value="Office">
+                      <input type="hidden" name="timezone" value="">
+                      <input type="hidden" name="uid" value="">
+                      <input type="hidden" name="phone" value="false">
+                      <input class="input" type="hidden" name="login" value="Office">
+                      <input class="input" type="hidden" name="password" value="office">
+                      <!--leave the spaces between "Live Demo    " for the border line -->
+                      <input type="submit" value=" Live Demo                                   " style="background-color: #ffffff; font-family:'Open Sans', sans-serif; border-color: #ffffff; border-bottom: 1px solid #eee; font-weight:400; padding: 5px 8px 5px;">
+                    </form>
+                    <!--End of Live Demo -->
+                    <li><a href="officetracker-freetrial.html">30 Days Free Trial</a></li>
+                    <li><a href="officetracker-successstories.html">Success Stories</a></li>
+                    <li><a href="officetracker-faq.html">Frequent Questions & Answers</a></li>
+                    <li><a href="officetracker-whousesofficetracker.html">Who Uses Office Tracker</a></li>
+                  </ul>
+                </li>
+                  <li class="dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Products <i class="fa fa-angle-down"></i></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="officetracker-products.html">Product Overview</a></li>
+                      <li><a href="officetracker-howitworks.html">How it Works</a></li>
+                      <li><a href="officetracker-cloudbase.html">Cloud Hosted Option</a></li>
                     </ul>
-                  </div>
-                  <div class="col-md-6">
-                    <!--changed display:none in order to hiding but not mess with the Recent Work for Office Tracker-->
-                      <div id="sb-search" style="display: none;" class="sb-search">
-                        <form>
-                          <input class="sb-search-input" placeholder="Enter your search term..." type="text" value="" name="search" id="search">
-                          <input class="sb-search-submit" type="submit" value="">
-                            <span class="sb-icon-search" title="Click to start searching"></span>
-                        </form>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="navbar-header">
-                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                      </button>
-                      <a class="navbar-brand" href="index.html"><img src="img/officeTrackerLogo.png" height="50px"/></a>
-                  </div>
-                  <div class="navbar-collapse collapse ">
-                    <ul class="nav navbar-nav">
-                      <li><a href="index.html" class="active" style="color: #d9232d;">Home</a></li>
+                  </li>
 
-                      <li class="dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Learn More <i class="fa fa-angle-down"></i></a>
-                      <ul class="dropdown-menu">
-
-                        <!--Live Demo -->
-                        <form action="https://demo.officetracker.biz/otweb/OTPClientLogin" name="loginform" enctype="application/x-www-form-urlencoded" method="POST" target="_blank">
-                          <input type="hidden" name="logincount" value="0">
-                          <input type="hidden" name="lastname" value="Office">
-                          <input type="hidden" name="timezone" value="">
-                          <input type="hidden" name="uid" value="">
-                          <input type="hidden" name="phone" value="false">
-                          <input class="input" type="hidden" name="login" value="Office">
-                          <input class="input" type="hidden" name="password" value="office">
-                          <!--leave the spaces between "Live Demo    " for the border line -->
-                          <input type="submit" value=" Live Demo                                   " style="background-color: #ffffff; font-family:'Open Sans', sans-serif; border-color: #ffffff; border-bottom: 1px solid #eee; font-weight:400; padding: 5px 8px 5px;">
-                        </form>
-                        <!--End of Live Demo -->
-                        <li><a href="officetracker-freetrial.html">30 Days Free Trial</a></li>
-                        <li><a href="officetracker-successstories.html">Success Stories</a></li>
-                        <li><a href="officetracker-faq.html">Frequent Questions & Answers</a></li>
-                        <li><a href="officetracker-whousesofficetracker.html">Who Uses Office Tracker</a></li>
-
-                        
-
-                      </ul>
-                      </li>
-                      <li class="dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Products <i class="fa fa-angle-down"></i></a>
-                        <ul class="dropdown-menu">
-                          <li><a href="officetracker-products.html">Product Overview</a></li>
-                          <li><a href="officetracker-howitworks.html">How it Works</a></li>
-                          <li><a href="officetracker-cloudbase.html">Cloud Hosted Option</a></li>
-                        </ul>
-                      </li>
-
-                      <li class="dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Pricing <i class="fa fa-angle-down"></i></a>
-                        <ul class="dropdown-menu">
-                          <li><a href="officetracker-orderform.html">Business</a></li>
-                          <li><a href="officetracker-orderform.html?edu">Non Profit</a></li>
-                          <li><a href="officetracker-orderform.html?upgrade">Upgrade</a></li>
-                          <li><a href="officetracker-orderform.html?support">Support</a></li>
+                  <li class="dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Pricing <i class="fa fa-angle-down"></i></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="officetracker-orderform.html">Business</a></li>
+                      <li><a href="officetracker-orderform.html?edu">Non Profit</a></li>
+                      <li><a href="officetracker-orderform.html?upgrade">Upgrade</a></li>
+                      <li><a href="officetracker-orderform.html?support">Support</a></li>
                         </ul>
                       </li>
 
@@ -134,80 +133,80 @@
       </div>
     </header>
     <!-- end header -->          
-            <section id="inner-headline"> 
-                <div class="container"> 
-                    <div class="row"> 
-                        <div class="col-lg-12"> 
-                            <ul class="breadcrumb"> 
-                                <li></li>                                 
-                            </ul>                             
-                        </div>                         
-                    </div>                     
-                </div>                 
-            </section>
-            <br />            
-            <section id="content"> 
-                <div class="container"> 
-                    <div class="row"> 
-                        <div class="col-lg-12"> 
-                            <div class="col-lg-8"> 
-                                <div class="post-slider"> 
-                                    <div class="post-heading"> 
-                                        <h2 style="color: #666666;" href="#">Product Overview</h2> 
-                                    </div>                                     
-                                    <!-- start flexslider -->                                     
-                                    <div id="post-slider" class="postslider flexslider"> 
-                                        <ul class="slides" style="margin-bottom: 20px;"> 
-                                            <li> 
-                                                <img src="img/officetracker/products/largedesktopview8.jpg" alt="" style="margin-bottom: 20px; padding-top:20px;" /> 
-                                                <p><strong>Appointment Scheduling</strong> - Use Office Tracker as your "front desk" scheduler and allow one or more shcedulers to easily handle appointments, meetings and events for an entire office of people, rooms and resources. Track customers with the contact manager, keeping an automated history of all their appointments. Send automated reminders to customers and others about upcoming appointments.</p> 
-                                            </li>                                             
-                                            <li> 
-                                                <img src="img/officetracker/products/tabletsm8.jpg" alt="" style="margin-bottom: 20px; padding-top:20px;" />
-                                                <p><strong>Service Scheduling</strong> - Office Tracker is perfect for all types of service scheduling. You can schedule your service reps and appointments for customers, maintenance dates, delivery dates and more - all it's so easy, your office staff won't have any trouble using it from day one.</p> 
-                                            </li>                                             
-                                            <li> 
-                                                <img src="img/officetracker/products/photoappointment8.jpg" alt="" style="margin-bottom: 20px; padding-top:20px;" />
-                                                <p><strong>Call Center Scheduling</strong> - Schedule your staff shifts with ease, set up vacation time, create recurring blocks of time, keep up with sick days and more.</p> 
-                                            </li>                                             
-                                            <li> 
-                                                <img src="img/officetracker/products/mobilehand8.jpg" alt="" style="margin-bottom: 20px; padding-top:20px;" />
-                                                <p><strong>Vacation Scheduling</strong> - Schedule time off so everyone can look ahead and plan more effectivly. Avoid two key staff memebers taking the same vacation dates. Careate customized reports to calculate vacation time.</p> 
-                                            </li>                                             
-                                        </ul>                                         
-                                    </div>                                     
-                                </div>                                 
-                            </div>                             
-                            <!--The Right Hand Side of the screen -->                             
-                            <div class="row"> 
-                                <div class="col-lg-4"> 
-                                    <div class="col-lg-3"></div>                                     
-                                    <div class="widget"> 
-                                        <div > 
-                                            <img class="img-responsive center-block" src="img/officetracker/products/ppcirclepic.png" alt="" style="margin-top: 60px; padding-top: 10px;">
-                                        </div>                                         
-                                        <div class="media"> 
-                                            <div class="media-left media-top"> 
-                                                <div class="col-lg-3"> 
-                                                    <img src="img/officetracker/products/quotes.png" alt="" class="media-object"> 
-                                                </div>                                                 
-                                                <div class="media-body"> 
-                                                    Not only does Office Tracker save DATV money, but just as importantly, it saves us time.
-                                                    <br>
-                                                    <small>Steve Ross, Executive Director <span>&#8213; DATV, Dayton Access Television</span></small>
-                                                </div>                                                 
-                                            </div>                                             
-                                        </div>                                         
-                                    </div>                                     
-                                </div>                                 
-                                <!--End of Right Hand Side -->                                 
-                            </div>                             
-                        </div>                         
-                    </div>                     
-                </div>                 
-            </section>             
+      <section id="inner-headline"> 
+        <div class="container"> 
+          <div class="row"> 
+            <div class="col-lg-12"> 
+              <ul class="breadcrumb"> 
+                <li></li>                                 
+              </ul>                             
+            </div>                         
+          </div>                     
+        </div>                 
+      </section>
+      <br />            
+      <section id="content"> 
+        <div class="container"> 
+          <div class="row"> 
+            <div class="col-lg-12"> 
+              <div class="col-lg-8 col-sm-8"> 
+                <div class="post-slider"> 
+                  <div class="post-heading"> 
+                    <h2 style="color: #666666;" href="#">Product Overview</h2> 
+                </div>                                     
+                <!-- start flexslider -->                                     
+                <div id="post-slider" class="postslider flexslider"> 
+                  <ul class="slides" style="margin-bottom: 20px;"> 
+                    <li> 
+                      <img src="img/officetracker/products/largedesktopview8.jpg" alt="" style="margin-bottom: 20px; padding-top:20px;" /> 
+                      <p><strong>Meeting Scheduling</strong> - Share room schedules and events, add agendas and custom color labels, track time usage for users and resources. Project schedules on big screens..</p> 
+                    </li>                                             
+                    <li> 
+                      <img src="img/officetracker/products/tabletsm8.jpg" alt="" style="margin-bottom: 20px; padding-top:20px;" />
+                      <p><strong>Customer Scheduling</strong> - Share and schedule contacts, keep an automated history of all appointments. Send automated reminders or text message to customers and others about upcoming appointments.</p>
+                    </li>                                             
+                    <li> 
+                      <img src="img/officetracker/products/photoappointment8.jpg" alt="" style="margin-bottom: 20px; padding-top:20px;" />
+                      <p><strong>Service and Staff Scheduling</strong> - Schedule service reps and appointments, maintenance dates, delivery dates, track vacations and sick days, create recurring blocks of time. Avoid conflicting schedules.</p> 
+                    </li>                                             
+                    <li> 
+                      <img src="img/officetracker/products/mobilehand8.jpg" alt="" style="margin-bottom: 20px; padding-top:20px;" />
+                      <p><strong>Easy Tracking and Reporting</strong> - Create customized reports to calculate time usage for users, rooms, resources and equipment. Make time planning quick and easy.</p> 
+                    </li>                                             
+                  </ul>                                         
+                </div>                                     
+              </div>                                 
+            </div>                             
+            <!--The Right Hand Side of the screen -->                             
+            <div class="row"> 
+              <div class="col-lg-4 col-sm-4"> 
+                 <div class="col-lg-3"></div>                                     
+                  <div class="widget"> 
+                    <div > 
+                      <img class="img-responsive center-block" src="img/officetracker/products/ppcirclepic.png" alt="" style="margin-top: 60px; padding-top: 10px;">
+                    </div>                                         
+                    <div class="media"> 
+                      <div class="media-left media-top"> 
+                        <div class="col-lg-3"> 
+                          <img src="img/officetracker/products/quotes.png" alt="" class="media-object"> 
+                        </div>                                                 
+                        <div class="media-body"> 
+                          Not only does Office Tracker save DATV money, but just as importantly, it saves us time.
+                          <br>
+                          <small>Steve Ross, Executive Director <span>&#8213; DATV, Dayton Access Television</span></small>
+                        </div>                                                 
+                      </div>                                             
+                    </div>                                         
+                  </div>                                     
+                </div>                                 
+                <!--End of Right Hand Side -->                                 
+              </div>                             
+            </div>                         
+          </div>                     
+        </div>                 
+      </section>             
 
-            <!-- Portfolio Projects -->
+        <!-- Portfolio Projects -->
         <div class="container marginbot50">
           <div class="row">
             <div class="col-lg-12">
@@ -433,12 +432,12 @@
             </div>
           </div>
         </div>
-            <!-- Second Part -->             
-            <section id="content" style="background-color: #f2f2f2;"> 
+            <!-- Third Part -->             
+            <section id="grad1" > 
                 <div class="container"> 
                     <div class="row"> 
                         <div class="col-lg-12" > 
-                            <div class="col-lg-8" style="padding-top: 30px;"> 
+                            <div class="col-lg-8" style="padding: 30px 0px 60px;">  
                                 <img src="img/officetracker/products/ppscreen1.png" alt="" /> 
                             </div>                             
                             <div class="col-lg-4" style="padding-top: 30px;"> 
@@ -467,16 +466,17 @@
                     </div>                     
                 </div>                 
             </section>             
-            <!--End of Second Part -->             
-            <!-- Third Part -->             
+            <!--End of Third Part -->  
+
+            <!-- Fourth Part -->             
             <section id="content"> 
                 <div class="container"> 
                     <div class="row"> 
                         <div class="col-lg-12" style="background-color: #ffffff;"> 
-                            <div class="col-lg-8" style="padding-top: 30px;"> 
+                            <div class="col-lg-8" style="padding: 30px 0px 60px;"> 
                                 <img src="img/officetracker/products/ppscreen2.png" alt="" /> 
                             </div>                             
-                            <div class="col-lg-4" style="padding-top: 30px;"> 
+                            <div class="col-lg-4" style="padding-top: 30px;">  
                                 <div style="padding-left: 10px;"> 
                                     <h4 style="font-style: normal;">Customer Management</h4> 
                                     <p style="font-style: normal;"> 
@@ -500,12 +500,12 @@
                     </div>                     
                 </div>                 
             </section>
-            <!-- Fourth Part -->             
-            <section id="content" style="background-color: #f2f2f2;"> 
+            <!-- Fifth Part -->             
+            <section id="grad1" >  
                 <div class="container"> 
                     <div class="row"> 
                         <div class="col-lg-12" > 
-                            <div class="col-lg-8" style="padding-top: 30px;"> 
+                            <div class="col-lg-8" style="padding: 30px 0px 60px;">  
                                 <img src="img/officetracker/products/mobilehand8.jpg" alt="" /> 
                             </div>                             
                             <div class="col-lg-4" style="padding-top: 30px;"> 
@@ -529,12 +529,12 @@
                     </div>                     
                 </div>                 
             </section>
-            <!-- Fifth Part -->             
+            <!-- Sixth Part -->             
             <section id="content"> 
                 <div class="container"> 
                     <div class="row"> 
                         <div class="col-lg-12" style="background-color: #ffffff;"> 
-                            <div class="col-lg-8" style="padding-top: 30px;"> 
+                            <div class="col-lg-8" style="padding: 30px 0px 60px;">  
                                 <img src="img/officetracker/products/cloud.jpg" alt="" /> 
                             </div>                             
                             <div class="col-lg-4" style="padding-top: 30px;"> 
