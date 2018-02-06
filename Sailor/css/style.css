@@ -2725,6 +2725,10 @@ header, section, footer, aside, nav, main, article, figure {
  /* For browsers that do not support gradients */
     background: linear-gradient(to bottom, rgba(209,222,245,0), rgba(209,222,245,1)); /* Standard syntax (must be last) */
 }
+#grad1 img {
+	margin-bottom: 0px;
+	max-width: 100%;
+}
 
 #img-border{
 	border:10px solid #808b96;
