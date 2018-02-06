@@ -1,22 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <title>Office Tracker Success Stories</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Bootstrap 3 template for corporate business" />
-  <!-- css -->
-  <link href="css/bootstrap.min.css" rel="stylesheet" />
-  <link href="css/cubeportfolio.min.css" rel="stylesheet" />
-  <link href="css/style.css" rel="stylesheet" />
-  <link href="css/officetrackerstyle.css" rel="stylesheet" />
-  <!-- Theme skin -->
-  <link id="t-colors" href="skins/default.css" rel="stylesheet" />
-  <!-- boxed bg -->
-  <link id="bodybg" href="bodybg/bg1.css" rel="stylesheet" type="text/css" />
-
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet">
+<!DOCTYPE html> 
+<html lang="en"> 
+  <head> 
+    <meta charset="utf-8"> 
+    <title>Office tracker's Success Stories page</title>         
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <meta name="description" content="Bootstrap 3 template for corporate business" /> 
+    <!-- css -->         
+    <link href="css/bootstrap.min.css" rel="stylesheet" /> 
+    <link href="plugins/flexslider/flexslider.css" rel="stylesheet" media="screen" /> 
+    <link href="css/cubeportfolio.min.css" rel="stylesheet" /> 
+    <link href="css/style.css" rel="stylesheet" /> 
+    <!-- Theme skin -->         
+    <link id="t-colors" href="skins/default.css" rel="stylesheet" /> 
+    <!-- boxed bg -->         
+    <link id="bodybg" href="bodybg/bg1.css" rel="stylesheet" type="text/css" /> 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet"> 
 
   <!-- =======================================================
     Office Tracker's webpage
@@ -32,83 +30,85 @@
 </head>
 
 <body>
-  <div id="wrapper">
-    <!-- start header -->
-    <header>
-      <div class="navbar navbar-default navbar-fixed-top">
-        <div class="top">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-4">
+<div id="wrapper">
+  <!-- start header -->
+  <header>
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="top">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              </div>
+                <div class="col-md-8">
+                  <!-- Office Tracker's logo orange #FE5433 -->
+                  <ul class="topright-info">
+                    <li><a href="mailto:info@officetracker.com"><i class="fa fa-envelope-square fa-2x" style="color: #FE5433;"aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.facebook.com/officetracker/"><i class="fa fa-facebook-square fa-2x" style="color: #FE5433;" aria-hidden="true"></i></a></li>
+                    <li><a href="tel:1-800-257-2120"><i class="fa fa-phone-square fa-2x" style="color:#FE5433;" aria-hidden="true"></i></a></li>
+                  </ul>
                 </div>
-                  <div class="col-md-8">
-                    <!-- Office Tracker's logo orange #FE5433 -->
-                    <ul class="topright-info">
-                      <li><a href="mailto:info@officetracker.com"><i class="fa fa-envelope-square fa-2x" style="color: #FE5433;"aria-hidden="true"></i></a></li>
-                      <li><a href="https://www.facebook.com/officetracker/"><i class="fa fa-facebook-square fa-2x" style="color: #FE5433;" aria-hidden="true"></i></a></li>
-                      <li><a href="tel:1-800-257-2120"><i class="fa fa-phone-square fa-2x" style="color:#FE5433;" aria-hidden="true"></i></a></li>
+                <div class="col-md-6">
+                <!--changed display:none in order to hiding but not mess with the Recent Work for Office Tracker-->
+                  <div id="sb-search" style="display: none;" class="sb-search">
+                    <form>
+                      <input class="sb-search-input" placeholder="Enter your search term..." type="text" value="" name="search" id="search">
+                      <input class="sb-search-submit" type="submit" value="">
+                        <span class="sb-icon-search" title="Click to start searching"></span>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="index.html"><img src="img/officeTrackerLogo.png" height="50px"/></a>
+                </div>
+              <div class="navbar-collapse collapse ">
+                <ul class="nav navbar-nav">
+                  <li><a href="index.html" class="active" style="color: #d9232d;">Home</a></li>
+
+                  <li class="dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Learn More <i class="fa fa-angle-down"></i></a>
+                  <ul class="dropdown-menu">
+
+                    <!--Live Demo -->
+                    <form action="https://demo.officetracker.biz/otweb/OTPClientLogin" name="loginform" enctype="application/x-www-form-urlencoded" method="POST" target="_blank">
+                      <input type="hidden" name="logincount" value="0">
+                      <input type="hidden" name="lastname" value="Office">
+                      <input type="hidden" name="timezone" value="">
+                      <input type="hidden" name="uid" value="">
+                      <input type="hidden" name="phone" value="false">
+                      <input class="input" type="hidden" name="login" value="Office">
+                      <input class="input" type="hidden" name="password" value="office">
+                      <!--leave the spaces between "Live Demo    " for the border line -->
+                      <input type="submit" value=" Live Demo                                   " style="background-color: #ffffff; font-family:'Open Sans', sans-serif; border-color: #ffffff; border-bottom: 1px solid #eee; font-weight:400; padding: 5px 8px 5px;">
+                    </form>
+                    <!--End of Live Demo -->
+                    <li><a href="officetracker-freetrial.html">30 Days Free Trial</a></li>
+                    <li><a href="officetracker-successstories.html">Success Stories</a></li>
+                    <li><a href="officetracker-faq.html">Frequent Questions & Answers</a></li>
+                    <li><a href="officetracker-whousesofficetracker.html">Who Uses Office Tracker</a></li>
+                  </ul>
+                </li>
+                  <li class="dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Products <i class="fa fa-angle-down"></i></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="officetracker-products.html">Product Overview</a></li>
+                      <li><a href="officetracker-howitworks.html">How it Works</a></li>
+                      <li><a href="officetracker-cloudbase.html">Cloud Hosted Option</a></li>
+                      <li><a href="officetracker-selfservice.html">Self Service Scheduling</a></li>
+                      <li><a href="officetracker-webviewer.html">WebViewer Public Calendar</a></li>
                     </ul>
-                  </div>
-                  <div class="col-md-6">
-                    <!--changed display:none in order to hiding but not mess with the Recent Work for Office Tracker-->
-                      <div id="sb-search" style="display: none;" class="sb-search">
-                        <form>
-                          <input class="sb-search-input" placeholder="Enter your search term..." type="text" value="" name="search" id="search">
-                          <input class="sb-search-submit" type="submit" value="">
-                            <span class="sb-icon-search" title="Click to start searching"></span>
-                        </form>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="navbar-header">
-                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                      </button>
-                      <a class="navbar-brand" href="index.html"><img src="img/officeTrackerLogo.png" height="50px"/></a>
-                  </div>
-                  <div class="navbar-collapse collapse ">
-                    <ul class="nav navbar-nav">
-                      <li><a href="index.html" class="active" style="color: #d9232d;">Home</a></li>
+                  </li>
 
-                      <li class="dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Learn More <i class="fa fa-angle-down"></i></a>
-                      <ul class="dropdown-menu">
-
-                        <!--Live Demo -->
-                        <form action="https://demo.officetracker.biz/otweb/OTPClientLogin" name="loginform" enctype="application/x-www-form-urlencoded" method="POST" target="_blank">
-                          <input type="hidden" name="logincount" value="0">
-                          <input type="hidden" name="lastname" value="Office">
-                          <input type="hidden" name="timezone" value="">
-                          <input type="hidden" name="uid" value="">
-                          <input type="hidden" name="phone" value="false">
-                          <input class="input" type="hidden" name="login" value="Office">
-                          <input class="input" type="hidden" name="password" value="office">
-                          <!--leave the spaces between "Live Demo    " for the border line -->
-                          <input type="submit" value=" Live Demo                                   " style="background-color: #ffffff; font-family:'Open Sans', sans-serif; border-color: #ffffff; border-bottom: 1px solid #eee; font-weight:400; padding: 5px 8px 5px;">
-                        </form>
-                        <!--End of Live Demo -->
-                        <li><a href="officetracker-freetrial.html">30 Days Free Trial</a></li>
-                        <li><a href="officetracker-successstories.html">Success Stories</a></li>
-                        <li><a href="officetracker-faq.html">Frequent Questions & Answers</a></li>
-                        <li><a href="officetracker-whousesofficetracker.html">Who Uses Office Tracker</a></li>
-                      </ul>
-                      </li>
-                      <li class="dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Products <i class="fa fa-angle-down"></i></a>
-                        <ul class="dropdown-menu">
-                          <li><a href="officetracker-products.html">Product Overview</a></li>
-                          <li><a href="officetracker-howitworks.html">How it Works</a></li>
-                          <li><a href="officetracker-cloudbase.html">Cloud Hosted Option</a></li>
-                        </ul>
-                      </li>
-
-                      <li class="dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Pricing <i class="fa fa-angle-down"></i></a>
-                        <ul class="dropdown-menu">
-                          <li><a href="officetracker-orderform.html">Business</a></li>
-                          <li><a href="officetracker-orderform.html?edu">Non Profit</a></li>
-                          <li><a href="officetracker-orderform.html?upgrade">Upgrade</a></li>
-                          <li><a href="officetracker-orderform.html?support">Support</a></li>
+                  <li class="dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Pricing <i class="fa fa-angle-down"></i></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="officetracker-orderform.html">Business</a></li>
+                      <li><a href="officetracker-orderform.html?edu">Non Profit</a></li>
+                      <li><a href="officetracker-orderform.html?upgrade">Upgrade</a></li>
+                      <li><a href="officetracker-orderform.html?support">Support</a></li>
                         </ul>
                       </li>
 
@@ -134,36 +134,194 @@
         </div>
       </div>
     </header>
-    <!-- end header -->
-    <br />
-    <br />
-    <br />
-    <br />
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <h2 >Office Tracker Success Story</h2>
-        </div>
-      </div>
-    </div>
-     
+    <!-- end header -->          
+      <section id="inner-headline"> 
+        <div class="container"> 
+          <div class="row"> 
+            <div class="col-lg-12"> 
+              <ul class="breadcrumb"> 
+                <li></li>                                 
+              </ul>                             
+            </div>                         
+          </div>                     
+        </div>                 
+      </section>
+      <br />            
+      <section id="content"> 
+        <div class="container"> 
+          <div class="row"> 
+            <div class="col-lg-12"> 
+                <div class="post-slider"> 
+                  <div class="post-heading"> 
+                    <h2 style="color: #666666;" href="#">Office Tracker Success Stories</h2> 
+                  </div>
+                <div>
+              </div>
+            </div>
+          </div>
+        </section>                                    
+      <!-- start flexslider -->
+      <section id="content"> 
+        <div class="container"> 
+          <div class="row"> 
+            <div class="col-lg-12">                                    
+                <div id="post-slider" class="postslider flexslider"> 
+                  <ul class="slides" style="background-color: #2471a3; opacity: 0.9;"> 
+                    <!--Grgich Hills-->
+                    <li> 
+                      <div class="col-lg-8" style="padding: 0px; ">
+                        <img src="img/officetracker/success/wine2.jpg" alt="" style="padding-top: 0px;" />
+                      </div>
+                      <div class="col-lg-4" style=" padding: 40px; text-align: center;"> 
+                      
+                        <h3 style="color: #ffffff;"> Grgich Hills</h3>
+                        <br />
+                        <p style="color: #ffffff;">Founded in 1977, Grgich Hills is an organic and Biodynamic certified winery in the Napa Valley region of California.</p>
+                        <br />
+                        <p style="color: #ffffff;"> Learn how Office Tracker improves their scheduling.</p>
+                        <br />
+                        <a href="#GrgichHill"><u>Learn More</u></a>
+                    </div>
+                  </li>
+                  <!-- Tomball Regional Medical Center -->
+                  <li> 
+                      <div class="col-lg-8" style="padding: 0px;">
+                      <img src="img/officetracker/success/medical2.jpg" alt="" style="padding-top: 0px;" />
+                      </div>
+                      <div class="col-lg-4" style=" padding: 40px; text-align: center;"> 
+                      
+                        <h3 style="color: #ffffff;"> Tomball Regional Medical Center</h3>
+                        <br />
+                        <p style="color: #ffffff;">Tomball Regional Medical Center is a 350 bed Acute Care Hospital. Before Office Tracker scheduling for the Imaging and Rehab staff was done on a dry erase marker board or printed paper schedules out and posted them on a wall.</p>
+                        <br />
+                        <a href="#Tomball"><u>Learn More</u></a>
+                    </div>
+                  </li>            
+                  <!--DATV -->                       
+                  <li> 
+                    <div class="col-lg-8 " style="padding: 0px;">
+                      <img src="img/officetracker/success/datvvideo.jpg" alt="" style="padding-top: 0px;" />
+                    </div>
+                      <div class="col-lg-4" style=" padding: 40px; text-align: center;"> 
+                      
+                        <h3 style="color: #ffffff;">Dayton Access Television</h3>
+                        <br />
+                        <p style="color: #ffffff;">DATV is the non-profit, community television station in Dayton, OH. Citizens who use our video editing facilities have always had to sign up using the paper calendar method.</p>
+                        <br />
+                        <a href="#DATV"><u>Learn More</u></a>
+                    </div>
+                  </li>
+                  <!--White Dragon -->
+                  <li> 
+                    <div class="col-lg-8" style="padding: 0px;">
+                      <img src="img/officetracker/success/martialarts.jpg" alt="" style="padding-top: 0px;" />
+                    </div>
+                      <div class="col-lg-4" style=" padding: 40px; text-align: center;"> 
+                      
+                        <h3 style="color: #ffffff;">White Dragon Martial Arts</h3>
+                        <br />
+                        <p style="color: #ffffff;">White Dragon Martial Arts is one of the only schools in San Diego that specializes in offering all students one-on-one private lessons. As a result, a versatile scheduling program is needed to keep track of these lessons on a weekly, bi-weekly, and monthly basis. We have over 2,000 active students in 8 locations.</p>
+                        <br />
+                        <a href="#WhiteDrgaon"><u>Learn More</u></a>
+                    </div>
+                  </li>
+                  <!--Dietz Hydroseeding Company -->
+                  <li> 
+                    <div class="col-lg-8" style="padding: 0px;">
+                      <img src="img/officetracker/success/hydrovegetation.jpg" alt="" style="padding-top: 0px;" />
+                    </div>
+                      <div class="col-lg-4" style=" padding: 40px; text-align: center;"> 
+                      
+                        <h3 style="color: #ffffff;">Dietz Hydroseeding Company</h3>
+                        <br />
+                        <p style="color: #ffffff;">Dietz Hydroseeding Co.'s principal location is in Sylmar, California with a satellite office in Orange, CA. We perform private, commercial and public works projects throughout California.</p>
+                        <br />
+                        <a href="#Dietz"><u>Learn More</u></a>
+                    </div>
+                  </li>
+                  <!--Blind Magic Windows Coverings -->
+                  <li> 
+                    <div class="col-lg-8" style="padding: 0px;">
+                      <img src="img/officetracker/success/blinds.jpg" alt="" style="padding-top: 0px;" />
+                    </div>
+                      <div class="col-lg-4" style=" padding: 40px; text-align: center;"> 
+                      
+                        <h3 style="color: #ffffff;">Blind Magic Window Coverings</h3>
+                        <br />
+                        <p style="color: #ffffff;">Blind Magic Window Coverings in Edmonton Alberta Canada started as a home based business and has grown to ten staff members operating in two retail stores and one central office.</p>
+                        <br />
+                        <a href="#BlindMagic"><u>Learn More</u></a>
+                    </div>
+                  </li>
+                  <!--New Horizons Community Church -->
+                  <li> 
+                    <div class="col-lg-8" style="padding: 0px;">
+                      <img src="img/officetracker/success/churchwindow.jpg" alt="" style="padding-top: 0px;" />
+                    </div>
+                      <div class="col-lg-4" style=" padding: 40px; text-align: center;"> 
+                      
+                        <h3 style="color: #ffffff;">New Horizons Community Church</h3>
+                        <br />
+                        <p style="color: #ffffff;">New Horizons Community Church is a Methodist church, we have 3 offices with 7 employees, in Sarnia, Ontario, Canada. We open our building to the community and allow groups to use our rooms free of charge. This of course requires good scheduling.</p>
+                        <br />
+                        <a href="#NewHorizons"><u>Learn More</u></a>
+                    </div>
+                  </li>
+                  <!-- Stonecrest Community -->
+                  <li> 
+                    <div class="col-lg-8" style="padding: 0px;">
+                      <img src="img/officetracker/success/activesenior2.jpg" alt="" style="padding-top: 0px;" />
+                    </div>
+                      <div class="col-lg-4" style=" padding: 40px; text-align: center;"> 
+                      
+                        <h3 style="color: #ffffff;">Stonecrest Community</h3>
+                        <br />
+                        <p style="color: #ffffff;">Stonecrest Community is a 55 plus active retirement community located in Summerfield, Fl. Our current population includes about 1850 homes with over 3000 residents and growing. We specialize in a lifestyle. Creating fun and exciting things for our residents, where they can play, learn and enjoy their retirement years.</p>
+                        <br />
+                        <a href="#Stonecrest"><u>Learn More</u></a>
+                    </div>
+                  </li>
+                  <!-- Weston Psychological Associates -->
+                  <li> 
+                    <div class="col-lg-8" style="padding: 0px;">
+                      <img src="img/officetracker/success/family2.jpg" alt="" style="padding-top: 0px;" />
+                    </div>
+                      <div class="col-lg-4" style=" padding: 40px; text-align: center;"> 
+                      
+                        <h3 style="color: #ffffff;">Weston Psycological Associates</h3>
+                        <br />
+                        <p style="color: #ffffff;">Weston Psychological Associates is a psychology practice that provides mental health services. Presently we have 10 providers and 5 offices. Our offices are located in Weston, Coral Springs, Margate and Miami, Florida.</p>
+                        <br />
+                        <a href="#Weston"><u>Learn More</u></a>
+                    </div>
+                  </li>                                                                
+                </ul>                                         
+              </div>       
+            </div>                                                 
+          </div>                         
+        </div>                                     
+      </section>
+
+
+                                   
     <section id="content" style="background-color: #FFFFFF;" name="content">
       <div class="container">
         <div class="row">
-          <div class="col-lg-12">
-            <h3 >Grgich Hills Expands Wine Tours/Events with Office Tracker Scheduling</h3>
-            <br/>
-            <div class="col-lg-3">
-              <div class="media-left media-top">
-                <img class="img-responsive center-block" src="img/officetracker/grgichhillsvioletround.png" alt="" class="img-responsive" />
+          <div id="GrgichHill" style="padding-top: 100px;">
+            <div class="col-lg-12">
+              <h3>Grgich Hills Expands Wine Tours/Events with Office Tracker Scheduling</h3>
+              <br/>
+              <div class="col-lg-3">
+                <div class="media-left media-top">
+                  <img class="img-responsive center-block" src="img/officetracker/grgichhillsvioletround.png" alt="" class="img-responsive" />
+                </div>
               </div>
-            </div>
-            <div class="col-lg-1"> 
-              <img src="img/officetracker/products/quotes.png" alt="" class="media-object"> 
-            </div>
-            <div class="col-md-7">                                  
-              <div class="media-body"> 
-                <h4>We test drove about five different systems before we decided that Office Tracker met our current and future needs
+              <div class="col-lg-1"> 
+                <img src="img/officetracker/products/quotes.png" alt="" class="media-object"> 
+              </div>
+              <div class="col-md-7">                                  
+                <div class="media-body"> 
+                  <h4>We test drove about five different systems before we decided that Office Tracker met our current and future needs
                 <br>
                   <small>&#8213; Violet Grgich, V.P. Operations <span>Grgich Hills</span></small></h4>
               </div> 
@@ -199,10 +357,13 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
     
     <section id="content" style="padding-top: 20px;">
       <div class="container">
         <div class="row">
+          <div id="Tomball" style="padding-top: 100px;">
           <div class="col-lg-12">
             <h3>Tomball Regional Medical Center Replaces Dry Erase Board with Office Tracker Scheduling</h3>
             <br/>
@@ -224,6 +385,7 @@
           </div>
         </div>
       </div>
+    </div>
     </section>
     <section id="content" style="padding-top: 20px;" >
       <div class="container">
@@ -255,12 +417,13 @@
     <section id="content" style="padding-top: 20px;">
       <div class="container">
         <div class="row">
-          <div class="col-lg-12">
-            <h3 >Dayton Access Television Improves Editing with Office Tracker Scheduling</h3>
-            <br/>
-            <div class="col-lg-3">
-            <img class="img-responsive center-block" src="img/officetracker/datvround.jpg" alt="" class="img-responsive" />
-            </div>
+          <div id="DATV" style="padding-top: 100px;">
+            <div class="col-lg-12">
+              <h3 >Dayton Access Television Improves Editing with Office Tracker Scheduling</h3>
+              <br/>
+              <div class="col-lg-3">
+                <img class="img-responsive center-block" src="img/officetracker/datvround.jpg" alt="" class="img-responsive" />
+              </div>
             <div class="col-md-1">
               <div class="media-left media-top"> 
                 <img src="img/officetracker/products/quotes.png" alt="" class="media-object"> 
@@ -276,7 +439,8 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
     
     <section id="content"  style="padding-top: 20px;">
       <div class="container">
@@ -303,20 +467,22 @@
         </div>
       </div>
     </section>
+
     <!-- White Dragon Martial Arts-->
     <section id="content" style="padding-top: 20px;">
       <div class="container">
         <div class="row">
-          <div class="col-lg-12">
-            <h3 >White Dragon Martial Arts</h3>
-            <br/>
-            <div class="col-lg-3">
-              <img class="img-responsive center-block" src="img/officetracker/whitedragonlogo.jpg" alt="" class="img-responsive" />
-            </div>
-            <div class="col-md-1">
-              <div class="media-left media-top"> 
-                <img src="img/officetracker/products/quotes.png" alt="" class="media-object"> 
+          <div id="WhiteDrgaon" style="padding-top: 100px;">
+            <div class="col-lg-12">
+              <h3 >White Dragon Martial Arts</h3>
+              <br/>
+              <div class="col-lg-3">
+                <img class="img-responsive center-block" src="img/officetracker/whitedragonlogo.jpg" alt="" class="img-responsive" />
               </div>
+              <div class="col-md-1">
+                <div class="media-left media-top"> 
+                  <img src="img/officetracker/products/quotes.png" alt="" class="media-object"> 
+                </div>
             </div> 
             <div class="col-md-7">                                  
               <div class="media-body"> 
@@ -329,6 +495,7 @@
           </div>
         </div>
       </div>
+    </div>
     </section>
     <section id="content" style="padding-top: 20px;">
       <div class="container">
@@ -358,27 +525,30 @@
         </div>
       </div>
     </section>
+
     <!-- Dietz Hydroseeding Improves Scheduling Job Personnel and Equipment-->
     <section id="content"  style="padding-top: 20px;">
       <div class="container">
         <div class="row">
-          <div class="col-lg-12">
-            <h3 >Dietz Hydroseeding Improves Scheduling Job Personnel and Equipment</h3>
-            <br/>
-            <div class="col-lg-3">
-              <img class="img-responsive center-block" src="img/officetracker/dietz.jpg" alt="" class="img-responsive" />
-            </div>
-            <div class="col-md-1">
-              <div class="media-left media-top"> 
-                <img src="img/officetracker/products/quotes.png" alt="" class="media-object"> 
+          <div id="Dietz" style="padding-top: 100px;">
+            <div class="col-lg-12">
+              <h3 >Dietz Hydroseeding Improves Scheduling Job Personnel and Equipment</h3>
+              <br/>
+              <div class="col-lg-3">
+                <img class="img-responsive center-block" src="img/officetracker/dietz.jpg" alt="" class="img-responsive" />
               </div>
-            </div> 
-            <div class="col-md-7">                                  
-              <div class="media-body"> 
-                <h4>Office Tracker is now not just used for scheduling job personnel and equipment.  We also use Office Tracker to schedule sales appointments, vacation days, and equipment maintenance.
+              <div class="col-md-1">
+                <div class="media-left media-top"> 
+                  <img src="img/officetracker/products/quotes.png" alt="" class="media-object"> 
+                </div>
+              </div> 
+              <div class="col-md-7">                                  
+                <div class="media-body"> 
+                  <h4>Office Tracker is now not just used for scheduling job personnel and equipment.  We also use Office Tracker to schedule sales appointments, vacation days, and equipment maintenance.
                   <br>
                     <small>&#8213; Ron Dietz <span></span></small></h4>
-              </div> 
+                </div> 
+              </div>
             </div>
           </div>
         </div>
@@ -416,10 +586,11 @@
       </div>
     </section>
 
-    <!-- Blind Magic Window -->
-    <section id="content" style="padding-top: 20px;">
+  <!-- Blind Magic Window -->
+  <section id="content"  style="padding-top: 20px;">
       <div class="container">
         <div class="row">
+          <div id="BlindMagic" style="padding-top: 100px;">
           <div class="col-lg-12">
             <h3 >Blind Magic Window Coverings Grows With Better Scheduling</h3>
             <br/>
@@ -441,7 +612,8 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
     <section id="content" style="padding-top: 20px;">
       <div class="container">
         <div class="row">
@@ -467,10 +639,11 @@
         </div>
       </div>
     </section>
-    <!-- New Horizons Community Church -->
-    <section id="content"  style="padding-top: 20px;">
+  <!-- New Horizons Community Church -->
+  <section id="content"  style="padding-top: 20px;">
       <div class="container">
         <div class="row">
+          <div id="NewHorizons" style="padding-top: 100px;">
           <div class="col-lg-12">
             <h3 >New Horizons Community Church</h3>
             <br/>
@@ -492,7 +665,8 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
     <section id="content"  style="padding-top: 20px;">
       <div class="container">
         <div class="row">
@@ -524,10 +698,11 @@
         </div>
       </div>
     </section>
-    <!-- Stonecrest Community  -->
-    <section id="content" style="padding-top: 20px;">
-      <div class="container">
-        <div class="row">
+  <!-- Stonecrest Community  -->
+  <section id="content" style="padding-top: 20px;">
+    <div class="container">
+      <div class="row">
+        <div id="Stonecrest" style="padding-top: 100px;">
           <div class="col-lg-12">
             <h3 >Stonecrest Community by Chris Olney, Activities Director</h3>
             <br/>
@@ -549,7 +724,8 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
     <section id="content" style="padding-top: 20px;">
       <div class="container">
         <div class="row">
@@ -580,10 +756,10 @@
         </div>
       </div>
     </section>
-    <!-- Weston Psychological Associates -->
-    <section id="content"  style="padding-top: 20px;">
-      <div class="container">
-        <div class="row">
+  <section id="content" style="padding-top: 20px;">
+    <div class="container">
+      <div class="row">
+        <div id="Weston" style="padding-top: 100px;">
           <div class="col-lg-12">
             <h3 >Weston Psychological Associates</h3>
             <br/>
@@ -605,7 +781,8 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
     <section id="content"  style="padding-top: 20px;">
       <div class="container">
         <div class="row">

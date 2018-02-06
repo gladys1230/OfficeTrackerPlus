@@ -2,19 +2,19 @@
 <html lang="en"> 
   <head> 
     <meta charset="utf-8"> 
-    <title>Office tracker's Contact page</title>         
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
-    <meta name="description" content="Bootstrap 3 template for corporate business" /> 
-    <!-- css -->         
-    <link href="css/bootstrap.min.css" rel="stylesheet" /> 
-    <link href="plugins/flexslider/flexslider.css" rel="stylesheet" media="screen" /> 
-    <link href="css/cubeportfolio.min.css" rel="stylesheet" /> 
-    <link href="css/style.css" rel="stylesheet" /> 
-    <!-- Theme skin -->         
-    <link id="t-colors" href="skins/default.css" rel="stylesheet" /> 
-    <!-- boxed bg -->         
-    <link id="bodybg" href="bodybg/bg1.css" rel="stylesheet" type="text/css" /> 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet"> 
+      <title>Office tracker's Automated Self-Service Scheduling page</title>         
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+      <meta name="description" content="Bootstrap 3 template for corporate business" /> 
+      <!-- css -->         
+      <link href="css/bootstrap.min.css" rel="stylesheet" /> 
+      <link href="plugins/flexslider/flexslider.css" rel="stylesheet" media="screen" /> 
+      <link href="css/cubeportfolio.min.css" rel="stylesheet" /> 
+      <link href="css/style.css" rel="stylesheet" /> 
+      <!-- Theme skin -->         
+      <link id="t-colors" href="skins/default.css" rel="stylesheet" /> 
+      <!-- boxed bg -->         
+      <link id="bodybg" href="bodybg/bg1.css" rel="stylesheet" type="text/css" /> 
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet"> 
 
   <!-- =======================================================
     Office Tracker's webpage
@@ -28,6 +28,79 @@
     Author URL: https://bootstrapmade.com
   ======================================================= -->
 </head>
+
+<script type="text/javascript">
+function ShowSSS(which)
+{
+var zindex = 50;
+var opacity = 60;
+var opaque = (opacity / 100);
+var bgcolor = '#000000';
+var leftps= "40%";
+var topps= "30%";
+
+var dark=document.getElementById('darken');
+var sss=document.getElementById('sss');
+var closebutton=document.getElementById('closebutton');
+
+if (which) {
+    
+    if( document.body && ( document.body.scrollWidth || document.body.scrollHeight ) ) {
+        var pageWidth = document.body.scrollWidth+'px';
+        var pageHeight = document.body.scrollHeight+'px';
+    } else if( document.body.offsetWidth ) {
+      var pageWidth = document.body.offsetWidth+'px';
+      var pageHeight = document.body.offsetHeight+'px';
+    } else {
+       var pageWidth='100%';
+       var pageHeight='100%';
+    }   
+    
+    dark.style.opacity=opaque;                      
+    dark.style.MozOpacity=opaque;                   
+    dark.style.filter='alpha(opacity='+opacity+')'; 
+    dark.style.zIndex=zindex;        
+    dark.style.backgroundColor=bgcolor;  
+    dark.style.width= pageWidth;
+    dark.style.height= pageHeight;
+    dark.style.display='block';  
+
+  sss.style.zIndex = zindex+1000;
+  sss.style.display = "block";
+  sss.style.left=leftps;
+  sss.style.top=topps;    
+  
+  closebutton.style.zIndex = zindex+2000;
+  closebutton.style.display = "block";
+  closebutton.style.left=leftps;
+  closebutton.style.top=topps;
+
+  
+  } else {
+     dark.style.display='none';
+   sss.style.display='none';
+  closebutton.style.display='none';
+  } 
+}
+
+</script>
+<BODY BGCOLOR="#FFFFFF" marginwidth=0 marginheight=0 leftmargin=0 topmargin=0 class="milummain" link="#003366" vlink="#003366">
+<iframe id="sss" scrolling="no" style="display:none; border:#000000 solid 1px; position:fixed; overflow:hidden; width: 302px; height: 311px; margin-left:auto; margin-top:auto; text-align:center; " src="https://demo.officetracker.biz/otweb/OTOSMain">
+</iframe>
+
+<div id="closebutton" style="position:absolute; display:none; width:302px; text-align:right; margin-top:7px;  overflow:hidden" ><img src="img/officetracker/closebutton.png" onClick="ShowSSS(false)"/></div> 
+<div id="darken" style="position:absolute; display:none; top:0; left:0; overflow:hidden " onClick="ShowSSS(false)">
+</div>
+
+<script language=Javascript>function openThisWin() {
+  
+  var myWin = window.open("peopleview.htm","GroupView","status=no,width=650,height=450")
+
+  }
+  
+  function openNextWin() {
+  var theWin = window.open("roomview.htm","Room","status=no,width=700,height=460")
+  }</script>
 
 <body>
   <div id="wrapper">
@@ -133,112 +206,89 @@
         </div>
       </div>
     </header>
-    <!-- end header -->          
-    <br />
-    <br />  
+    <!-- end header -->        
     <br />
     <br />
-    <br />           
-    <section id="content"> 
-      <div class="container"> 
-        <div class="row"> 
-          <div class="col-lg-12"> 
-            <div class="col-lg-8"> 
-              <h2>Contact Office Tracker by Phone, Email, Fax or Mail</h2>
-              <p>
-                We'd love to hear from you! Please feel free to e-mail, phone or mail us with your questions, suggestions or comments.
-              </p>
-              <h3>Contact us get in touch with us by filling form below</h3>
-              <br />
-  
-              <div id="sendmessage">Your message has been sent. Thank you!</div>
-              <div id="errormessage"></div>
-              <form action="" method="post" role="form" class="contactForm">
-              <div class="form-group">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                <div class="validation"></div>
-              </div>
-              <div class="form-group">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                <div class="validation"></div>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                <div class="validation"></div>
-              </div>
-              <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                <div class="validation"></div>
-              </div>
-                    
-              <div class="text-center"><button type="submit" class="btn btn-theme btn-block btn-md">Send Message</button></div>
-            </form>
-            <br />
-            <p style="text-align: center;">
-              <span class="fa fa-envelope-square fa-2x" style="color: #FE5433;"aria-hidden="true"></span>
-              <a href="officetracker-register.html" style="color:#656565;"><u>Sign up for Office Tracker News & Tips</u></a>
+    <br />
+    <br />
+    <br />
+    <section id="content">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <h2>Office Tracker's Automated Self-Service Scheduling</h2>
+            <img src="img/officetracker/products/selfservice.jpg" alt="" style="margin-bottom: 20px; padding-top:5px;" />
+            <p>
+              Self service online scheduling means your customers, your staff or anyone else with a need to set time based appointments, events or meetings with you and your organization can do so from any computer at any time of the day. There’s no need for you and your staff to spend the time searching for available times or setting up customer information.
+            </p>
+            <p>
+              Self service scheduling reduces the cost of your business operations and makes it more efficient and professional. You can do more with less. You and your entire staff spend less time handling minor scheduling questions and wasting time on the phone trying to rework a customer’s schedule to suit their specific needs. This gives you more time to spend on the important tasks at hand that make your organization profitable.
             </p>
 
-            <h3>
-              Product Questions or More Info. Needed?
-            </h3>
+            <!--Click here to register and access a live demo -->
             <p>
-              Interested in finding out how you can get Office Tracker to improve your office scheduling? Call us or send us an e-mail. We're here to help.
-            </p>
-            <p>Toll-Free:<strong> 1-800-257-2120</strong></p>
-            <p>Outside U.S.: 1-512-469-2966</p>
-            <p>Fax: 1-512-828-8788</p>
-            <p>Sales: <a href="mailto:sales@officetracker.com" style="color:#656565;"><u>sales@officetracker.com</u></a></p>
-            <h3>
-              General Feedback
-            </h3>
-            <p>
-              Your opinions are very important to us. It helps us keep motivated and points us to ways we can improve our business. If you have any comments or suggestions for us, please share them:
-            </p>
-            <p>
-              <strong>Comments/Feedbacks:<a href="mailto:info@officetracker.com" style="color:#656565;"><u> info@officetracker.com</u></a></strong>
-            </p>
-            <p>
-              <a href="officetracker-legalprivacy.html" style="color:#656565;"><u>Legal notices/privacy policy regarding comments and feedback</u></a>
+              <a href="#" onClick="ShowSSS(true)"><strong style="color: #666666"><u>Click here to register and access a live demo &gt;&gt; </u></strong></a>
             </p>
 
-            <h3>
-              Support
-            </h3>
             <p>
-              Have a question about how to use Office Tracker? Visit our support page to find an answer or ask a question:
-
-              <a href="https://www.officetracker.com/support/" style="color:#656565;"><u>www.officetracker.com/support</u></a>
+              With Office Tracker online scheduling your customers can easily schedule available appointments you have determined, they can check back at any time later to see when their upcoming appointments are scheduled. They can also set and receive automated e-mail reminders days or hours in advance.
             </p>
-          </div>                             
-                    
-          <!--The Right Hand Side of the screen -->                             
+            <p>
+              A simple snippet of html code is placed where you want the schedule "frame" to display on your web site. You can change the format to include your own company logo, colors, etc.
+            </p>
+            <img src="img/officetracker/onlineappointmentscheduling_clip002.jpg" alt="">
+            <p></p>
+            <p>
+              Users will log in or register as a new user (automated registration goes through your e-mail server) and requires them to confirm via a link e-mailed to their address for verification purposes.
+            </p>
+            <p></p>
+            <img src="img/officetracker/onlineappointmentscheduling_clip_002_0000.jpg" alt="">
+            <p></p>
+            <p>
+              Once registered, they can select from a list of available appointments and schedule themselves:
+            </p>
+            <p></p>
+            <img src="img/officetracker/onlineappointmentscheduling_clip_002_0001.jpg" alt="">
+            <p></p>
+            <p>
+              Contact us for a free online demo today at <strong>1-800-257-2120</strong>.
+            </p>
+            <p>
+              Self-Service Scheduling Benefits:
+            </p>
+            <p>&#8213; Reduces staff workload</p>
+            <p>&#8213; Offers scheduling around the clock 24 hours a day</p>
+            <p>&#8213; Easy to implement on your web site</p>
+            <p>&#8213; Customizable design</p>
+            <p>&#8213; More professional image</p>
+            <p>&#8213; Better customer service</p>
+            <p>&#8213; Compatible with most web browsers on your computers</p>
+          </div>                        
+          <!--The Right Hand Side of the screen -->                 
           <div class="row"> 
             <div class="col-lg-4"> 
-              <div class="col-lg-3"></div>  
-                <div class="widget"> <div > 
-                <img class="img-responsive center-block" src="img/officetracker/ociquote.png" alt="" style="margin-top: 10px;">
+              <div class="col-lg-3"></div>                                   
+                <div class="widget"><div > 
+                <img class="img-responsive center-block" src="img/officetracker/products/ppcirclepic.png" alt="" style="margin-top: 50px">
               </div>                                         
-                <div class="media"> 
-                  <div class="media-left media-top"> 
-                    <div class="col-lg-3"> 
-                      <img src="img/officetracker/products/quotes.png" alt="" class="media-object"> 
-                    </div>                                                 
-                    <div class="media-body"> 
-                      Office Tracker has brought our office into this century and has not only improved our operations, but streamlined them.
-                      <br>
-                      J.Hales <span>&#8213; OCI Technologies</span>
-                    </div>                                    
-                  </div>
-                </div>                                         
-              </div>                                     
-            </div>                                 
-            <!--End of Right Hand Side -->                                 
-          </div>                             
+              <div class="media"> 
+                <div class="media-left media-top"> 
+                  <div class="col-lg-3"> 
+                    <img src="img/officetracker/products/quotes.png" alt="" class="media-object"> 
+                  </div>                                                 
+                  <div class="media-body"> 
+                    Customers or others can log in to find and schedule appointments or reservations 24 hours a day!
+                    <!--<br>
+                    <small>Steve Ross, Executive Director <span>&#8213; DATV, Dayton Access Television</span></small>-->
+                  </div>                                                 
+                </div>                                             
+              </div>                                         
+            </div>                                     
+          </div>                                 
+          <!--End of Right Hand Side -->                                 
         </div>                         
-      </div>                     
-    </div>                 
-    </section>                         
+      </div>                                     
+    </section>             
     <footer>
       <div class="container">
         <div class="row">
