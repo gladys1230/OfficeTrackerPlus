@@ -43,8 +43,7 @@
 <input type="hidden" name="address1" value="" />
 
 <div>
-  <table border="0" cellpadding="2" cellspacing="0" class="milumleftnav">
-    <tr valign="top">
+  <table>
   <!-- start header -->
     <header>
       <div class="navbar navbar-default navbar-fixed-top">
@@ -220,7 +219,7 @@
                   </div>
                   <!--End of License Types -->
                   <!-- Add On Options -->
-                  <div class="col-lg-12" style="margin-top: 20px;">
+                  <div class="col-lg-12" style="margin-top: 20px; margin-bottom: 20px;">
                     <div class="milumleftnav">Add On Options:</div>
                     <div>
                   </div>
@@ -264,14 +263,27 @@
 
                       </div>
                       <!-- End of AddOnRow-->
-
                     </div>
-                    
                   </div>
                 </div>
                 <!--End of Add On Options -->
                 <br />
+                <!-- Phone Support -->
                 <br />
+                <br />
+                <div>
+                  <h4>Phone Support Plan </h4>
+                  <p>(Free online support is included with your order)</p>
+                  <p>
+                    <input name="Support" id="Support" type="radio" value="No Phone Support" onClick="UpdateForm()" checked="true"> Online Support Only (Free)
+                    <input name="Support" id="Support" type="radio" value="90 Day Support" onClick="UpdateForm()"> 3 months-$495
+                    <input name="Support" id="Support" type="radio" value="6 Month Support" onClick="UpdateForm()"> 6 months-$695
+                    <input name="Support" id="Support" type="radio" value="1 YR Support" onClick="UpdateForm()"> 1 Year-$895
+                    </p>
+                  <h4 style="display: none;" id="SupportTotal" align="right">Support: $0.00</h4>
+                </div>
+                <!-- End of Phone Support -->
+
                 <!--Promotion Code -->
                 <div style="padding-top: 20px;">
                   
@@ -289,9 +301,11 @@
                       <div align="right" id="SubTotal" class="milumleftnavbold">Sub-Total: $0.00</div>
                     </div>
 
-                    <div class="milumleftnavbold">
+                    <div>
                       <div id="PromoDiscount" align="right" style="color:#FF6600">&nbsp;</div>
                       <div id="BundleDiscount" align="right">&nbsp;</div><br/>
+
+                      <!-- Total -->
                       <div align="right" id="TotalOrder" class="style11">Total: $0.00</div>
                     </div>
                     <!--End of Totol Box -->
@@ -299,78 +313,45 @@
                 
               </div>
               <!-- End of Promotion Code -->
-              <!-- Phone Support -->
-              <div >
-                <!--<tr>
-    <td colspan="2" bgcolor="#E5E5E5"><span class="style11" style="padding-left: 10px;">2. Choose a Phone Support Plan: <br>
-    </span>
-    <strong style="padding-left: 10px;">Save $100 when you purchase a Yearly  Support Plan with your scheduling package </strong></td>
-  </tr>-->
-  <tr>
-    <td height="35" colspan="2"><p align="center">Online Support Included
-with new package purchases </p>
-    <p align="center">
-      <input name="Support" id="Support" class="style11"  type="radio" value="No Phone Support" onClick="UpdateForm()" checked="true">
-    Online Support Only (Free)
-      <input name="Support" id="Support" type="radio"  class="style11"  value="90 Day Support" onClick="UpdateForm()">
-    3 months-$495
-      <input name="Support" id="Support" type="radio" class="style11"  value="6 Month Support" onClick="UpdateForm()">
-    6 months-$695
-      <input name="Support" id="Support" type="radio"  class="style11" value="1 YR Support" onClick="UpdateForm()">
-    1 Year-$895</p></td>
-  </tr>
-  <tr>
-    <td height="24"><div align="right"> </div></td>
-    <td><div id="SupportTotal" align="right">Support: $0.00</div></td>
-  </tr>
-
-              </div>
-              <!-- End of Phone Support -->
+              
               <!-- Tax -->
-              <div>
-                <input type="checkbox" name="SalesTax"  class="style11" id="SalesTax" onClick="UpdateForm()" value="Taxxed"> Check this box if you are in Texas and are not tax exempt <br />
-                ( Adds 8.25% Sales Tax&nbsp;)
+              <div style="padding-top: 20px;">
+                <div class="col-lg-10">
+                  <input type="checkbox" name="SalesTax" id="SalesTax" onClick="UpdateForm()" value="Taxxed"> Check this box if you are in Texas and are not tax exempt <br />
+                  ( Adds 8.25% Sales Tax&nbsp;)
+                  <div align="right" id="Tax">&nbsp; </div>
+                </div>
+                <!-- End of Tax -->
+                <!-- Next Button -->
+                <div class="col-lg-2" style="padding-right: 0px;">
+                  <input style="width: 100%;" type="button" name="Continue" class="btn btn-theme btn-block btn-md"  value="Next &gt;&gt;" onClick="HideShow('order');UpdateForm()">
+                </div>
+                <!-- End of Next Button -->
               </div>
-              <!-- End of Tax -->
-
-
-                  
-
-
+              
               </div>
             </div>
+
             <div class="col-lg-2">
               <h1>STOP HERE</h1>
             </div>
           </div>
         </div>
       </div>
+      </table>
+    
       <!-- End of this New Form -->
-  <tr>
-    <td>
-      <input type="checkbox" name="SalesTax"  class="style11" id="SalesTax" onClick="UpdateForm()" value="Taxxed">
-        Check this box if you are in Texas and are not tax exempt
-      <br>
-      ( Adds 8.25% Sales Tax&nbsp;)</td>
-    <td><div align="right" id="Tax">&nbsp; </div></td>
-  </tr>
-  <tr>
-    <td></td>
-      <td>
-        <div align="right"><h4>Click to continue:</h4>
-          <input type="button" name="Continue" class="btn btn-theme btn-block btn-md"  value="Continue &gt;&gt;" onClick="HideShow('order');UpdateForm()">
-        </div>
-      </td>
-  </tr>
-  <tr>
+  <!--<tr>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
   </tr>
   </table>
-</div>
+</div>-->
+<!-- End of the First Page -->
 
 <!--payment form -->
-<div style="visibility:hidden; position:absolute; height:0px; width:0px">  <INPUT TYPE=text class="style11"  NAME=realname id="realname" VALUE="" SIZE=50> </div>
+<div style="visibility:hidden;">  
+  <input type=text  NAME=realname id="realname" VALUE="" SIZE=50> </div>
 
 <div id="shippingpayment" style="position:absolute; width:584px; height:586px; top:0; left:0; background-color: #FFFFFF; border: 1px none #000000; z-index:1; visibility:hidden;">
  <TABLE BORDER=0 CELLPADDING=2 HEIGHT=578 width="579" class="milumleftnav" style="text-align:left; font-weight:normal ">
