@@ -146,34 +146,48 @@
       </div>
     </header>
     <!-- end header -->
-      <br /><br /><br /><br /><br /><br /><br /><br />
+    <!--First Page of Order Form -->
+      <br /><br /><br /><br /><br /><br /><br /><br /><br />
       <div class="container">
         <div class="row">
-          <div class="col-lg-12" >
-            <div class="col-lg-2">
-              <h1>START HERE</h1>
+          <div class="col-lg-12 col-xs-12" >
+            <div class="col-lg-2 col-xs-2">
             </div>
-            <div class="col-lg-8">
+            <div class="col-lg-8 col-xs-12">
               <div id="numberuserstotal" >
                 <div id="Header" class="heading"><br> </div>
                 <div class="specialoffer" id="subHeader">&nbsp;</div>
+                <!--Order Here -->
+                <div class="row">
+                  <div class="col-lg-12 col-xs-12" style="background-color: #E5E5E5; border-radius: 20px;">
+                    <div class="col-lg-1 col-xs-1">
+                    </div>
 
-                <!--Heading -->
-                <div style="padding: 10px; background-color: #E5E5E5;">
-                  <h2 >Start Your Order Here</h2>
-                  <p>You can use this for an estimate</p>
+                    <div class="col-lg-1 col-xs-1" style="padding: 20px;" >
+                      <i class="fa fa-shopping-cart fa-4x" style="color: #FFFFFF;"aria-hidden="true"></i>
+                    </div>
+                    <div class="col-lg-8 col-xs-8" style="text-align: center;">
+                      <h2 >Start Your Order Here</h2>
+                      <h4>You can use this for an estimate</h4>
+                    </div>
+                    <div class="col-lg-2 col-xs-2" style="padding: 20px;">
+                      <i class="fa fa-arrow-circle-o-down fa-4x" style="color: #1E5780;"aria-hidden="true"></i>
+                    </div>
+                  </div>
                 </div>
+                <!--End of Order Here -->
+
                 <!--Full Users -->
                 <div style="padding-top: 10px;">
-                  <div class="col-lg-5">
+                  <div class="col-lg-5 col-xs-5">
                     <h5>Enter # of Full Users:</h5>
                   </div>
-                  <div class="col-lg-4">
+                  <div class="col-lg-4 col-xs-4">
                   <div id="NumberOfUsersdiv">
                     <input name="NumberOfUsers" id="NumberOfUsers" type="text" class="form-control" onChange="UpdateForm()" style="text-align:right;">
                   </div>
                   </div>
-                  <div class="col-lg-3" style="padding-top: 15px;">
+                  <div class="col-lg-3 col-xs-3" style="padding-top: 15px;">
                     <a href="javascript:UpdateForm()">Update</a>
                   </div>
                   <div id="PricePerUser" style="visibility:hidden " align="right">Price/user: $0.00
@@ -182,15 +196,15 @@
                 <!--End of Full Users-->
                 <!-- View Only Users -->
                 <div>
-                  <div class="col-lg-5">
+                  <div class="col-lg-5 col-xs-5">
                     <h5>Enter # of View-Only Users: </h5>
                   </div>
-                  <div class="col-lg-4">
+                  <div class="col-lg-4 col-xs-4">
                     <div id="NumberofViewOnlydiv">
                       <input name="NumberOfViewOnly" id="NumberOfViewOnly" type="text" class="form-control"  onChange="UpdateForm()" style="text-align:right">
                     </div>
-                    </div>
-                    <div class="col-lg-3" style="padding-top: 15px;">
+                  </div>
+                    <div class="col-lg-3 col-xs-3" style="padding-top: 15px;">
                       <a href="javascript:UpdateForm()">Update</a><span id="ViewOnlyWarn" style="color:#FF0000; "></span>
                     </div>
                     <div id="ViewOnlyTotal" style="visibility:hidden; color:#FF0000" align="right">&nbsp;
@@ -200,10 +214,10 @@
 
                   <!--License Types -->
                   <div>
-                    <div class="col-lg-5">
+                    <div class="col-lg-5 col-xs-5">
                       <h5>Select License Type such as "Cloud Hosted": </h5>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-xs-4">
                       <div id="licensediv">
                         <select name="license" id="license" class="form-control" onChange="UpdateForm()" style="text-align:right ">
                           <option id="monthly" value="monthly">Cloud Hosted</option>
@@ -214,31 +228,32 @@
                         </select>
                       </div>
                     </div>
-                    <div class="col-lg-3" style="padding-top: 15px;">
+                    <div class="col-lg-3 col-xs-3" style="padding-top: 15px;">
                     </div>
                   </div>
                   <!--End of License Types -->
                   <!-- Add On Options -->
-                  <div class="col-lg-12" style="margin-top: 20px; margin-bottom: 20px;">
+                  <div class="col-lg-12 col-xs-12" style="margin-top: 20px; margin-bottom: 20px;">
                     <div class="milumleftnav">Add On Options:</div>
                     <div>
                   </div>
                   <div>
                     <!-- BBSync -->   
                     <div style="display: none;">
-                      <input type="checkbox" id="BBSync" name="BBSync" value="Add Blackberry Sync" onClick="UpdateForm()"> Blackberry Sync <i class="fa fa-question-circle" style="color: #FE5433;"aria-hidden="true" onMouseOver="HideShowInfo('AddOnInfo', 'blackberry')" onMouseOut="HideShowInfo('AddOnInfo',null,'close')"></i>
+                      <input type="checkbox" id="BBSync" name="BBSync" value="Add Blackberry Sync" onClick="UpdateForm()"> Blackberry Sync <i class="fa fa-question-circle fa-2x" style="color: #FE5433;"aria-hidden="true" onMouseOver="HideShowInfo('AddOnInfo', 'blackberry')" onMouseOut="HideShowInfo('AddOnInfo',null,'close')"></i>
                       <input type="checkbox" id="Contacts" name="Contacts" value="Add Contacts" onClick="UpdateForm()">
                       Contact Manager<font color="#000000" face="Arial, Helvetica, sans-serif">&nbsp; </font></div>
                     <!-- End of BBSync -->
                     <!-- Public Calendar-->
+                    <!--Keep the Top and Left as it for the mouse over -->
                     <input type="checkbox" class="style11" id="WebViewer" name="WebViewer" value="Yes" onClick="UpdateForm()">
-                      Public Calendar add on for your web site <i class="fa fa-question-circle" style="color: #FE5433;"aria-hidden="true"></i><div id="WebViewerdiv" style="position:absolute; top: 260; left: 240px; width:18px; height:18px; z-index:1000; font-size: 10px;"  onMouseOver="HideShowInfo('AddOnInfo','webviewer')" onMouseOut="HideShowInfo('AddOnInfo',null,'close')"></div><br/>
+                      Public Calendar add on for your web site <i class="fa fa-question-circle fa-2x" style="color: #FE5433;"aria-hidden="true"></i><div id="WebViewerdiv" style="position:absolute; top: 200; left: 250px; width:18px; height:18px; z-index:1000; font-size: 10px;"  onMouseOver="HideShowInfo('AddOnInfo','webviewer')" onMouseOut="HideShowInfo('AddOnInfo',null,'close')"></div><br/>
                     <!-- End of Public Calendar -->
 
                     <!-- SSW -->
-
-                    <input type="checkbox" class="style11" id="SSW" name="SSW" value="Yes" onClick="UpdateForm()"> Self Service Scheduling add on for your web site <i class="fa fa-question-circle" style="color: #FE5433;"aria-hidden="true"></i>
-                    <div id="SSWdiv" style="position:absolute; top: 360px; left: 292px; width:18px; height:18px; z-index:1000;"  onMouseOver="HideShowInfo('AddOnInfo','selfscheduling')" onMouseOut="HideShowInfo('AddOnInfo',null,'close')"></div>
+                    <!-- Keep the Top and Left as it for the mover over -->
+                    <input type="checkbox" class="style11" id="SSW" name="SSW" value="Yes" onClick="UpdateForm()"> Self Service Scheduling add on for your web site <i class="fa fa-question-circle fa-2x" style="color: #FE5433;"></i>
+                    <div id="SSWdiv" style="position:absolute; top: 210; left: 300px; width:18px; height:18px; z-index:1000;"  onMouseOver="HideShowInfo('AddOnInfo','selfscheduling')" onMouseOut="HideShowInfo('AddOnInfo',null,'close')"></div>
                     <!-- End of SSW -->
                     <div style="display: none;">
                       <input type="checkbox" id="OTPalm" name="OTPalm" value="Add OTPalm" onClick="UpdateForm()">OTPalm
@@ -285,10 +300,10 @@
                 <!-- End of Phone Support -->
 
                 <!--Promotion Code -->
-                <div style="padding-top: 20px;">
+                <div style="padding-top: 10px;">
                   
                   <div >
-                    <div align="left"><div id="SpecialDiscount" style="color:#FF0000" align="left">&nbsp;</div><h4>Promo Code:</h4><input name="Promo" class="form-control" style="width: 50%;" type="text" id="Promo" size="6" onChange="UpdateForm()" align="right"></div>
+                    <div align="left"><div id="SpecialDiscount" style="color:#FF0000" align="left">&nbsp;</div><h4 style="color: #FE5433;">Promo Code: &nbsp;&nbsp;<i class="fa fa-gift" style="color: #1E5780;"aria-hidden="true"></i></h4><input name="Promo" class="form-control" style="width: 50%;" type="text" id="Promo" size="6" onChange="UpdateForm()" align="right"></div>
                     <!-- Total Box -->
                     <div style="display:none; position:absolute; height:0; width:0 ">
                       <div id="StandardOption" style="font-weight:bold ">
@@ -306,16 +321,15 @@
                       <div id="BundleDiscount" align="right">&nbsp;</div><br/>
 
                       <!-- Total -->
-                      <div align="right" id="TotalOrder" class="style11">Total: $0.00</div>
+                      <h4 align="right" id="TotalOrder">Total: $0.00</h4>
                     </div>
                     <!--End of Totol Box -->
                 </div>
-                
               </div>
               <!-- End of Promotion Code -->
               
               <!-- Tax -->
-              <div style="padding-top: 20px;">
+              <div>
                 <div class="col-lg-10">
                   <input type="checkbox" name="SalesTax" id="SalesTax" onClick="UpdateForm()" value="Taxxed"> Check this box if you are in Texas and are not tax exempt <br />
                   ( Adds 8.25% Sales Tax&nbsp;)
@@ -332,8 +346,7 @@
               </div>
             </div>
 
-            <div class="col-lg-2">
-              <h1>STOP HERE</h1>
+            <div class="col-lg-2 col-xs-2">
             </div>
           </div>
         </div>
@@ -342,8 +355,8 @@
     
       <!-- End of this New Form -->
 <!-- End of the First Page -->
-<!--payment form -->
 
+<!--payment form -->
 <div style="visibility:hidden; position:absolute;">  <INPUT TYPE=text  NAME=realname id="realname" VALUE="" SIZE=50> </div>
 
 <div id="shippingpayment" style="position:absolute; top:0px; background-color: #FFFFFF; border: 1px none #000000; z-index:1; visibility:hidden;">
@@ -351,30 +364,30 @@
   <br /><br /><br /><br /><br /><br /><br /><br />
       <div class="container">
         <div class="row">
-          <div class="col-lg-12" >
+          <div class="col-lg-12 col-xs-12" >
             <div style="padding-top: 50px; padding-bottom:10px;" id="TotalOrder2" class="milumleftnav">Your Office Tracker Total: $0.00 <a href="javascript:HideShow('userinfo')">Edit</a>
             </div>
-
-            <div style="background-color: #E5E5E5; padding: 10px;">
+    
+            <div style="background-color: #E5E5E5; padding: 10px; border-radius: 20px;">
               <h4>Enter Your Shipping and Payment Information:</h4>
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-2 col-xs-2">
             </div>
             <!--First Name -->
             <div class="row">
-              <div class=class="col-lg-10">
+              <div class=class="col-lg-10 col-xs-10">
               <div style="padding-top: 20px;">
-                <div class="col-lg-1">
+                <div class="col-lg-1 col-xs-1">
                 </div>
-                <div class="col-lg-2" >
+                <div class="col-lg-2 col-xs-3" >
                   <h5>First Name:</h5>
                 </div>
 
-                <div class="col-lg-8" >
-                  <INPUT TYPE=text  class="form-control"  NAME=first_name id="first_name" VALUE="" SIZE=18>
+                <div class="col-lg-8 col-xs-8" >
+                  <INPUT TYPE=text  class="form-control" NAME=first_name id="first_name" VALUE="" SIZE=18>
                   </INPUT>
                 </div>
-                <div class="col-lg-1">
+                <div class="col-lg-1 col-xs-0">
                 </div>
               </div>
             </div>
@@ -383,18 +396,18 @@
 
             <!--Last Name -->
             <div class="row">
-              <div class=class="col-lg-10">
-                <div class="col-lg-1">
+              <div class=class="col-lg-10 col-xs-10">
+                <div class="col-lg-1 col-xs-1">
                 </div>
-                <div class="col-lg-2" >
+                <div class="col-lg-2 col-xs-3" >
                   <h5>Last Name:</h5>
                 </div>
 
-                <div class="col-lg-8" >
+                <div class="col-lg-8 col-xs-8" >
                   <INPUT TYPE=text NAME=last_name class="form-control" id="last_name" VALUE="" SIZE=18>
                   </INPUT>
                 </div>
-                <div class="col-lg-1">
+                <div class="col-lg-1 col-xs-0">
                 </div>
               </div>
             </div>
@@ -402,18 +415,18 @@
 
             <!--Company Name -->
             <div class="row">
-              <div class=class="col-lg-10">
-                <div class="col-lg-1">
+              <div class=class="col-lg-10 col-xs-10">
+                <div class="col-lg-1 col-xs-1">
                 </div>
-                <div class="col-lg-2" >
+                <div class="col-lg-2 col-xs-3" >
                   <h5>Company or Org.:</h5>
                 </div>
 
-                <div class="col-lg-8" >
+                <div class="col-lg-8 col-xs-8" >
                   <INPUT TYPE=text NAME=Company class="form-control"  VALUE="" SIZE=50>
                   </INPUT>
                 </div>
-                <div class="col-lg-1">
+                <div class="col-lg-1 col-xs-0">
                 </div>
               </div>
             </div>
@@ -421,18 +434,18 @@
 
             <!-- Phone Number -->
             <div class="row">
-              <div class=class="col-lg-10">
-                <div class="col-lg-1">
+              <div class=class="col-lg-10 col-xs-10">
+                <div class="col-lg-1 col-xs-1">
                 </div>
-                <div class="col-lg-2" >
+                <div class="col-lg-2 col-xs-3" >
                   <h5>Phone Number:</h5>
                 </div>
 
-                <div class="col-lg-8" >
+                <div class="col-lg-8 col-xs-8" >
                   <INPUT TYPE=text NAME=Phone class="form-control"  VALUE="" SIZE=15>
                   </INPUT>
                 </div>
-                <div class="col-lg-1">
+                <div class="col-lg-1 col-xs-0">
                 </div>
               </div>
             </div>
@@ -440,68 +453,68 @@
 
             <!-- Email -->
             <div class="row">
-              <div class=class="col-lg-10">
-                <div class="col-lg-1">
+              <div class=class="col-lg-10 col-xs-10">
+                <div class="col-lg-1 col-xs-1">
                 </div>
-                <div class="col-lg-2" >
+                <div class="col-lg-2 col-xs-3" >
                   <h5>E-Mail:</h5>
                 </div>
 
-                <div class="col-lg-8" >
+                <div class="col-lg-8 col-xs-8" >
                   <INPUT TYPE=text NAME="email" class="form-control"  VALUE="" SIZE=50>
                   </INPUT>
                 </div>
-                <div class="col-lg-1">
+                <div class="col-lg-1 col-xs-0">
                 </div>
               </div>
             </div>
             <!-- End of Email -->
             <!-- Street Address -->
             <div class="row">
-              <div class=class="col-lg-10">
-                <div class="col-lg-1">
+              <div class=class="col-lg-10 col-xs-10">
+                <div class="col-lg-1 col-xs-1">
                 </div>
-                <div class="col-lg-2" >
+                <div class="col-lg-2 col-xs-3" >
                   <h5>Stress Address: </h5>
                 </div>
 
-                <div class="col-lg-8" >
+                <div class="col-lg-8 col-xs-8" >
                   <INPUT TYPE=text NAME="Street Address" class="form-control"  VALUE="" SIZE=50>
                   </INPUT>
                 </div>
-                <div class="col-lg-1">
+                <div class="col-lg-1 col-xs-0">
                 </div>
               </div>
             </div>
             <!-- End of Street Address -->
             <!-- City -->
             <div class="row">
-              <div class=class="col-lg-10">
-                <div class="col-lg-1">
+              <div class=class="col-lg-10 col-xs-10">
+                <div class="col-lg-1 col-xs-1">
                 </div>
-                <div class="col-lg-2" >
+                <div class="col-lg-2 col-xs-3" >
                   <h5>City: </h5>
                 </div>
 
-                <div class="col-lg-8" >
+                <div class="col-lg-8 col-xs-8" >
                   <INPUT TYPE=text NAME=city class="form-control"  VALUE="" SIZE=50>
                   </INPUT>
                 </div>
-                <div class="col-lg-1">
+                <div class="col-lg-1 col-xs-0">
                 </div>
               </div>
             </div>
             <!-- End of City -->
             <!-- State or Province -->
             <div class="row">
-              <div class=class="col-lg-10">
-                <div class="col-lg-1">
+              <div class=class="col-lg-10 col-xs-10">
+                <div class="col-lg-1 col-xs-1">
                 </div>
-                <div class="col-lg-2" >
+                <div class="col-lg-2 col-xs-3" >
                   <h5>State or Province: </h5>
                 </div>
 
-                <div class="col-lg-8" >
+                <div class="col-lg-8 col-xs-8" >
                   <SELECT NAME=state class="form-control">
                     <OPTION>Select a State 
                     <option value="AL">Alabama</option>
@@ -557,7 +570,7 @@
                     <option value="WY">Wyoming</option>
                   </SELECT>
                 </div>
-                <div class="col-lg-1">
+                <div class="col-lg-1 col-xs-0">
                 </div>
               </div>
             </div>
@@ -565,25 +578,25 @@
             <!--Zip Code -->
 
             <div class="row">
-              <div class=class="col-lg-10">
-                <div class="col-lg-1">
+              <div class=class="col-lg-10 col-xs-10">
+                <div class="col-lg-1 col-xs-1">
                 </div>
-                <div class="col-lg-2" >
+                <div class="col-lg-2 col-xs-3" >
                   <h5>Zip Code: </h5>
                 </div>
 
-                <div class="col-lg-3" >
+                <div class="col-lg-3 col-xs-2" >
                   <INPUT TYPE=text NAME=zip class="form-control"  VALUE="" SIZE=15>
                   </INPUT>
                 </div>
-                <div class="col-lg-2">
+                <div class="col-lg-2 col-xs-2">
                   <h5>Country: </h5>
                 </div>
                 <!--End of Zip -->
                 <!--Country -->
-                <div class="col-lg-3" >
+                <div class="col-lg-3 col-xs-4" >
                   <SELECT NAME=country class="form-control">
-                    <OPTION VALUE="/" SELECTED>Choose your country</OPTION>
+                    <OPTION VALUE="/" SELECTED>Choose Your Country</OPTION>
                     <option value="US">United States</option>
                     <option value="AF">Afghanistan</option>
                     <option value="AX">Åland Islands</option>
@@ -835,23 +848,23 @@
                     <option value="ZW">Zimbabwe</option>
                   </SELECT>
                 </div>
-                <div class="col-lg-1">
+                <div class="col-lg-1 col-xs-0">
                 </div>
               </div>
             </div>
             <!--End of Country -->
             <!--Current Version -->
             <div class="row">
-              <div class=class="col-lg-10">
-                <div class="col-lg-1">
+              <div class=class="col-lg-10 col-xs-10">
+                <div class="col-lg-1 col-xs-1">
                 </div>
-                <div class="col-lg-2" >
-                  <h5>Your Current Version:</h5>
+                <div class="col-lg-2 col-xs-3" >
+                  <h5>Current Version:</h5>
                 </div>
 
-                <div class="col-lg-3" >
+                <div class="col-lg-3 col-xs-2" >
                   <select name="Current_Version" id="Current_Version" class="form-control" >
-                    <option value="None">Current Version</option>
+                    <option value="None">Version</option>
                     <option value="New_Purchase">New Purchase</option>
                     <option value="Version_12">Version 12</option>
                     <option value="Version_11">Version 11</option>
@@ -865,10 +878,10 @@
                 </div>
                 <!-- End of Current Version -->
                 <!-- Upgrade Verion -->
-                  <div class="col-lg-3" >
+                  <div class="col-lg-3 col-xs-4" >
                   <h5>Upgrade to the latest version?</h5>
                 </div>
-                <div class="col-lg-2" >
+                <div class="col-lg-2 col-xs-2" >
                   <select name="Wants_to_upgrade" id="Wants_to_upgrade" class="form-control" >
                     <option value"No_Answer">Choose</option>
                     <option value="Yes">Yes</option>
@@ -876,20 +889,20 @@
                   </select>
                 </div>
                 <!-- End of Upgrade Version -->
-                <div class="col-lg-1">
+                <div class="col-lg-1 col-xs-0">
                 </div>
               </div>
             </div>
             <!--Card -->
             <div class="row">
-              <div class=class="col-lg-10">
-                <div class="col-lg-1">
+              <div class=class="col-lg-10 col-xs-10">
+                <div class="col-lg-1 col-xs-1">
                 </div>
-                <div class="col-lg-2" >
+                <div class="col-lg-2 col-xs-3" >
                   <h5>Card: </h5>
                 </div>
 
-                <div class="col-lg-8" >
+                <div class="col-lg-8 col-xs-8" >
                   <select name='CardType' id="CardType" class="form-control" >
                     <option value="">Choose Card </option>
                     <option value="MasterCard">MasterCard </option>
@@ -898,28 +911,28 @@
                     <option value="Discover">Discover</option>
                   </select>
                 </div>
-                <div class="col-lg-1">
+                <div class="col-lg-1 col-xs-0">
                 </div>
               </div>
             </div>
             <!-- End of Card -->
             <!-- Card number -->
             <div class="row">
-              <div class=class="col-lg-10">
-                <div class="col-lg-1">
+              <div class=class="col-lg-10 col-xs-10">
+                <div class="col-lg-1 col-xs-1">
                 </div>
-                <div class="col-lg-2" >
+                <div class="col-lg-2 col-xs-3" >
                   <h5>Card #: </h5>
                 </div>
 
-                <div class="col-lg-4" >
+                <div class="col-lg-4 col-xs-3" >
                   <INPUT type=text name="card#" id='card#' class="form-control" value="" >
                   </INPUT>
                 </div>
-                <div class="col-lg-1">
+                <div class="col-lg-1 col-xs-1">
                   <h5>Exp.: </h5>
                 </div>
-                <div class="col-lg-1">
+                <div class="col-lg-1 col-xs-2">
                   <select name="exp Month" value="" class="form-control"  size=1>
                     <option>01</option>
                     <option>02</option>
@@ -935,7 +948,7 @@
                     <option>12</option>
                   </select>
                 </div>
-                <div class="col-lg-2">
+                <div class="col-lg-2 col-xs-2">
                   <select name="exp Year" value="" class="form-control" size=1>
                     <option>2017</option>
                     <option>2018</option>
@@ -949,7 +962,7 @@
                     <option>2026</option>
                   </select>
                 </div>
-                <div class="col-lg-1">
+                <div class="col-lg-1 col-xs-0">
                 </div>
 
               </div>
@@ -957,10 +970,10 @@
             <!-- End of Card number -->
 
             <div class="row">
-              <div class=class="col-lg-10">
-                <div class="col-lg-1">
+              <div class=class="col-lg-10 col-xs-10">
+                <div class="col-lg-1 col-xs-1">
                 </div>
-                <div class="col-lg-10" >
+                <div class="col-lg-10 col-xs-10" >
                   <p>Agreement<br>
                     By entering my cardholder name and clicking the Submit Order button I verify all information shown above is correct and agree to the amount of charge, including recurring monthly charges if I am purchasing a Monhtly Hosting service. I also agree to all terms including the Purchase Policies Terms and Conditions below. 
                   </p>
@@ -968,122 +981,77 @@
                     All Milum Corporation &quot;Office Tracker&quot; software licenses and services purchases are final and non-refundable. If you have not tried the free trial version, you should do so before making this purchase. All purchases are in U.S. Dollars and any customs fees and sales or excise taxes, including VAT tax are the cardholder's responsibility. 
                   </p>
                 </div>
-                <div class="col-lg-1">
+                <div class="col-lg-1 col-xs-1">
                 </div>
               </div>
             </div>
 
             <div class="row">
-              <div class=class="col-lg-10">
-                <div class="col-lg-1">
+              <div class=class="col-lg-10 col-xs-10">
+                <div class="col-lg-1 col-xs-1">
                 </div>
-                <div class="col-lg-1" >
+                <div class="col-lg-1 col-xs-2" >
                   <!-- First Name -->
                   <h5>First Name: </h5>
                 </div>
-                <div class="col-lg-4" >
+                <div class="col-lg-4 col-xs-3" >
                   <INPUT TYPE=text NAME=cardfirstname class="form-control"  id="cardfirstname" VALUE="" SIZE=18>
                   </INPUT>
                 </div>
                 <!-- End of First Name -->
+                <div class="col-lg-0 col-xs-1">
+                </div>
                 <!-- Last Name -->
-                <div class="col-lg-1" >
+                <div class="col-lg-1 col-xs-2" >
                   <h5>Last Name: </h5>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-xs-3">
                   <INPUT TYPE=text NAME=cardlastname id="cardlastname" class="form-control"  VALUE="" SIZE=18></INPUT>
 
                   <div style="position:absolute; height:0px; width:0px; visibility:hidden"><input type=text class="style11" name='cardholder' id='cardholder' value="" size=15></div>
                 </div>
                 <!-- End of Last Name -->
-                <div class="col-lg-1">
+                <div class="col-lg-1 col-xs-0">
                 </div>
               </div>
 
             </div>
             
             <div class="row">
-              <div class="col-lg-12">
-                <div class="col-lg-12">
+              <div class="col-lg-1 col-xs-1" >
+              </div>
+              <div class="col-lg-10 col-xs-10" >
                 <h4>Click the Submit Order button just once to complete your order.</h4>
               </div>
-            </div>
+              <div class="col-lg-1 col-xs-1" >
+              </div>
             </div>
 
             <div class="row">
-              <div class="col-lg-12">
-                <div class="col-lg-3">
-                </div>
-              <div class="col-lg-9">
-                <h5>A confirmation page will display. We will contact you via e-mail or phone shortly.</h5>
-                <input style="padding-top: 20px;" type=submit class="btn btn-theme btn-block btn-md"  name=name value="Submit Order">
+              <div class="col-lg-3 col-xs-1">
+              </div>
+              <div class="col-lg-9 col-xs-11">
+                <p>A confirmation page will display. We will contact you via e-mail or phone shortly.</p>
+              </div>
+                
+            </div>
+
+            <div class="row">
+              <div class="col-lg-3 col-xs-3">
+              </div>
+              <div class="col-lg-6 col-xs-6">
+                <input style="padding-top: 5px;" type=submit class="btn btn-theme btn-block btn-md" name=name value="Submit Order">
+              </div>
+              <div class="col-lg-3 col-xs-3">
               </div>
             </div>
-            </div>
-
-
-
-
-
-        </div>
       </div>
     </div>
   </TABLE>
 </div>
 <!-- Support Form -->
+<!--Keep This Part, otherwise the headline will disappear on other forms -->
 <div id="supportonly" style="position:absolute; top:85px; left:0; width:620px; height:728px; background-color: #FFFFFF; border: 1px none #000000; z-index:1; visibility: hidden;">
-
-  <table width="700" border="0" align="left" cellpadding="3" cellspacing="3" class="milumleftnav" style="font-weight:normal; text-align:left ">
-    <tr>
-      <td colspan="2" bgcolor="#E5E5E5" class="style11" style="padding-left: 10px;">Choose your Support Plan:</td>
-    </tr>
-    <tr>
-      <td height="35" colspan="2">
-        <br />
-        <p align="left">
-          <input name="Support" class="style11"  id="Support" type="radio" value="90 Day Support" onClick="UpdateForm()">
-          <span style="font-weight:bold ">Basic Support Plan - $495/ 90 days</span> May be limited to four support telephone calls per month. Online questions answered usually within 0-4 hours during work days. One contact name per support plan. If contact changes there may be a transfer fee of $50.
-        </p>
-        <br />
-        <p>
-          <input name="Support" id="Support" class="style11"  type="radio" value="6 Month Support" onClick="UpdateForm()">
-          <span style="font-weight:bold ">Standard Support Plan- $695/6 months</span> May be limited to four support telephone calls per month. Online questions answered usually within 0-4 hours during work days. One contact name per support plan. If contact changes there may be a transfer fee of $50.
-        </p>
-        <br />
- 
-        <p>
-          <input name="Support" id="Support" class="style11"  type="radio" value="1 YR Support" onClick="UpdateForm()" >
-          <span style="font-weight:bold ">    Premium Support Plan- $895/1 year</span>
-            ($100 less with new product license) May be limited to four support telephone calls per month. Online questions answered usually within 0-4 hours during work days. One contact name per support plan. If contact changes there may be a transfer fee of $50.
-        </p>
-        <br />
-        <p>
-          <input name="Support" id="Support" class="style11"  type="radio" value="0 Per Incident" onClick="UpdateForm()">
-          <span style="font-weight:bold ">Per Incident Support Plan- $125/1 hour</span>
-            The following per incident service is offered with a limit of 1 hour per incident.
- 
-            <br /><br />
-            <ul>
-              <li>This plan is only available for phone support and the cost is $125.00 per incident up to a maximum of 1 hour, charged to your American Express, Visa or Mastercard. </li>
-              <li>Each support incident is equal to a single issue or problem that cannot reasonably be broken down into subordinate parts </li></ul>
-        </p>
-        <p>
-          *All Support Package phone calls may be limited to 20 mins and 4 per month at Milum's discretion.
-        </p>
-  <p>Online Support Available at:  <a href="http://www.officetracker.com/forums/">http://www.officetracker.com/forums/</a></p>
-  <p>Or via email at: <a href="mailto:support@officetracker.com">support@officetracker.com</a></p>
-  <p>Support Packages, pricing and terms subject to change without notice. 
-  </p></td>
-  
-      </tr>
-    </div></div></td>
-    </tr>
-  </table>
-  <p></p>
-</div>
-<div align="center">
- 
-</div>
 </form>
 
 <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
