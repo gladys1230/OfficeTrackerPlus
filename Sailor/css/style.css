@@ -60,8 +60,6 @@ h1,h2, h3, h4, h5, h6 {
 	/*change this from margin-bottom: 20px for Office Tracker;*/
 	margin-bottom: 5px;
 }
-
-
 .highlight {
 	color: #fff !important;
 	padding: 0 8px;
@@ -592,7 +590,7 @@ header ul.nav li ul li.dropdown-submenu li a {
 
 #featured{
 	width: 100%;
-	background:#fcfcfc;
+	background:#ffffff;
 	position:relative;
 	margin: 0;
 	padding:0 ;
@@ -624,15 +622,15 @@ box-shadow: none;
 .main-slider .flex-caption {background:none; -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000); zoom: 1;}
 /*changed rgba(0, 0, 0, 0.06) for Office Tracker */
 /*changed width from 295px & rgba for Office Tracker */
-.main-slider .flex-caption {
-    bottom: 20px;
+/*.main-slider .flex-caption {
+    bottom: 10px;
     background-color: rgba(4, 19, 104, 0.68);
     color: #fff;
     margin: 0;
-    padding: 10px 35px 20px 30px;
+    padding: 10px 35px 10px 30px;
     position: absolute;
     right: 0;
-    width: 365px;
+    width: 340px;
     height: 200px;
 
 }
@@ -640,7 +638,7 @@ box-shadow: none;
 /*.main-slider .flex-caption {background:none; -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000); zoom: 1;}*/
 /*changed rgba(0, 0, 0, 0.06) for Office Tracker */
 /*changed width from 295px & rgba for Office Tracker */
-.main-slider .flex-caption { bottom: 25px; background-color: rgba(19, 24, 53, 0.83); color: #fff; margin: 0; padding: 10px 25px 25px 30px; position: absolute; right: 0; width: 495px;}
+.main-slider .flex-caption { bottom: 25px; background-color: rgba(19, 24, 53, 0.83); color: #fff; margin: 0; padding: 10px 20px 20px 20px; position: absolute; right: 0; width: 400px;}
 
 @media(max-width: 640px) {
 	.main-slider .flex-caption{
@@ -653,6 +651,35 @@ box-shadow: none;
 	p{
 		font-size: 12px;
 	}
+
+	}
+
+	@media(max-width: 1280px){
+		#fbplugin{
+			padding-top: 58px;
+		}
+		
+	}
+
+	@media(max-width: 1024px){
+		#fbplugin{
+			padding-top: 35px;
+		}
+		h1, h2, h3,{
+			font-size: 1.8em;
+			line-height: 1em;
+		}
+
+		h4{
+			font-size: 1.5em;
+			line-height: 1em;
+		}
+
+		.widget{
+			padding-top: 0px;
+			margin-top: -10px;
+
+		}
 
 	}
 .main-slider .flex-caption h3 {color: #fff; letter-spacing: 1px; margin-bottom: 8px; text-transform: uppercase;}
